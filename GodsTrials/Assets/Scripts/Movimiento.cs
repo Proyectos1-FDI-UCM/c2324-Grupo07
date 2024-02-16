@@ -1,36 +1,59 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine;
+using System.Collections;
 
-public class Movimiento : MonoBehaviour
+public class ControlarJugador : MonoBehaviour
 {
-    public float velocity = 5;
     public float jumpvelocity = 10;
-    public Rigidbody2D rb;
-    // Start is called before the first frame update
+    public float velocity = 5;
+    public Transform marcadorSuelo;
+    private float MarcadorSuelo;
+    public LayerMask Suelo;
+    private bool isGrounded;
+    private bool doubleJump;
+
+ 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
-    // Update is called once per frame
+    }
+    void FixedUpdate()
+    {
+       
+        isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
+    }
     void Update()
     {
-        float finalvelocity = 0;
-
+      
+        if (isGrounded)
+        {
+            doubleJump = false;
+        }
+         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Saltar();
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !isGrounded)
+        {
+            Saltar();
+            doubleJump = true;
+        }
         if (Input.GetKey(KeyCode.D))
         {
-            finalvelocity = velocity;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            finalvelocity = -velocity;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, GetComponent<Rigidbody2D>().velocity.y);
         }
-        rb.velocity = new Vector2(finalvelocity, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity += new Vector2(0, jumpvelocity);
-        }
+    }
+
+    public void Saltar()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
     }
 }
 
