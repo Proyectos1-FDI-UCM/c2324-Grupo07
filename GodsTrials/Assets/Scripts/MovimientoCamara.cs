@@ -5,10 +5,6 @@ using UnityEngine;
 public class MovimientoCamara : MonoBehaviour
 {
     public Transform _hercules;
-    private void Start()
-    {
-        _hercules = transform;
-    }
     private void Update()
     {
         if (_hercules != null)

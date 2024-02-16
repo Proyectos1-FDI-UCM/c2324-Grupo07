@@ -311,9 +311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2167ddc737329e84cb0a5e5d80304e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
   jumpvelocity: 10
-  rb: {fileID: 1352873189}
+  velocity: 5
+  marcadorSuelo: {fileID: 0}
+  Suelo:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1352873188
 BoxCollider2D:
   m_ObjectHideFlags: 0
