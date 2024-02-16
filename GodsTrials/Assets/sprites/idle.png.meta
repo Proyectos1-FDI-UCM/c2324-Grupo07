@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a6ebe3c3531ef845b9a020410dfadb4
+guid: 7d909b190976aaa46be22325a63ba521
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,180 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hercules (1)_0
+      name: idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1852
-        width: 2805
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e14d29bf492b0cc4f9a93b42669e13d2
-      internalID: 1342434071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 1776
-        width: 46
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c80a4ff6e38e12a45b8dd77741f852de
-      internalID: -880622761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_2
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 1776
-        width: 46
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b21582a301a9484f8e8112b2b1b936a
-      internalID: 2055180191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_3
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 1776
-        width: 52
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d05e40d20f1f0df429dd544fc996e459
-      internalID: 430702903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_4
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 1776
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 249d62317a4800d498d017c72cc9e7f3
-      internalID: -784192430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_5
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 1776
-        width: 56
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83de9c4febe9e614b96d8c46b4d8ed31
-      internalID: -1592279814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_6
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 1776
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: daa3047ce7aea2f4e87c030636f11643
-      internalID: 1288186082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_7
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 1776
-        width: 59
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c383b089f9bd7246818670f48c723dd
-      internalID: 1524287789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_8
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 1776
-        width: 50
+        x: 5
+        y: 5
+        width: 44
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -292,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d93773936772e49aa44ddac922c905
-      internalID: -390710151
+      spriteID: 6e73e9b8121e1214ca47a6922c95afeb
+      internalID: 119668449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hercules (1)_9
+      name: idle_1
       rect:
         serializedVersion: 2
-        x: 530
-        y: 1776
-        width: 48
-        height: 54
+        x: 52
+        y: 4
+        width: 44
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,103 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 272b6d6e13359b144b71afafc5730f4c
-      internalID: 1540749267
+      spriteID: 1926119ff89be684c8490cad34719c9c
+      internalID: -813597651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hercules (1)_10
+      name: idle_2
       rect:
         serializedVersion: 2
-        x: 579
-        y: 1776
-        width: 61
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eefb051a87e10b74380996f2ac15ae88
-      internalID: -1046057637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_11
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 1776
-        width: 56
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18978b22d981a4242b43af2f79590108
-      internalID: -293935123
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_12
-      rect:
-        serializedVersion: 2
-        x: 697
-        y: 1776
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 673c91fe21601884c803f3a8de3385ab
-      internalID: -991966627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_13
-      rect:
-        serializedVersion: 2
-        x: 756
-        y: 1776
-        width: 64
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e90426571f17464aa150e3ea80d0887
-      internalID: 1781859081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_14
-      rect:
-        serializedVersion: 2
-        x: 823
-        y: 1776
-        width: 56
+        x: 99
+        y: 4
+        width: 44
         height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -418,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f569efc2515a94a4ab763949914ac33d
-      internalID: -1716068419
+      spriteID: dbf711e344353bf419c2eea5f9aed7b2
+      internalID: 1860579607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hercules (1)_15
+      name: idle_3
       rect:
         serializedVersion: 2
-        x: 879
-        y: 1776
-        width: 39
-        height: 53
+        x: 146
+        y: 5
+        width: 44
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,82 +187,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42feef9198b4a82418befc6a8d540692
-      internalID: 556052096
+      spriteID: b5ae7604c90f9984f80b7ec232ab0c6e
+      internalID: -811884373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hercules (1)_16
+      name: idle_4
       rect:
         serializedVersion: 2
-        x: 919
-        y: 1776
-        width: 47
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ea0d02747facf14bb718e068994c9e5
-      internalID: 820854884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_17
-      rect:
-        serializedVersion: 2
-        x: 967
-        y: 1776
-        width: 48
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f5b48ae6a1c0c448812ad584c44121b
-      internalID: -1798850679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_18
-      rect:
-        serializedVersion: 2
-        x: 1016
-        y: 1776
-        width: 48
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c1077d6a2fb46d4bb2fe1c60ff3ed34
-      internalID: -2091748006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hercules (1)_19
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 1776
-        width: 46
+        x: 193
+        y: 5
+        width: 44
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -523,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b9f1f45684827247897ba9450683866
-      internalID: -1872051940
+      spriteID: 6d63677d47c21ec499b5153834b83fd5
+      internalID: -401344196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hercules (1)_20
+      name: idle_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2805
-        height: 1763
+        x: 240
+        y: 5
+        width: 44
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,8 +229,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c1109eff57ffbe4a99800d83d52d009
-      internalID: 910830947
+      spriteID: c720167bcad18824ea83c8e19952d60e
+      internalID: -1537175313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 4
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a113794904b4244a849a8801c5ed4da
+      internalID: 577697110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 5
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b8609b34b3f264485bf7a2a8ac9f72
+      internalID: -2074598804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_8
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 4
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4f10d250d726143b19289e11cba2c8
+      internalID: -2077479599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_9
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7079f6a6b99ee40b2ab90424cfb2a6
+      internalID: 1247298040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_10
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0641959f6a75e4eb51fd636e4f6b0a
+      internalID: 1645937408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_11
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167ebe31b37572f40bfc001e861e9d8c
+      internalID: 2140978302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_12
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2579d6646cd85439ea178c8171237b
+      internalID: -909871921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_13
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13cd52a6c86fa94d947ade3225049f4
+      internalID: 22738046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_14
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 5
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8c308aef375be47903fb14e0a79731
+      internalID: -2008116
       vertices: []
       indices: 
       edges: []
@@ -561,27 +435,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hercules (1)_0: 1342434071
-      hercules (1)_1: -880622761
-      hercules (1)_10: -1046057637
-      hercules (1)_11: -293935123
-      hercules (1)_12: -991966627
-      hercules (1)_13: 1781859081
-      hercules (1)_14: -1716068419
-      hercules (1)_15: 556052096
-      hercules (1)_16: 820854884
-      hercules (1)_17: -1798850679
-      hercules (1)_18: -2091748006
-      hercules (1)_19: -1872051940
-      hercules (1)_2: 2055180191
-      hercules (1)_20: 910830947
-      hercules (1)_3: 430702903
-      hercules (1)_4: -784192430
-      hercules (1)_5: -1592279814
-      hercules (1)_6: 1288186082
-      hercules (1)_7: 1524287789
-      hercules (1)_8: -390710151
-      hercules (1)_9: 1540749267
+      idle_0: 119668449
+      idle_1: -813597651
+      idle_10: 1645937408
+      idle_11: 2140978302
+      idle_12: -909871921
+      idle_13: 22738046
+      idle_14: -2008116
+      idle_2: 1860579607
+      idle_3: -811884373
+      idle_4: -401344196
+      idle_5: -1537175313
+      idle_6: 577697110
+      idle_7: -2074598804
+      idle_8: -2077479599
+      idle_9: 1247298040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
