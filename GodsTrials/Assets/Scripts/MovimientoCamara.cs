@@ -5,6 +5,13 @@ using UnityEngine;
 public class MovimientoCamara : MonoBehaviour
 {
     public Transform _hercules;
+    Camera cam;
+    private float camSize = 20.0f;
+    private void Start()
+    {
+         cam = Camera.main;
+        cam.orthographicSize = camSize;
+    }
     private void Update()
     {
         if (_hercules != null)
