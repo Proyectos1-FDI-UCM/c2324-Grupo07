@@ -14,11 +14,12 @@ public class ControlarJugador : MonoBehaviour
     public LayerMask Suelo;
     private bool isGrounded;
     private bool doubleJump;
+    private Animator animator;
 
  
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -32,9 +33,14 @@ public class ControlarJugador : MonoBehaviour
         {
             doubleJump = false;
         }
-         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Saltar();
+            animator.SetBool("IsJumping", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", false);
         }
         if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !isGrounded)
         {
