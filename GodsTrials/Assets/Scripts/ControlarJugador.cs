@@ -32,16 +32,15 @@ public class ControlarJugador : MonoBehaviour
         if (isGrounded)
         {
             doubleJump = false;
+            animator.SetBool("jumping", false);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Saltar();
-            animator.SetBool("IsJumping", true);
+            
         }
-        else
-        {
-            animator.SetBool("IsJumping", false);
-        }
+    
+        
         if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !isGrounded)
         {
             Saltar();
@@ -59,6 +58,7 @@ public class ControlarJugador : MonoBehaviour
 
     public void Saltar()
     {
+        animator.SetBool("jumping", true);
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
     }
 }
