@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53e0c88a8cde58b49890f2846f724e18
+guid: 3721983a0081b264ba0a5bd2aced6943
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,54 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pezizquierda_0
+      name: run1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 47
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04e1d67de0e478b4dba0923c8e553250
-      internalID: 1223511207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 5
-        width: 48
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49095bc38a811f04f8318514f58309d8
-      internalID: -1023040568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_2
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 5
-        width: 47
+        x: 14
+        y: 4
+        width: 44
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,20 +124,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2299186ca1ddae4c912ee88a0958079
-      internalID: 797395542
+      spriteID: 75f6b92c3e434484e8c8c7311f1c30bb
+      internalID: 932354143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pezizquierda_3
+      name: run1_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 5
+        x: 61
+        y: 4
+        width: 42
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d9976919aca0f48a6d9cb43aba02b5
+      internalID: 1986426738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 4
         width: 50
-        height: 57
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,229 +166,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60df471663ad3a7469037e42f69f4f80
-      internalID: -961056935
+      spriteID: f8792ecfed7b21c498d5fa014b37a06c
+      internalID: -110775292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pezizquierda_4
+      name: run1_3
       rect:
         serializedVersion: 2
-        x: 204
-        y: 5
-        width: 47
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f1690bcdc8768d4b8472efe85222b61
-      internalID: -1937565927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_5
-      rect:
-        serializedVersion: 2
-        x: 254
-        y: 5
-        width: 48
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5746f21d20b51a3439d8ab8b658f7a2e
-      internalID: 1490678946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_6
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 5
-        width: 48
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7924170099dbd243b1ceb68a006cf5a
-      internalID: 1488225945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_7
-      rect:
-        serializedVersion: 2
-        x: 354
-        y: 5
-        width: 43
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fab946141f11634d8cf542386b797af
-      internalID: 29232625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_8
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 5
-        width: 43
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87975c9d8fc40c947a24407771f0bf22
-      internalID: 1523354508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_9
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 5
-        width: 49
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3cb0517026a0ba43990e42965d17ca3
-      internalID: 662147240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_10
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 5
-        width: 45
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7288c5f39ccc3b4d830ae9ce5e8aad3
-      internalID: 2052919005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_11
-      rect:
-        serializedVersion: 2
-        x: 546
-        y: 5
-        width: 52
-        height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efc0c7c2e0131724fa4a3a265818d557
-      internalID: -421911746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_12
-      rect:
-        serializedVersion: 2
-        x: 601
-        y: 5
-        width: 69
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99aeea2e0cc9e034a89bd1aaaab01c5e
-      internalID: 937577829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_13
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 5
-        width: 69
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2dd779230b886b44694da22a3a61b335
-      internalID: -1025241257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_14
-      rect:
-        serializedVersion: 2
-        x: 745
-        y: 5
-        width: 68
+        x: 159
+        y: 4
+        width: 58
         height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -418,19 +187,208 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f50a2f7948580ad4bbb358782264593c
-      internalID: -1986464590
+      spriteID: 04b1cce3f288c654fb7b834d746f4a4a
+      internalID: -378208085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pezizquierda_15
+      name: run1_4
       rect:
         serializedVersion: 2
-        x: 816
-        y: 5
-        width: 67
+        x: 220
+        y: 4
+        width: 54
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5f5c731b28fcd4ea523d84c931f173
+      internalID: 1205564981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_5
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 4
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20271091adfac114ba66b5a428cd81b6
+      internalID: 704412269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 4
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df63c5cebf0cac74eb1ee23e32300911
+      internalID: -416557161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_7
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 4
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc03689c6fbe6d43bc60c07413f3e21
+      internalID: -413105886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 4
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f132b533cc6ced48855627e35a2a2ff
+      internalID: -250042614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_9
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 4
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98e492eee7e24c49b2323835c8fb741
+      internalID: 1395689208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_10
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 4
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a56488a2a794b1468964a3defcb0da5
+      internalID: 1011301100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_11
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 4
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69967e9b705d39f44b2858e716a1791f
+      internalID: 1992579804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_12
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 4
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b492f3dc3713340853c743a0353cb2
+      internalID: -1763448345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run1_13
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 4
+        width: 54
         height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -439,92 +397,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32ad99441753c5743812ce5c30200e75
-      internalID: -1861384806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_16
-      rect:
-        serializedVersion: 2
-        x: 886
-        y: 5
-        width: 65
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd7271b2c6c2ead449e9e495a797a7f1
-      internalID: 487889565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_17
-      rect:
-        serializedVersion: 2
-        x: 954
-        y: 5
-        width: 65
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1b1b9709c541074b914cf8b17a5afea
-      internalID: 1298071300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_18
-      rect:
-        serializedVersion: 2
-        x: 1022
-        y: 5
-        width: 66
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12707ed92359ba741937359486b2a9bd
-      internalID: 1949548274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pezizquierda_19
-      rect:
-        serializedVersion: 2
-        x: 1091
-        y: 5
-        width: 66
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 132510deae1f46d4d88b50fca9ac9361
-      internalID: 405837684
+      spriteID: 0746e1bd8fff65c429648396f84ac984
+      internalID: -1881000835
       vertices: []
       indices: 
       edges: []
@@ -540,26 +414,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pezizquierda_0: 1223511207
-      pezizquierda_1: -1023040568
-      pezizquierda_10: 2052919005
-      pezizquierda_11: -421911746
-      pezizquierda_12: 937577829
-      pezizquierda_13: -1025241257
-      pezizquierda_14: -1986464590
-      pezizquierda_15: -1861384806
-      pezizquierda_16: 487889565
-      pezizquierda_17: 1298071300
-      pezizquierda_18: 1949548274
-      pezizquierda_19: 405837684
-      pezizquierda_2: 797395542
-      pezizquierda_3: -961056935
-      pezizquierda_4: -1937565927
-      pezizquierda_5: 1490678946
-      pezizquierda_6: 1488225945
-      pezizquierda_7: 29232625
-      pezizquierda_8: 1523354508
-      pezizquierda_9: 662147240
+      run1_0: 932354143
+      run1_1: 1986426738
+      run1_10: 1011301100
+      run1_11: 1992579804
+      run1_12: -1763448345
+      run1_13: -1881000835
+      run1_2: -110775292
+      run1_3: -378208085
+      run1_4: 1205564981
+      run1_5: 704412269
+      run1_6: -416557161
+      run1_7: -413105886
+      run1_8: -250042614
+      run1_9: 1395689208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
