@@ -30,7 +30,7 @@ public class MovimientoCamara : MonoBehaviour
         }
 
         //CAM ZOOM
-        if (_hercules.position.x < 24)
+        if (_hercules.position.x < 55)
         {
             if (cam.orthographicSize > minCamSize && _hercRb.velocity.x > 0.1f)
             {
