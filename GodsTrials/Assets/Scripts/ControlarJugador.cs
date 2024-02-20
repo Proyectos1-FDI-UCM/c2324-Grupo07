@@ -15,8 +15,17 @@ public class ControlarJugador : MonoBehaviour
     private bool isGrounded;
     private bool doubleJump;
     private Animator animator;
+            bool nosalta = true;
 
- 
+    private void OnTriggerEnter2D(Collider2D suelo)
+    {
+        
+        if (CompareTag("Player")==suelo)
+        {
+            isGrounded = true;
+        }
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -24,24 +33,22 @@ public class ControlarJugador : MonoBehaviour
     void FixedUpdate()
     {
        
-        isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
+        //isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
     }
     void Update()
     {
-      
+
         if (isGrounded)
         {
-            doubleJump = false;
+            doubleJump = false;           
             animator.SetBool("jumping", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && nosalta)
         {
             Saltar();
-            
+            isGrounded = false;
         }
-    
-        
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
         {
             Saltar();
             doubleJump = true;
@@ -60,6 +67,7 @@ public class ControlarJugador : MonoBehaviour
     {
         animator.SetBool("jumping", true);
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
+        nosalta=false;
     }
 }
 
