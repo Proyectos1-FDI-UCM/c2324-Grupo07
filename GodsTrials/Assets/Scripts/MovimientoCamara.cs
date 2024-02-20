@@ -9,9 +9,6 @@ public class MovimientoCamara : MonoBehaviour
     Camera cam;
     private float camSize = 20.0f;
     private float minCamSize = 5.0f;
-    private Vector3 camFollow = new Vector3(0.0f, 0.0f, -10.0f);
-
-
     private void Start()
     {
         cam = Camera.main;
@@ -19,18 +16,12 @@ public class MovimientoCamara : MonoBehaviour
     }
     private void Update()
     {
-        //POSITION
+        Vector3 camFollow = new Vector3(_hercules.position.x, 0, -10);
         if (_hercules != null)
         {
-            if (_hercules.position.x < 86.7)
-            {
-                camFollow[0] = _hercules.position.x;
-                transform.position = camFollow;
-            }           
+            transform.position = camFollow;
         }
-
-        //CAM ZOOM
-        if (_hercules.position.x < 55)
+        if (_hercules.position.x < 24)
         {
             if (cam.orthographicSize > minCamSize && _hercRb.velocity.x > 0.1f)
             {
