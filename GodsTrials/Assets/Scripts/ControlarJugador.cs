@@ -9,9 +9,6 @@ public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
     public float velocity = 5;
-    //public Transform marcadorSuelo;
-    //private float MarcadorSuelo;
-    //public LayerMask Suelo;
     private bool isGrounded;
     private bool doubleJump;
     private Animator animator;
@@ -29,19 +26,8 @@ public class ControlarJugador : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-    //void FixedUpdate()
-    //{
-       
-    //    isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
-    //}
     void Update()
     {
-
-        //if (isGrounded)
-        //{
-        //    doubleJump = false;           
-        //    animator.SetBool("jumping", false);
-        //}
         if (Input.GetKeyDown(KeyCode.Space) && numSaltos > 0)
         {
             Saltar();
