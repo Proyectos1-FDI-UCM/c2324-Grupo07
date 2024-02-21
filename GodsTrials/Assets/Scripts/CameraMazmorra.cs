@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoCamara : MonoBehaviour
+public class CameraMazmorra : MonoBehaviour
 {
     public Transform _hercules;
     public Rigidbody2D _hercRb;
