@@ -9,44 +9,43 @@ public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
     public float velocity = 5;
-    public Transform marcadorSuelo;
-    private float MarcadorSuelo;
-    public LayerMask Suelo;
+    //public Transform marcadorSuelo;
+    //private float MarcadorSuelo;
+    //public LayerMask Suelo;
     private bool isGrounded;
     private bool doubleJump;
     private Animator animator;
-            bool nosalta = true;
-
-    private void OnTriggerEnter2D(Collider2D suelo)
+    private float numSaltos = 2.0f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (CompareTag("Player")==suelo)
+        if(collision.transform != null)
         {
-            isGrounded = true;
+            numSaltos = 2;
         }
+        Debug.Log(numSaltos);
     }
 
     void Start()
     {
         animator = GetComponent<Animator>();
     }
-    void FixedUpdate()
-    {
+    //void FixedUpdate()
+    //{
        
-        //isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
-    }
+    //    isGrounded = Physics2D.OverlapCircle(marcadorSuelo.position, MarcadorSuelo, Suelo);
+    //}
     void Update()
     {
 
-        if (isGrounded)
-        {
-            doubleJump = false;           
-            animator.SetBool("jumping", false);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && nosalta)
+        //if (isGrounded)
+        //{
+        //    doubleJump = false;           
+        //    animator.SetBool("jumping", false);
+        //}
+        if (Input.GetKeyDown(KeyCode.Space) && numSaltos > 0)
         {
             Saltar();
-            isGrounded = false;
+            numSaltos--;
         }
         if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
         {
@@ -67,7 +66,6 @@ public class ControlarJugador : MonoBehaviour
     {
         animator.SetBool("jumping", true);
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
-        nosalta=false;
     }
 }
 
