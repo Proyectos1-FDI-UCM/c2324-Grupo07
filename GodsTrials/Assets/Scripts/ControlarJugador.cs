@@ -46,6 +46,10 @@ public class ControlarJugador : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, GetComponent<Rigidbody2D>().velocity.y);
         }
+        else if (!Input.anyKey)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
+        }
     }
 
     public void Saltar()
