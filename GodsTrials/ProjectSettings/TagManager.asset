@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: huecos
+    uniqueID: 2420681117
+    locked: 0
   - name: hercules
     uniqueID: 2957888389
     locked: 0
