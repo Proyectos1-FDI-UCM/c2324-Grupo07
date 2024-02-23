@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class CameraInfierno : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private ControlarJugador _hercules;
+    private void OnTriggerEnter2D(Collider2D cam)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _hercules = cam.GetComponent<ControlarJugador>();
+        float arriba = transform.position.y;
+        float reach = transform.position.y + 10f;
+        if (_hercules != null)
+        {
+            float mueve = Mathf.Lerp(arriba, reach, 1.0f);
+            transform.position = new Vector3 (0f, mueve, 0f);
+        }
+        if (cam.CompareTag("Abajo"))
+        {
+            float move = Mathf.Lerp(arriba, -reach, 1.0f);
+            transform.position = new Vector3(0f, move, 0f);
+        }
     }
 }
