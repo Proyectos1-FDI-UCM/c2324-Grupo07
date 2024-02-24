@@ -699,6 +699,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1708743708}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: circulo1
+      value: 
+      objectReference: {fileID: 889246583}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: circulo2
+      value: 
+      objectReference: {fileID: 1511934283}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: hercules
+      value: 
+      objectReference: {fileID: 1708743708}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: tieneSalto
       value: 0
       objectReference: {fileID: 0}
@@ -1169,6 +1181,11 @@ Transform:
   - {fileID: 1496980532}
   m_Father: {fileID: 922638801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &889246583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5510309483381122063, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 566319840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &922638800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1434,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1511934283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7548971834968103021, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 566319840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518226371
 GameObject:
   m_ObjectHideFlags: 0

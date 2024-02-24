@@ -13,12 +13,16 @@ public class ControlarJugador : MonoBehaviour
     private bool enSuelo;
     private bool dobleSalto = true;
     public GameObject botas;
-    public Transform suelo;
-    public Transform pared;
+    public Transform hercules;
+    public Transform circulo1;
+    public Transform circulo2;
     public LayerMask capaSuelo;
     public LayerMask capaPared;
     public bool tieneSalto = false;
-    private bool enPared;
+    private bool enParedRC1;
+    private bool enParedRC2;
+    private bool enParedLC1;
+    private bool enParedLC2;
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
         foreach (ContactPoint2D contacto in activarSalto.contacts)
@@ -44,9 +48,11 @@ public class ControlarJugador : MonoBehaviour
     }
     void Update()
     {
-        enSuelo = Physics2D.OverlapCircle(suelo.position, 1f, capaSuelo);
-        enPared = Physics2D.OverlapCircle(pared.position, 1f, capaPared);
-        Debug.Log(enPared);
+        enSuelo = Physics2D.OverlapCircle(hercules.position, 1f, capaSuelo);
+        enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaPared);
+        enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaPared);
+        enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaPared);
+        enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaPared);
         if (enSuelo && Input.GetKeyDown(KeyCode.Space))
         {
             Salto();
@@ -56,15 +62,15 @@ public class ControlarJugador : MonoBehaviour
             Salto();
             dobleSalto = false;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
         {
             rb.velocity = new Vector2(velocity, rb.velocity.y);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
         {
             rb.velocity = new Vector2(-velocity, rb.velocity.y);
         }
-        else if (!Input.anyKey || enPared && !enSuelo)
+        else if (!Input.anyKey)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
