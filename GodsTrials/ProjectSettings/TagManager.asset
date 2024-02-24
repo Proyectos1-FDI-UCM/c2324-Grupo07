@@ -9,12 +9,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Suelo
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Pared
+  - collider camara arriba
+  - collider camara abajo
   - 
   - 
   - 
@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: collider camara
+    uniqueID: 3552362719
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

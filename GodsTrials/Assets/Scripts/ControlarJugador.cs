@@ -9,53 +9,70 @@ public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
     public float velocity = 5;
-    private bool isGrounded;
-    private bool doubleJump;
-    private Animator animator;
-    private float numSaltos = 2.0f;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Rigidbody2D rb;
+    private bool enSuelo;
+    private bool dobleSalto = true;
+    public GameObject botas;
+    public Transform suelo;
+    public Transform pared;
+    public LayerMask capaSuelo;
+    public LayerMask capaPared;
+    public bool tieneSalto = false;
+    private bool enPared;
+    private void OnCollisionEnter2D(Collision2D activarSalto)
     {
-        if(collision.transform != null)
+        foreach (ContactPoint2D contacto in activarSalto.contacts)
         {
-            numSaltos = 2;
+            if (contacto.normal.y > 0.5f)
+            {
+                dobleSalto = true;
+            }
         }
-        Debug.Log(numSaltos);
+    }
+    private void OnTriggerEnter2D(Collider2D itemBotas)
+    {
+        if (itemBotas.gameObject == botas)
+        {
+            tieneSalto = true;
+            botas.SetActive(false);
+        }
     }
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && numSaltos > 0)
+        enSuelo = Physics2D.OverlapCircle(suelo.position, 1f, capaSuelo);
+        enPared = Physics2D.OverlapCircle(pared.position, 1f, capaPared);
+        Debug.Log(enPared);
+        if (enSuelo && Input.GetKeyDown(KeyCode.Space))
         {
-            Saltar();
-            numSaltos--;
+            Salto();
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
+        else if (tieneSalto && dobleSalto && Input.GetKeyDown(KeyCode.Space))
         {
-            Saltar();
-            doubleJump = true;
+            Salto();
+            dobleSalto = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(velocity, rb.velocity.y);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(-velocity, rb.velocity.y);
         }
-        else if (!Input.anyKey)
+        else if (!Input.anyKey || enPared && !enSuelo)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
 
-    public void Saltar()
+    public void Salto()
     {
-        animator.SetBool("jumping", true);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
+        rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
 }
 
