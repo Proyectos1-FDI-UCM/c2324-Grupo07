@@ -21,17 +21,17 @@ public class AnimatorController : MonoBehaviour
     void Update()
     {
 
-        if (rb.velocity.y > 0.1f && rb.velocity.x > 0.1f)
+        if (rb.velocity.y > 0.1f && rb.velocity.x > 0.1f || rb.velocity.y > 0.1f && rb.velocity.x < -0.1f)
         {
             animator.SetInteger("AnimState", 2); //jump
         }
-        else if(rb.velocity.y > 0.1f && rb.velocity.x < 0.01f)
+        else if(rb.velocity.y > 0.1f && rb.velocity.x == 0)
         {
-            animator.SetInteger("AnimState", 3); //jump
+            animator.SetInteger("AnimState", 3); //jump parado
         }
         else
         {
-            if (rb.velocity.x > 0.1f)
+            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && rb.velocity.y > 0.1f)
             {
                 animator.SetInteger("AnimState", 1); //run derecha
                 if (player.rotation == Quaternion.Euler(0, 180, 0))
@@ -44,12 +44,12 @@ public class AnimatorController : MonoBehaviour
                     player.rotation = Quaternion.identity;
                 }
             }
-            else if (rb.velocity.x < -0.1f)
+            else if (rb.velocity.x < -0.1f || rb.velocity.x < -0.1f && rb.velocity.y > 0.1f)
             {
                 animator.SetInteger("AnimState", 1); //run izquierda
                 player.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else
+            else if (rb.velocity.y == 0 && rb.velocity.x == 0)
             {
                 animator.SetInteger("AnimState", 0); //idle
             }

@@ -73,9 +73,13 @@ public class ControlarJugador : MonoBehaviour
         else if (!Input.anyKey)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+            if (enSuelo)
+            {
+                rb.velocity= new Vector2(0,0);
+            }
         }
     }
-
+    
     public void Salto()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
