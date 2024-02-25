@@ -646,6 +646,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5339727424688362170, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3533bb9b86bbc77408d10fe560eb4fac, type: 2}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -859,8 +863,8 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 3.2949421, y: 0.6877841, z: 0}
-      leftTangent: {x: -0.5290804, y: 0.20871466, z: 0}
+    - position: {x: 3.2949421, y: 0.7426412, z: 0}
+      leftTangent: {x: -0.5290804, y: 0.20871472, z: 0}
       rightTangent: {x: 0.23688722, y: -0.09324002, z: 0}
       mode: 1
       height: 1
@@ -1004,8 +1008,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 1.1040123, y: -0.09039295, z: 0}
-    m_Extent: {x: 3.4576154, y: 1.340364, z: 0}
+    m_Center: {x: 1.1040123, y: -0.09039116, z: 0}
+    m_Extent: {x: 3.4576154, y: 1.3403658, z: 0}
   m_SpriteSortPoint: 0
 --- !u!1 &632973759
 GameObject:
