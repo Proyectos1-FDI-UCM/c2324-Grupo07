@@ -9,17 +9,24 @@ public class CameraInfierno : MonoBehaviour
     public Transform _circuloCabeza;
     public Transform _circuloPies;
     public float velMov = 5.0f;
-    private Vector3 posicionObjetivo;
+    public float distanciaVertical = 3.0f;
     public LayerMask capaColisionArriba;
     public LayerMask enSuelo;
-
+    private bool moviendose = false;
     private void Update()
     {
-        posicionObjetivo = new Vector3(_camara.position.x, _circuloPies.position.y + 3, _camara.position.z);
-        if (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f, enSuelo) ||
-            Physics2D.Raycast(_circuloCabeza.position, Vector3.up, 0.5f, capaColisionArriba))
+        bool tocandoSuelo = Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f, enSuelo);
+        bool tocandoColliderArriba = Physics2D.Raycast(_circuloCabeza.position, Vector3.up, 0.5f, capaColisionArriba);
+        bool tocandoParteInferiorPantalla = _circuloPies.position.y <= _camara.position.y - 5;
+        if ((tocandoSuelo || tocandoColliderArriba || tocandoParteInferiorPantalla) && !moviendose)
         {
+            Vector3 posicionObjetivo = new Vector3(_camara.position.x, _circuloPies.position.y + distanciaVertical, _camara.position.z);
             _camara.position = Vector3.Lerp(_camara.position, posicionObjetivo, velMov * Time.deltaTime);
+            moviendose = true;
+        }
+        else
+        {
+            moviendose = false;
         }
     }
 }
