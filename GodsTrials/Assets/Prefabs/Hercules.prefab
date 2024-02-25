@@ -189,16 +189,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpvelocity: 7.5
   velocity: 5
-  botas: {fileID: 0}
-  hercules: {fileID: 0}
-  circulo1: {fileID: 0}
-  circulo2: {fileID: 0}
+  botas: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
+  hercules: {fileID: 2636078505748438533}
+  circulo1: {fileID: 5510309483381122063}
+  circulo2: {fileID: 7548971834968103021}
   capaSuelo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   capaPared:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   tieneSalto: 0
 --- !u!61 &3607060759189552656
 BoxCollider2D:
