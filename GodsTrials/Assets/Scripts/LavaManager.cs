@@ -14,7 +14,7 @@ public class LavaManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject==hercules)
+        if (other.gameObject == hercules)
         {   
             hercules.transform.position = posoriginal;   
         }
