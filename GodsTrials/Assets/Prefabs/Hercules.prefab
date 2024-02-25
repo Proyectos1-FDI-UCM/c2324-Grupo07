@@ -190,8 +190,9 @@ MonoBehaviour:
   jumpvelocity: 7.5
   velocity: 5
   botas: {fileID: 0}
-  suelo: {fileID: 0}
-  pared: {fileID: 0}
+  hercules: {fileID: 0}
+  circulo1: {fileID: 0}
+  circulo2: {fileID: 0}
   capaSuelo:
     serializedVersion: 2
     m_Bits: 0
@@ -208,7 +209,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3757211540936703108}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e84952818dfc4fe4faf1f0852c5e647f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -260,7 +261,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e84952818dfc4fe4faf1f0852c5e647f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

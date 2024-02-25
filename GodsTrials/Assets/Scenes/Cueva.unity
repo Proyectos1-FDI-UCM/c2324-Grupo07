@@ -711,6 +711,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1708743708}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: velocity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: tieneSalto
       value: 0
       objectReference: {fileID: 0}
