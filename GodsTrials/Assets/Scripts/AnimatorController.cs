@@ -21,9 +21,13 @@ public class AnimatorController : MonoBehaviour
     void Update()
     {
 
-        if (rb.velocity.y > 0.1f)
+        if (rb.velocity.y > 0.1f && rb.velocity.x > 0.1f)
         {
             animator.SetInteger("AnimState", 2); //jump
+        }
+        else if(rb.velocity.y > 0.1f && rb.velocity.x < 0.01f)
+        {
+            animator.SetInteger("AnimState", 3); //jump
         }
         else
         {
