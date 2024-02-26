@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LavaManager : MonoBehaviour
 {
@@ -15,14 +14,7 @@ public class LavaManager : MonoBehaviour
     {
         if (other.gameObject == hercules)
         {
-            if(SceneManager.GetActiveScene().name == "Cueva")
-            {
-                SceneManager.LoadScene(1);
-            }
-            else if(SceneManager.GetActiveScene().name == "Infierno")
-            {
-                SceneManager.LoadScene(2);
-            }
+            hercules.transform.position = posicionInicial;
         }
     }
 }
