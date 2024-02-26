@@ -7,7 +7,10 @@ public class AnimatorController : MonoBehaviour
     #region parametros
     private Transform player;
     Animator animator;
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+    private bool enSuelo;
+    public LayerMask capaSuelo;
+    public Transform _circuloPies;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,7 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        enSuelo = (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f,capaSuelo));
         if (rb.velocity.y > 0.1f && rb.velocity.x > 0.1f || rb.velocity.y > 0.1f && rb.velocity.x < -0.1f)
         {
             animator.SetInteger("AnimState", 2); //jump
