@@ -5,18 +5,16 @@ using UnityEngine;
 public class LavaManager : MonoBehaviour
 {
     public GameObject hercules;
-    private Vector3 posoriginal;
-   
-
+    private Vector3 posicionInicial;
     private void Start()
     {
-        posoriginal = hercules.transform.position;
+        posicionInicial = hercules.transform.position;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == hercules)
-        {   
-            hercules.transform.position = posoriginal;   
+        {
+            hercules.transform.position = posicionInicial;
         }
     }
 }
