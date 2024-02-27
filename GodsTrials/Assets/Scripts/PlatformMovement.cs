@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
+    public Transform hercules;
     public Vector2 direccion;
     public float tiempoViaje = 2;
     public float distanciaViaje = 0;
@@ -53,14 +54,14 @@ public class PlatformMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == hercules)
         {
             collision.gameObject.transform.parent = transform;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == hercules)
         {
             collision.gameObject.transform.parent = null;
         }
