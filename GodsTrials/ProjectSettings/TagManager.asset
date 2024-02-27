@@ -3,17 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Abajo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Suelo
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Pared
+  - collider camara arriba
+  - collider camara abajo
   - 
   - 
   - 
@@ -38,9 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: collider camara
+    uniqueID: 3552362719
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: huecos
+    uniqueID: 2420681117
+    locked: 0
   - name: hercules
     uniqueID: 2957888389
+    locked: 0
+  - name: lava
+    uniqueID: 19309437
     locked: 0

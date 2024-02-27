@@ -9,53 +9,80 @@ public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
     public float velocity = 5;
-    private bool isGrounded;
-    private bool doubleJump;
-    private Animator animator;
-    private float numSaltos = 2.0f;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Rigidbody2D rb;
+    private bool enSuelo;
+    private bool dobleSalto = true;
+    public GameObject botas;
+    public Transform hercules;
+    public Transform circulo1;
+    public Transform circulo2;
+    public LayerMask capaSuelo;
+    public LayerMask capaPared;
+    public bool tieneSalto = false;
+    private bool enParedRC1;
+    private bool enParedRC2;
+    private bool enParedLC1;
+    private bool enParedLC2;
+    private void OnCollisionEnter2D(Collision2D activarSalto)
     {
-        if(collision.transform != null)
+        foreach (ContactPoint2D contacto in activarSalto.contacts)
         {
-            numSaltos = 2;
+            if (contacto.normal.y > 0.5f)
+            {
+                dobleSalto = true;
+            }
         }
-        //Debug.Log(numSaltos);
+    }
+    private void OnTriggerEnter2D(Collider2D itemBotas)
+    {
+        if (itemBotas.gameObject == botas)
+        {
+            tieneSalto = true;
+            botas.SetActive(false);
+        }
     }
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && numSaltos > 0)
+        enSuelo = Physics2D.OverlapCircle(hercules.position, 1f, capaSuelo);
+        enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaPared);
+        enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaPared);
+        enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaPared);
+        enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaPared);
+        if (enSuelo && Input.GetKeyDown(KeyCode.Space))
         {
-            Saltar();
-            numSaltos--;
+            Salto();
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
+        else if (tieneSalto && dobleSalto && Input.GetKeyDown(KeyCode.Space))
         {
-            Saltar();
-            doubleJump = true;
+            Salto();
+            dobleSalto = false;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(velocity, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(velocity, rb.velocity.y);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-velocity, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(-velocity, rb.velocity.y);
         }
         else if (!Input.anyKey)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0, GetComponent<Rigidbody2D>().velocity.y);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            if (enSuelo)
+            {
+                rb.velocity= new Vector2(0,0);
+            }
         }
     }
-
-    public void Saltar()
+    
+    public void Salto()
     {
-        animator.SetBool("jumping", true);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpvelocity);
+        rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
 }
 
