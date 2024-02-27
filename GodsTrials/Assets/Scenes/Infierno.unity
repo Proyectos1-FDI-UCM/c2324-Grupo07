@@ -4934,6 +4934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lavaa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4322211832533149835, guid: 9fb5c014531c3cb4cad514c2e11cd546, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6050,16 +6054,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 965364897315756076, guid: 9fb5c014531c3cb4cad514c2e11cd546, type: 3}
   m_PrefabInstance: {fileID: 798363134}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729417890}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.83, y: -3.98, z: 0}
-  m_LocalScale: {x: 4, y: 0.1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 327412197}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071708418
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,6 +9365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lavaa
       objectReference: {fileID: 0}
+    - target: {fileID: 4322211832533149835, guid: 9fb5c014531c3cb4cad514c2e11cd546, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9449,12 +9447,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1093887860}
-  - {fileID: 1840443883}
   - {fileID: 409818325}
-  - {fileID: 729417893}
-  - {fileID: 168512554}
-  - {fileID: 1952974259}
-  - {fileID: 1978734562}
   - {fileID: 1071708423}
   - {fileID: 1639084255}
   - {fileID: 2833038043199999672}
