@@ -971,6 +971,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5339727424688362170, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3533bb9b86bbc77408d10fe560eb4fac, type: 2}
     - target: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: _circuloPies
       value: 

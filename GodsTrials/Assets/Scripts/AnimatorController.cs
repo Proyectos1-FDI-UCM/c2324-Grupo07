@@ -24,17 +24,17 @@ public class AnimatorController : MonoBehaviour
     void Update()
     {
         enSuelo = (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f,capaSuelo));
-        if (rb.velocity.y > 0.1f && rb.velocity.x > 0.1f || rb.velocity.y > 0.1f && rb.velocity.x < -0.1f)
+        if (!enSuelo && rb.velocity.x > 0.1f || !enSuelo  && rb.velocity.x < -0.1f)
         {
             animator.SetInteger("AnimState", 2); //jump
         }
-        else if(rb.velocity.y > 0.1f && rb.velocity.x == 0)
+        else if(!enSuelo && rb.velocity.x == 0)
         {
             animator.SetInteger("AnimState", 3); //jump parado
         }
         else
         {
-            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && rb.velocity.y > 0.1f)
+            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && !enSuelo)
             {
                 animator.SetInteger("AnimState", 1); //run derecha
                 if (player.rotation == Quaternion.Euler(0, 180, 0))
@@ -47,12 +47,12 @@ public class AnimatorController : MonoBehaviour
                     player.rotation = Quaternion.identity;
                 }
             }
-            else if (rb.velocity.x < -0.1f || rb.velocity.x < -0.1f && rb.velocity.y > 0.1f)
+            else if (rb.velocity.x < -0.1f || rb.velocity.x < -0.1f && !enSuelo)
             {
                 animator.SetInteger("AnimState", 1); //run izquierda
                 player.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else if (rb.velocity.y == 0 && rb.velocity.x == 0)
+            else if (enSuelo && rb.velocity.x == 0)
             {
                 animator.SetInteger("AnimState", 0); //idle
             }

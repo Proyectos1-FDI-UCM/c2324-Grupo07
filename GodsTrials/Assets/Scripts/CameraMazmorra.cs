@@ -22,15 +22,15 @@ public class CameraMazmorra : MonoBehaviour
         //POSITION
         if (_hercules != null)
         {
-            if (_hercules.position.x < 86.7)
+            if (_hercules.position.x < 86.6f)
             {
                 camFollow[0] = _hercules.position.x;
                 transform.position = camFollow;
-            }           
+            }
         }
 
         //CAM ZOOM
-        if (_hercules.position.x < 55)
+        if (_hercules.position.x < 25.5f)
         {
             if (cam.orthographicSize > minCamSize && _hercRb.velocity.x > 0.1f)
             {
