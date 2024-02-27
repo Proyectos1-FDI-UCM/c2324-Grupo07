@@ -19,7 +19,7 @@ public class ControlarJugador : MonoBehaviour
         {
             numSaltos = 2;
         }
-        Debug.Log(numSaltos);
+        //Debug.Log(numSaltos);
     }
 
     void Start()

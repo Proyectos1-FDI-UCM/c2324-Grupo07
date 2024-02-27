@@ -6,25 +6,13 @@ public class GameManager : MonoBehaviour
     #region references
     private GameManager _gameManager;
     private UIManager _UIManager;
+    private StateManager _stateManager;
     #endregion
 
     #region methods
-    /// <param name="collision">Colliding object</param>
-    public void ChangeLevel(int lvl)
+    public void LevelChange(string _toLevel)
     {
-        switch (lvl)
-        {
-            case 1:
-                _UIManager.LoadCueva();
-                print("to Cueva");
-                break;
-            case 2:
-                _UIManager.LoadInfierno();
-                print("to Infierno");
-                break;
-            default:
-                break;
-        }
+        _stateManager.ChangeGameState(_toLevel);
     }
     #endregion
 
@@ -36,5 +24,7 @@ public class GameManager : MonoBehaviour
         _gameManager = GetComponent<GameManager>();
 
         _UIManager = GetComponent<UIManager>();
+
+        _stateManager = GetComponent<StateManager>();
     }
 }

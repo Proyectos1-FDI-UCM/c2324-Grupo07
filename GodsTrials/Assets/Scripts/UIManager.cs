@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    #region references
+    private StateManager _StateManager;
+    #endregion
+
     #region methods
     /// <summary>
     /// Called when the player presses start button.
@@ -13,18 +16,20 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void OnPressStart()
     {
-        Invoke("LoadCueva", 0.0f); 
+        _StateManager.ChangeGameState("cueva");
     }
-
-    public void LoadCueva()
+    
+    public void OnPressExit()
     {
-        SceneManager.LoadScene(1);
+        _StateManager.ChangeGameState("quit");
     }
-
-    public void LoadInfierno()
-    {
-        SceneManager.LoadScene(2);
-    }
-
     #endregion
+
+    /// <summary>
+    /// Initial setup of references and call to StartMenu
+    /// </summary>
+    void Start()
+    {
+        _StateManager = GetComponent<StateManager>();
+    }
 }

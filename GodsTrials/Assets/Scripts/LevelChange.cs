@@ -9,7 +9,7 @@ public class LevelChange : MonoBehaviour
     /// Level id to load when triggered
     /// </summary>
     [SerializeField]
-    private int _toLevel;
+    private string _toLevel;
     /// <summary>
     /// Reference to Game Manager
     /// </summary>
@@ -23,11 +23,9 @@ public class LevelChange : MonoBehaviour
     /// <param name="collision">Colliding object</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.GetComponent<ControlarJugador>() != null)
         {
-
-            _gameManager.ChangeLevel(_toLevel);
+            _gameManager.LevelChange(_toLevel);
         }
 
     }
