@@ -366,6 +366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 7707742197809821074, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1178,7 +1182,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708743709}
   m_SourcePrefab: {fileID: 100100000, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
 --- !u!4 &566319841 stripped
 Transform:
@@ -2144,7 +2151,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1045987357}
   - component: {fileID: 1045987356}
-  - component: {fileID: 1045987355}
   m_Layer: 0
   m_Name: SueloCaida
   m_TagString: Untagged
@@ -2152,19 +2158,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1045987355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045987354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hercules: {fileID: 1675755597}
 --- !u!61 &1045987356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3495,6 +3488,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
   m_PrefabInstance: {fileID: 566319840}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1708743709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675755597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hercules: {fileID: 0}
+  lavaHueco: {fileID: 0}
+  pinchos: {fileID: 0}
+  bolasFuego: {fileID: 0}
+  vida: 3
 --- !u!1 &1717936237
 GameObject:
   m_ObjectHideFlags: 0
