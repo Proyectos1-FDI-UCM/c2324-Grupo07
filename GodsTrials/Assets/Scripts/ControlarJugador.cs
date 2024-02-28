@@ -13,11 +13,10 @@ public class ControlarJugador : MonoBehaviour
     private bool enSuelo;
     private bool dobleSalto = true;
     public GameObject botas;
-    public Transform hercules;
+    public GameObject hercules;
     public Transform circulo1;
     public Transform circulo2;
     public LayerMask capaSuelo;
-    public LayerMask capaPared;
     public bool tieneSalto = false;
     private bool enParedRC1;
     private bool enParedRC2;
@@ -35,7 +34,8 @@ public class ControlarJugador : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D itemBotas)
     {
-        if (itemBotas.gameObject == botas)
+        hercules = itemBotas.gameObject;
+        if (hercules == botas)
         {
             tieneSalto = true;
             botas.SetActive(false);
@@ -48,11 +48,11 @@ public class ControlarJugador : MonoBehaviour
     }
     void Update()
     {
-        enSuelo = Physics2D.OverlapCircle(hercules.position, 1f, capaSuelo);
-        enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaPared);
-        enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaPared);
-        enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaPared);
-        enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaPared);
+        enSuelo = Physics2D.Raycast(circulo2.position, Vector3.down, 0.5f, capaSuelo);
+        enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaSuelo);
+        enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaSuelo);
+        enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaSuelo);
+        enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaSuelo);
         if (enSuelo && Input.GetKeyDown(KeyCode.Space))
         {
             Salto();
