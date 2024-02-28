@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class LevelChange : MonoBehaviour
             _gameManager.LevelChange(_toLevel);
         }
 
+    }
+
+    public void Muerte()
+    {
+        SceneManager.LoadScene(3);
     }
     #endregion
 }
