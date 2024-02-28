@@ -1965,7 +1965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810933964}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Paredes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3294,7 +3294,7 @@ GameObject:
   - component: {fileID: 1496980532}
   - component: {fileID: 1496980534}
   - component: {fileID: 1496980533}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pared puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3636,7 +3636,7 @@ GameObject:
   - component: {fileID: 1698690299}
   - component: {fileID: 1698690298}
   - component: {fileID: 1698690297}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
