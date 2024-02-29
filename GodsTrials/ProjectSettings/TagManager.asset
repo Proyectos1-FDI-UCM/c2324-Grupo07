@@ -54,3 +54,9 @@ TagManager:
   - name: lava
     uniqueID: 19309437
     locked: 0
+  - name: Hud
+    uniqueID: 2372836573
+    locked: 0
+  - name: powerups
+    uniqueID: 427817095
+    locked: 0
