@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class VidaSystem : MonoBehaviour
 {
-    public GameObject hercules;
+    private LevelChange morir;
     public GameObject lavaHueco;
     public GameObject pinchosA;
     public GameObject pinchosI;
@@ -13,64 +12,42 @@ public class VidaSystem : MonoBehaviour
     public GameObject bolaFuego1;
     public GameObject bolaFuego2;
     public float vida = 3.0f;
+
+    private void Start()
+    {
+        morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        hercules = other.gameObject;
-        if (hercules == lavaHueco)
+        if (other.gameObject == lavaHueco)
         {
-            if (SceneManager.GetActiveScene().name == "Cueva" )
+            if (SceneManager.GetActiveScene().name == "Cueva")
             {
-                SceneManager.LoadScene(1);
+                morir.Muerte();
+                StartCoroutine(DelayedAfterDeath());
             }
             else if (SceneManager.GetActiveScene().name == "Infierno")
             {
-                SceneManager.LoadScene(2);            
+                morir.Muerte();
             }
         }
-        else if(hercules == pinchosA)
+        else if (other.gameObject == pinchosA || other.gameObject == pinchosI || other.gameObject == pinchosD ||
+                 other.gameObject == bolaFuego1 || other.gameObject == bolaFuego2)
         {
             vida--;
-            if(vida == 0)
+            if (vida <= 0)
             {
-                SceneManager.LoadScene(2);
+                morir.Muerte();
             }
-            Debug.Log(vida);
+            Debug.Log("Vida restante: " + vida);
         }
-        else if (hercules == pinchosD)
-        {
-            vida--;
-            if (vida == 0)
-            {
-                SceneManager.LoadScene(2);
-            }
-            Debug.Log(vida);
-        }
-        else if (hercules == pinchosI)
-        {
-            vida--;
-            if (vida == 0)
-            {
-                SceneManager.LoadScene(2);
-            }
-            Debug.Log(vida);
-        }
-        else if(hercules == bolaFuego1)
-        {
-            vida--;
-            if (vida == 0)
-            {
-                SceneManager.LoadScene(2);
-            }
-            Debug.Log(vida);
-        }
-        else if (hercules == bolaFuego2)
-        {
-            vida--;
-            if (vida == 0)
-            {
-                SceneManager.LoadScene(2);
-            }
-            Debug.Log(vida);
-        }
+    }
+    IEnumerator DelayedAfterDeath()
+    {
+        Debug.Log("Entra");
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Sale");
+        SceneManager.LoadScene(1);
     }
 }
