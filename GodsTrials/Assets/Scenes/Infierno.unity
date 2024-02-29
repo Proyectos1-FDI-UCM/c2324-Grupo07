@@ -4903,7 +4903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hercules: {fileID: 694933496}
   lavaHueco: {fileID: 1645555158}
   pinchosA: {fileID: 1409048408}
   pinchosI: {fileID: 1540359306}
@@ -5786,6 +5785,7 @@ GameObject:
   - component: {fileID: 1071708421}
   - component: {fileID: 1071708420}
   - component: {fileID: 1071708419}
+  - component: {fileID: 1071708424}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5858,6 +5858,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071708424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071708418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac52b0b2a2b3aa94180ffdadd3920bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toLevel: 
+  _gameManager: {fileID: 1071708421}
 --- !u!1 &1093887857
 GameObject:
   m_ObjectHideFlags: 0
