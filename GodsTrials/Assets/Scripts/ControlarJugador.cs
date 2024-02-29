@@ -43,7 +43,6 @@ public class ControlarJugador : MonoBehaviour
         {
             tieneSalto = true;
             botas.SetActive(false);
-            //Botas.SetActive(true);
             uiManager.PowerUps();
         }
     }
