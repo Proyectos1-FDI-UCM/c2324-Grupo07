@@ -12,6 +12,7 @@ public class VidaSystem : MonoBehaviour
     public GameObject bolaFuego1;
     public GameObject bolaFuego2;
     public float vida = 3.0f;
+    public float escena = 0.0f;
 
     private void Start()
     {
@@ -25,10 +26,14 @@ public class VidaSystem : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Cueva")
             {
                 morir.Muerte();
+                escena = 1.0f;
+                Debug.Log(escena);
             }
             else if (SceneManager.GetActiveScene().name == "Infierno")
             {
                 morir.Muerte();
+                escena = 2.0f;
+                Debug.Log(escena);
             }
         }
         else if (other.gameObject == pinchosA || other.gameObject == pinchosI || other.gameObject == pinchosD ||
@@ -38,6 +43,7 @@ public class VidaSystem : MonoBehaviour
             if (vida <= 0)
             {
                 morir.Muerte();
+                escena = 2.0f;
             }
             Debug.Log("Vida restante: " + vida);
         }
