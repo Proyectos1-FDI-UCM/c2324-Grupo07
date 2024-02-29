@@ -2190,7 +2190,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.932674, y: 0}
+  m_Offset: {x: -9.932674, y: -1252.6099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2201,7 +2201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 108.1, y: 1}
+  m_Size: {x: 108.1, y: 2506.2197}
   m_EdgeRadius: 0
 --- !u!4 &1045987357
 Transform:
@@ -3154,6 +3154,7 @@ GameObject:
   - component: {fileID: 1518226373}
   - component: {fileID: 1518226372}
   - component: {fileID: 1518226376}
+  - component: {fileID: 1518226377}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3226,6 +3227,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 293808941}
   transitionTime: 1
+--- !u!114 &1518226377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518226371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac52b0b2a2b3aa94180ffdadd3920bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toLevel: 
+  _gameManager: {fileID: 1518226373}
 --- !u!1 &1585587705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3500,10 +3515,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hercules: {fileID: 0}
-  lavaHueco: {fileID: 0}
-  pinchos: {fileID: 0}
-  bolasFuego: {fileID: 0}
+  lavaHueco: {fileID: 1045987354}
+  pinchosA: {fileID: 0}
+  pinchosI: {fileID: 0}
+  pinchosD: {fileID: 0}
+  bolaFuego1: {fileID: 0}
+  bolaFuego2: {fileID: 0}
   vida: 3
 --- !u!1 &1717936237
 GameObject:

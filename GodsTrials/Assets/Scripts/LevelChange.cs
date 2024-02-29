@@ -35,5 +35,9 @@ public class LevelChange : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void DespuesMuerte()
+    {
+        SceneManager.LoadScene(1);
+    }
     #endregion
 }
