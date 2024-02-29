@@ -519,8 +519,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1922130723
-  m_SortingLayer: 4
+  m_SortingLayerID: 427817095
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d7121e00adc17a54d841ef16464fd106, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4987,6 +4987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hercules: {fileID: 694933496}
   lavaHueco: {fileID: 1645555158}
   pinchosA: {fileID: 1409048408}
   pinchosI: {fileID: 1540359306}
@@ -4994,7 +4995,7 @@ MonoBehaviour:
   bolaFuego1: {fileID: 462406768}
   bolaFuego2: {fileID: 1935000511}
   vida: 3
-  escena: 0
+  fuerzaEmpuje: 10
 --- !u!1 &722610484
 GameObject:
   m_ObjectHideFlags: 0

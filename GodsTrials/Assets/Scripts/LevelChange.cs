@@ -35,14 +35,7 @@ public class LevelChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            if (_system.escena == 1)
-            {
-                SceneManager.LoadScene(1);
-            }
-            else
-            {
-                SceneManager.LoadScene(2);
-            }
+            SceneManager.LoadScene(1);
         }
     }
     public void Muerte()
