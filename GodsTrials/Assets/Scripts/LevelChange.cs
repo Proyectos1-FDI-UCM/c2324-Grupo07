@@ -16,6 +16,7 @@ public class LevelChange : MonoBehaviour
     /// </summary>
     [SerializeField]
     private GameManager _gameManager;
+    private VidaSystem _system;
     #endregion
     #region methods
     /// <summary>
@@ -34,7 +35,14 @@ public class LevelChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
-            SceneManager.LoadScene(1);
+            if (_system.escena == 1)
+            {
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
     public void Muerte()
