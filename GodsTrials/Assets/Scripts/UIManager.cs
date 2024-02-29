@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
     #region references
     private StateManager _StateManager;
     #endregion
+    [SerializeField] 
+     public GameObject Botas;
 
     #region methods
     /// <summary>
@@ -31,5 +33,15 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _StateManager = GetComponent<StateManager>();
+    }
+
+    public void PowerUps()
+    {
+        Botas.SetActive(true);
+    }
+
+    public void Vidas()
+    {
+            
     }
 }

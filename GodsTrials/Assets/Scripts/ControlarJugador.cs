@@ -25,6 +25,7 @@ public class ControlarJugador : MonoBehaviour
     private bool enParedRC2;
     private bool enParedLC1;
     private bool enParedLC2;
+    UIManager uiManager;
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
         foreach (ContactPoint2D contacto in activarSalto.contacts)
@@ -42,12 +43,15 @@ public class ControlarJugador : MonoBehaviour
         {
             tieneSalto = true;
             botas.SetActive(false);
+            //Botas.SetActive(true);
+            uiManager.PowerUps();
         }
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
     }
     void Update()
     {
