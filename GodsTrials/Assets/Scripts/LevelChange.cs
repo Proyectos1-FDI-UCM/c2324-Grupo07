@@ -30,14 +30,16 @@ public class LevelChange : MonoBehaviour
         }
 
     }
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
     public void Muerte()
     {
         SceneManager.LoadScene(3);
-    }
-    public void DespuesMuerte()
-    {
-        SceneManager.LoadScene(1);
     }
     #endregion
 }

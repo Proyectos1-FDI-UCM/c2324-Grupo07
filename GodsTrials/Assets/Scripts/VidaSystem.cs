@@ -25,7 +25,6 @@ public class VidaSystem : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Cueva")
             {
                 morir.Muerte();
-                StartCoroutine(DelayedAfterDeath());
             }
             else if (SceneManager.GetActiveScene().name == "Infierno")
             {
@@ -43,11 +42,5 @@ public class VidaSystem : MonoBehaviour
             Debug.Log("Vida restante: " + vida);
         }
     }
-    IEnumerator DelayedAfterDeath()
-    {
-        Debug.Log("Entra");
-        yield return new WaitForSeconds(5f);
-        Debug.Log("Sale");
-        SceneManager.LoadScene(1);
-    }
+
 }
