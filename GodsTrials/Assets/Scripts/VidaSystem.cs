@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class VidaSystem : MonoBehaviour
 {
     private LevelChange morir;
+    public GameObject hercules;
     public GameObject lavaHueco;
     public GameObject pinchosA;
     public GameObject pinchosI;
@@ -12,8 +13,7 @@ public class VidaSystem : MonoBehaviour
     public GameObject bolaFuego1;
     public GameObject bolaFuego2;
     public float vida = 3.0f;
-    public float escena = 0.0f;
-
+    public float fuerzaEmpuje = 2f;
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
@@ -21,32 +21,23 @@ public class VidaSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == lavaHueco)
+        hercules = other.gameObject;
+        if (hercules == lavaHueco)
         {
-            if (SceneManager.GetActiveScene().name == "Cueva")
+            if (SceneManager.GetActiveScene().name == "Cueva" || SceneManager.GetActiveScene().name == "Infierno")
             {
                 morir.Muerte();
-                escena = 1.0f;
-                Debug.Log(escena);
-            }
-            else if (SceneManager.GetActiveScene().name == "Infierno")
-            {
-                morir.Muerte();
-                escena = 2.0f;
-                Debug.Log(escena);
             }
         }
-        else if (other.gameObject == pinchosA || other.gameObject == pinchosI || other.gameObject == pinchosD ||
-                 other.gameObject == bolaFuego1 || other.gameObject == bolaFuego2)
+        else if (hercules == pinchosA || hercules == pinchosI || hercules == pinchosD ||
+                 hercules == bolaFuego1 || hercules == bolaFuego2)
         {
             vida--;
             if (vida <= 0)
             {
                 morir.Muerte();
-                escena = 2.0f;
             }
-            Debug.Log("Vida restante: " + vida);
+            Debug.Log("Vida restante: " + vida);     
         }
     }
-
 }
