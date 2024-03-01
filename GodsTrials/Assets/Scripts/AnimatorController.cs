@@ -61,4 +61,8 @@ public class AnimatorController : MonoBehaviour
             }
         }
     }
+    public void Daño()
+    {
+        animator.SetInteger("AnimState", 4);//daño
+    }
 }
