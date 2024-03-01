@@ -25,16 +25,16 @@ public class StateManager : MonoBehaviour
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
             case "options":
-                StartCoroutine(ChangeScene(3, true, false));
+                StartCoroutine(ChangeScene(4, true, false));
                 break;
             case "pause":
-                Load(4, true);
+                Load(5, true);
                 paused = true;
                 //StartCoroutine(ChangeScene(4, true, true));
                 break;
             case "resume":                
                 paused = false;
-                Unload(4);
+                Unload(5);
                 //StartCoroutine(ChangeScene(4, false, false));
                 break;
             case "back":

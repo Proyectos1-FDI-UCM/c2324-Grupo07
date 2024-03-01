@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _StateManager = GetComponent<StateManager>();
+        _stateManager = GetComponent<StateManager>();
         
     }
 
@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour
 
     public void Vidas()
     {
-         ralla.
+        // ralla.
         
 
     }
