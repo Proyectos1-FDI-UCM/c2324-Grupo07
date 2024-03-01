@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LevelChange : MonoBehaviour
     /// </summary>
     [SerializeField]
     private GameManager _gameManager;
+    private VidaSystem _system;
     #endregion
     #region methods
     /// <summary>
@@ -28,6 +30,17 @@ public class LevelChange : MonoBehaviour
             _gameManager.LevelChange(_toLevel);
         }
 
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+    public void Muerte()
+    {
+        SceneManager.LoadScene(3);
     }
     #endregion
 }

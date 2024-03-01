@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ public class UIManager : MonoBehaviour
     #region references
     private StateManager _stateManager;
     #endregion
+    [SerializeField] 
+    public GameObject Botas;
+    public Array rallas;
+    public GameObject ralla;
+
 
     #region methods
     /// <summary>
@@ -47,6 +53,19 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _stateManager = GetComponent<StateManager>();
+        _StateManager = GetComponent<StateManager>();
+        
+    }
+
+    public void PowerUps()
+    {
+        Botas.SetActive(true);
+    }
+
+    public void Vidas()
+    {
+         ralla.
+        
+
     }
 }
