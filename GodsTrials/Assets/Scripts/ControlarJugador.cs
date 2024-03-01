@@ -26,6 +26,7 @@ public class ControlarJugador : MonoBehaviour
     private bool enParedLC1;
     private bool enParedLC2;
     UIManager uiManager;
+    public int state = 0;
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
         foreach (ContactPoint2D contacto in activarSalto.contacts)
@@ -54,35 +55,38 @@ public class ControlarJugador : MonoBehaviour
     }
     void Update()
     {
-        enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
-        enSuelo2 = Physics2D.Raycast(saltoHercules2.position, Vector3.down, 0.1f, capaSuelo);
-        enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaSuelo);
-        enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaSuelo);
-        enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaSuelo);
-        enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaSuelo);
-        if (enSuelo1 && Input.GetKeyDown(KeyCode.Space) || enSuelo2 && Input.GetKeyDown(KeyCode.Space))
+        if (state == 0)
         {
-            Salto();
-        }
-        else if (tieneSalto && dobleSalto && Input.GetKeyDown(KeyCode.Space))
-        {
-            Salto();
-            dobleSalto = false;
-        }
-        if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
-        {
-            rb.velocity = new Vector2(velocity, rb.velocity.y);
-        }
-        if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
-        {
-            rb.velocity = new Vector2(-velocity, rb.velocity.y);
-        }
-        else if (!Input.anyKey)
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            if (enSuelo1 || enSuelo2)
+            enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
+            enSuelo2 = Physics2D.Raycast(saltoHercules2.position, Vector3.down, 0.1f, capaSuelo);
+            enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaSuelo);
+            enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaSuelo);
+            enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaSuelo);
+            enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaSuelo);
+            if (enSuelo1 && Input.GetKeyDown(KeyCode.Space) || enSuelo2 && Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity= new Vector2(0,-2.5f);
+                Salto();
+            }
+            else if (tieneSalto && dobleSalto && Input.GetKeyDown(KeyCode.Space))
+            {
+                Salto();
+                dobleSalto = false;
+            }
+            if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
+            {
+                rb.velocity = new Vector2(velocity, rb.velocity.y);
+            }
+            if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
+            {
+                rb.velocity = new Vector2(-velocity, rb.velocity.y);
+            }
+            else if (!Input.anyKey)
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+                if (enSuelo1 || enSuelo2)
+                {
+                    rb.velocity = new Vector2(0, -2.5f);
+                }
             }
         }
     }

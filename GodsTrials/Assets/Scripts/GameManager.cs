@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 public class GameManager : MonoBehaviour
 {
     #region references
     private GameManager _gameManager;
     private UIManager _UIManager;
     private StateManager _stateManager;
-    public DetectarNivel _detectarNivel;
     #endregion
 
     #region methods
@@ -24,34 +21,22 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _detectarNivel = GameObject.Find("Hercules").GetComponent<DetectarNivel>();
-
         _gameManager = GetComponent<GameManager>();
 
         _UIManager = GetComponent<UIManager>();
 
         _stateManager = GetComponent<StateManager>();
     }
+
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Muerte")
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            if (_detectarNivel.nivel == 1)
-            {
-                if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-                {
-                    SceneManager.LoadScene(2);
-                }
-            }
-            else if (_detectarNivel.nivel == 2)
-            {
-                if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-                {
-                    SceneManager.LoadScene(1);
-                }
-            }
+            print("pasamos a paused");
+            //print("event sys disable");
+            //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+            //eventSystem.enabled = false;
+            _stateManager.ChangeGameState("pause");
         }
-       
-
     }
 }

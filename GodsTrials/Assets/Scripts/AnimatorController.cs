@@ -61,4 +61,9 @@ public class AnimatorController : MonoBehaviour
             }
         }
     }
+    public void Daño()
+    {
+        Debug.Log("entra");
+        animator.SetTrigger("AnimTrigger");//daño
+    }
 }
