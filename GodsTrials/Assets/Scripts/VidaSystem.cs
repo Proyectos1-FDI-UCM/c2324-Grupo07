@@ -14,9 +14,11 @@ public class VidaSystem : MonoBehaviour
     public GameObject bolaFuego2;
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
+    UIManager uiManager;
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
+        uiManager= GameObject.Find("GameManager").GetComponent<UIManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +35,7 @@ public class VidaSystem : MonoBehaviour
                  hercules == bolaFuego1 || hercules == bolaFuego2)
         {
             vida--;
+            uiManager.Vidas();
             if (vida <= 0)
             {
                 morir.Muerte();
