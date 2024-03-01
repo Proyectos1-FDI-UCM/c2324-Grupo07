@@ -27,4 +27,16 @@ public class GameManager : MonoBehaviour
 
         _stateManager = GetComponent<StateManager>();
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            print("pasamos a paused");
+            //print("event sys disable");
+            //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+            //eventSystem.enabled = false;
+            _stateManager.ChangeGameState("pause");
+        }
+    }
 }

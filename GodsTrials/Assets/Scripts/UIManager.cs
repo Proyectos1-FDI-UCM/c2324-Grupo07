@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour
 {
     #region references
-    private StateManager _StateManager;
+    private StateManager _stateManager;
     #endregion
     [SerializeField] 
     public GameObject Botas;
@@ -22,13 +22,30 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void OnPressStart()
     {
-        _StateManager.ChangeGameState("cueva");
+        _stateManager.ChangeGameState("cueva");
     }
     
     public void OnPressExit()
     {
-        _StateManager.ChangeGameState("quit");
+        _stateManager.ChangeGameState("quit");
     }
+
+    public void OnPressOptions()
+    {
+        _stateManager.ChangeGameState("options");
+    }
+    
+    public void OnPressBack()
+    {
+        _stateManager.ChangeGameState("back");
+    }
+
+    public void OnPressResume()
+    {
+        print("resume is clicked");
+        _stateManager.ChangeGameState("resume");
+    }
+
     #endregion
 
     /// <summary>
