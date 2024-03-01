@@ -15,16 +15,24 @@ public class VidaSystem : MonoBehaviour
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
     UIManager uiManager;
+    private ControlarJugador jugador;
     public AnimatorController animatorController;
     public Rigidbody2D rb;
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        jugador = GetComponent<ControlarJugador>();
         rb = GetComponent<Rigidbody2D>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        StartCoroutine(Daño(other));
+    }
+
+    private IEnumerator Daño(Collider2D other)
+    {
+        jugador.state = 1;
         hercules = other.gameObject;
         if (hercules == lavaHueco)
         {
@@ -40,7 +48,8 @@ public class VidaSystem : MonoBehaviour
             Debug.Log("Lee");
             vida--;
             uiManager.Vidas();
-            Vector3 velocidad = new Vector3(1, 1, 0) * 5;
+            rb.velocity = Vector3.zero;
+            Vector3 velocidad = new Vector3(-1, 1, 0) * 5;
             rb.velocity = velocidad;
             if (vida <= 0)
             {
@@ -48,5 +57,7 @@ public class VidaSystem : MonoBehaviour
             }
             Debug.Log("Vida restante: " + vida);
         }
+        yield return new WaitForSeconds(0.5f);
+        jugador.state = 0;
     }
 }
