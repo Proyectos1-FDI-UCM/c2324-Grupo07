@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     #region references
@@ -13,7 +13,8 @@ public class UIManager : MonoBehaviour
     public GameObject Botas;
     public Array rallas;
     public GameObject ralla;
-
+    private int totalmonedas;
+    [SerializeField] private TMP_Text textomonedas;
 
     #region methods
     /// <summary>
@@ -56,6 +57,12 @@ public class UIManager : MonoBehaviour
         _stateManager = GetComponent<StateManager>();
         
     }
+    private void SumarRupias(int rupias)
+    {
+        totalmonedas += rupias;
+        textomonedas.text = totalmonedas.ToString();
+
+    }
 
     public void PowerUps()
     {
@@ -67,5 +74,10 @@ public class UIManager : MonoBehaviour
          
         
 
+    }
+
+    public void Monedas()
+    {
+        
     }
 }
