@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 3724266399923614141}
   - component: {fileID: -5339727424688362170}
   - component: {fileID: -2130489635583246647}
+  - component: {fileID: 132786282498388985}
   m_Layer: 0
   m_Name: Hercules
   m_TagString: Untagged
@@ -310,6 +311,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _circuloPies: {fileID: 0}
+  _circuloPies2: {fileID: 0}
+--- !u!114 &132786282498388985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757211540936703108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e1c2e6de408cf4bb8b829b215f82b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nivel: 0
 --- !u!1 &6485078300101357537
 GameObject:
   m_ObjectHideFlags: 0
