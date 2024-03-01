@@ -15,12 +15,14 @@ public class VidaSystem : MonoBehaviour
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
     UIManager uiManager;
+    public AnimatorController animatorController;
+    public Rigidbody2D rb;
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
-        uiManager= GameObject.Find("GameManager").GetComponent<UIManager>();
+        uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
+        rb = GetComponent<Rigidbody2D>();
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         hercules = other.gameObject;
@@ -34,13 +36,17 @@ public class VidaSystem : MonoBehaviour
         else if (hercules == pinchosA || hercules == pinchosI || hercules == pinchosD ||
                  hercules == bolaFuego1 || hercules == bolaFuego2)
         {
+            animatorController.Daño();
+            Debug.Log("Lee");
             vida--;
             uiManager.Vidas();
+            Vector3 velocidad = new Vector3(1, 1, 0) * 5;
+            rb.velocity = velocidad;
             if (vida <= 0)
             {
                 morir.Muerte();
             }
-            Debug.Log("Vida restante: " + vida);     
+            Debug.Log("Vida restante: " + vida);
         }
     }
 }

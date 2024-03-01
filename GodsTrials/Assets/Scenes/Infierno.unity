@@ -5060,6 +5060,24 @@ MonoBehaviour:
   bolaFuego2: {fileID: 1935000511}
   vida: 3
   fuerzaEmpuje: 10
+  animatorController: {fileID: 694933498}
+  rb: {fileID: 694933500}
+--- !u!114 &694933498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 409818325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694933496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc0c8d9f4ff2cd47b7384c20226962d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &694933500 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3724266399923614141, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 409818325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &722610484
 GameObject:
   m_ObjectHideFlags: 0
