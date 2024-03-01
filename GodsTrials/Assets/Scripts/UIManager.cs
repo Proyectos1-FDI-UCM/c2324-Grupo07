@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,13 @@ using UnityEngine.EventSystems;
 public class UIManager : MonoBehaviour
 {
     #region references
-    private StateManager _StateManager;
+    private StateManager _stateManager;
     #endregion
     [SerializeField] 
-     public GameObject Botas;
+    public GameObject Botas;
+    public Array rallas;
+    public GameObject ralla;
+
 
     #region methods
     /// <summary>
@@ -18,13 +22,30 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void OnPressStart()
     {
-        _StateManager.ChangeGameState("cueva");
+        _stateManager.ChangeGameState("cueva");
     }
     
     public void OnPressExit()
     {
-        _StateManager.ChangeGameState("quit");
+        _stateManager.ChangeGameState("quit");
     }
+
+    public void OnPressOptions()
+    {
+        _stateManager.ChangeGameState("options");
+    }
+    
+    public void OnPressBack()
+    {
+        _stateManager.ChangeGameState("back");
+    }
+
+    public void OnPressResume()
+    {
+        print("resume is clicked");
+        _stateManager.ChangeGameState("resume");
+    }
+
     #endregion
 
     /// <summary>
@@ -32,7 +53,8 @@ public class UIManager : MonoBehaviour
     /// </summary>
     void Start()
     {
-        _StateManager = GetComponent<StateManager>();
+        _stateManager = GetComponent<StateManager>();
+        
     }
 
     public void PowerUps()
@@ -42,6 +64,8 @@ public class UIManager : MonoBehaviour
 
     public void Vidas()
     {
-            
+         
+        
+
     }
 }

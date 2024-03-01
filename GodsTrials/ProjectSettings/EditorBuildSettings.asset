@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Muerte.unity
     guid: e2a3ba932cd72af4eb1c16e10c010cc3
+  - enabled: 1
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: e21c0d9e2f5f77348947e8d13efead77
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: 2a9679ec4ea3e844d9240405e652976d
   m_configObjects: {}
