@@ -29,7 +29,6 @@ public class VidaSystem : MonoBehaviour
     {
         StartCoroutine(Daño(other));
     }
-
     private IEnumerator Daño(Collider2D other)
     {
         jugador.state = 1;
@@ -41,8 +40,7 @@ public class VidaSystem : MonoBehaviour
                 morir.Muerte();
             }
         }
-        else if (hercules == pinchosA || hercules == pinchosI || hercules == pinchosD ||
-                 hercules == bolaFuego1 || hercules == bolaFuego2)
+        else if (hercules == pinchosA || hercules == pinchosD)
         {
             animatorController.Daño();
             Debug.Log("Lee");
@@ -50,6 +48,21 @@ public class VidaSystem : MonoBehaviour
             uiManager.Vidas();
             rb.velocity = Vector3.zero;
             Vector3 velocidad = new Vector3(-1, 1, 0) * 5;
+            rb.velocity = velocidad;
+            if (vida <= 0)
+            {
+                morir.Muerte();
+            }
+            Debug.Log("Vida restante: " + vida);
+        }
+        else if (hercules == bolaFuego1 || hercules == bolaFuego2 || hercules == pinchosI)
+        {
+            animatorController.Daño();
+            Debug.Log("Lee");
+            vida--;
+            uiManager.Vidas();
+            rb.velocity = Vector3.zero;
+            Vector3 velocidad = new Vector3(1, 1, 0) * 5;
             rb.velocity = velocidad;
             if (vida <= 0)
             {

@@ -35,9 +35,8 @@ public class LevelChange : MonoBehaviour
     }
     void Update()
     {
-        if(_detectarNivel.nivel==1)
+        if(_detectarNivel.nivel == 1)
         {
-            Debug.Log("pene1");
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 SceneManager.LoadScene(2);
@@ -45,7 +44,6 @@ public class LevelChange : MonoBehaviour
         }
         else if (_detectarNivel.nivel == 2) 
         {
-            Debug.Log("pene2");
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 SceneManager.LoadScene(1);
