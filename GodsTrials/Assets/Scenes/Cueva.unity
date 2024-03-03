@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 309431316}
   - component: {fileID: 309431315}
   - component: {fileID: 309431314}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 922638801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mazmorra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3190,7 +3190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _detectarNivel: {fileID: 0}
 --- !u!114 &1518226374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3205,6 +3204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Botas: {fileID: 0}
   ralla: {fileID: 0}
+  textomonedas: {fileID: 0}
 --- !u!4 &1518226375
 Transform:
   m_ObjectHideFlags: 0
@@ -3531,6 +3531,8 @@ MonoBehaviour:
   bolaFuego2: {fileID: 0}
   vida: 3
   fuerzaEmpuje: 2
+  animatorController: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!114 &1708743716
 MonoBehaviour:
   m_ObjectHideFlags: 0
