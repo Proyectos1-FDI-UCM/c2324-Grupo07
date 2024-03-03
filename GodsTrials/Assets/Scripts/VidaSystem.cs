@@ -18,6 +18,7 @@ public class VidaSystem : MonoBehaviour
     private ControlarJugador jugador;
     public AnimatorController animatorController;
     public Rigidbody2D rb;
+    private int numColisiones = 0;
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
@@ -28,6 +29,20 @@ public class VidaSystem : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         StartCoroutine(Daño(other));
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        numColisiones++;
+
+        if (numColisiones >= 2)
+        {
+            morir.Muerte();
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        numColisiones--;
     }
     private IEnumerator Daño(Collider2D other)
     {
