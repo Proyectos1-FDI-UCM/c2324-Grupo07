@@ -12,6 +12,8 @@ public class VidaSystem : MonoBehaviour
     public GameObject pinchosD;
     public GameObject bolaFuego1;
     public GameObject bolaFuego2;
+    public GameObject Limite1;
+    public GameObject Limite2;
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
     UIManager uiManager;
@@ -33,13 +35,11 @@ public class VidaSystem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         numColisiones++;
-
         if (numColisiones >= 2)
         {
             morir.Muerte();
         }
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         numColisiones--;
