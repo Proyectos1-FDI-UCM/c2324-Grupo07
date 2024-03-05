@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -330,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1691,6 +1699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1752,6 +1764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5521,6 +5537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5592,6 +5612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5691,8 +5715,8 @@ MonoBehaviour:
   pinchosD: {fileID: 1027399953}
   bolaFuego1: {fileID: 462406768}
   bolaFuego2: {fileID: 1935000511}
-  Limite1: {fileID: 0}
-  Limite2: {fileID: 0}
+  Grid: {fileID: 0}
+  Plataforma: {fileID: 0}
   vida: 3
   fuerzaEmpuje: 10
   animatorController: {fileID: 694933498}
@@ -7167,6 +7191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9204,6 +9232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moneda (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6997769356193046622, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1071708421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
