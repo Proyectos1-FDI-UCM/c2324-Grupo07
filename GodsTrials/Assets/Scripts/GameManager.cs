@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private GameManager _gameManager;
     private UIManager _UIManager;
     private StateManager _stateManager;
+    public int PuntosTotales { get { return puntosTotales; } }
+    private int puntosTotales;
     #endregion
 
     #region methods
@@ -15,6 +17,11 @@ public class GameManager : MonoBehaviour
         _stateManager.ChangeGameState(_toLevel);
     }
     #endregion
+    public void SumarMonedas(int puntosASumar)
+    {
+        puntosTotales += puntosASumar;
+        Debug.Log(puntosTotales);
+    }
 
     /// <summary>
     /// Initial setup of references and call to StartMenu
