@@ -956,7 +956,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Botas: {fileID: 0}
   ralla: {fileID: 0}
-  textomonedas: {fileID: 0}
+  gameManager: {fileID: 0}
+  monedas: {fileID: 0}
 --- !u!114 &1738252923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621074646420745668, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

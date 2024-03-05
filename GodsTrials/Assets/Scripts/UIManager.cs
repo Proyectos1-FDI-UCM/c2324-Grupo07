@@ -72,12 +72,6 @@ public class UIManager : MonoBehaviour
             Botas.SetActive(true);
         }
 
-        public void Vidas()
-        {
-            
-            
-
-        }
     #endregion
 
     /// <summary>

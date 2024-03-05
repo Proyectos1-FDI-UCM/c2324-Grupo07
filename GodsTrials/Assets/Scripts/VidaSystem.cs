@@ -17,6 +17,7 @@ public class VidaSystem : MonoBehaviour
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
     UIManager uiManager;
+    BarraVida barravida;
     private ControlarJugador jugador;
     public AnimatorController animatorController;
     public Rigidbody2D rb;
@@ -27,6 +28,7 @@ public class VidaSystem : MonoBehaviour
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
         jugador = GetComponent<ControlarJugador>();
         rb = GetComponent<Rigidbody2D>();
+        barravida= GameObject.Find("barravida").GetComponent<BarraVida>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -52,6 +54,7 @@ public class VidaSystem : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Cueva" || SceneManager.GetActiveScene().name == "Infierno")
             {
+                barravida.DañoTotal();
                 morir.Muerte();
             }
         }
@@ -60,7 +63,7 @@ public class VidaSystem : MonoBehaviour
             animatorController.Daño();
             Debug.Log("Lee");
             vida--;
-            uiManager.Vidas();
+            barravida.DañoTres();
             rb.velocity = Vector3.zero;
             Vector3 velocidad = new Vector3(-1, 1, 0) * 5;
             rb.velocity = velocidad;
@@ -75,7 +78,7 @@ public class VidaSystem : MonoBehaviour
             animatorController.Daño();
             Debug.Log("Lee");
             vida--;
-            uiManager.Vidas();
+            barravida.DañoTres();
             rb.velocity = Vector3.zero;
             Vector3 velocidad = new Vector3(1, 1, 0) * 5;
             rb.velocity = velocidad;
