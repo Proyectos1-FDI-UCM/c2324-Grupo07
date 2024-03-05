@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 127146974}
   - component: {fileID: 127146973}
   - component: {fileID: 127146972}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 1437941680}
   - component: {fileID: 1437941679}
   - component: {fileID: 1437941682}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ResButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 1523666639}
   - component: {fileID: 1523666638}
   - component: {fileID: 1523666637}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,9 +740,9 @@ Canvas:
   m_GameObject: {fileID: 1523666636}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 139079562}
-  m_PlaneDistance: 10
+  m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -752,7 +752,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &1523666640
 RectTransform:
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 1732013371}
   - component: {fileID: 1732013373}
   - component: {fileID: 1732013372}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 1950168607}
   - component: {fileID: 1950168609}
   - component: {fileID: 1950168608}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 2104091924}
   - component: {fileID: 2104091926}
   - component: {fileID: 2104091925}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

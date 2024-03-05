@@ -46,6 +46,10 @@ public class UIManager : MonoBehaviour
         _stateManager.ChangeGameState("resume");
     }
 
+    public void SetFullScreen (bool isFS){
+        Screen.fullScreen = isFS;
+    }
+
     #endregion
 
     /// <summary>
