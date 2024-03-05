@@ -138,3 +138,5 @@ MonoBehaviour:
   velocidad: 5
   amplitud: 0.1
   frecuencia: 2
+  moneda: {fileID: 2742780946303570795}
+  hercules: {fileID: 3607060759189552656, guid: 98c793649efa4884b8f022d7767dae99, type: 3}

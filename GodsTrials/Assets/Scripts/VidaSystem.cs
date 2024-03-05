@@ -12,8 +12,10 @@ public class VidaSystem : MonoBehaviour
     public GameObject pinchosD;
     public GameObject bolaFuego1;
     public GameObject bolaFuego2;
-    public GameObject Limite1;
-    public GameObject Limite2;
+    public Collider2D Grid;
+    public Collider2D Plataforma;
+    private bool contacto1 = false;
+    private bool contacto2 = false;
     public float vida = 3.0f;
     public float fuerzaEmpuje = 2f;
     UIManager uiManager;
@@ -36,15 +38,29 @@ public class VidaSystem : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        numColisiones++;
-        if (numColisiones >= 2)
+        if(collision.collider == Grid)
+        {
+            contacto1 = true;
+        }
+        else if(collision.collider == Plataforma)
+        {
+            contacto2 = true;
+        }
+        if(contacto1 && contacto2)
         {
             morir.Muerte();
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        numColisiones--;
+        if(collision.collider == Grid)
+        {
+            contacto1 = false;
+        }
+        else if(collision.collider == Plataforma)
+        {
+            contacto2 = false;
+        }
     }
     private IEnumerator Daño(Collider2D other)
     {
