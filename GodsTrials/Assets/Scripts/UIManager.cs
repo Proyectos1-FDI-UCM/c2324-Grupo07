@@ -13,8 +13,9 @@ public class UIManager : MonoBehaviour
     public GameObject Botas;
     public Array rallas;
     public GameObject ralla;
-    private int totalmonedas;
-    [SerializeField] private TMP_Text textomonedas;
+    public GameManager gameManager;
+    public TextMeshProUGUI monedas;
+
 
     #region methods
     /// <summary>
@@ -64,12 +65,7 @@ public class UIManager : MonoBehaviour
         Screen.brightness = br;
     }
 
-    private void SumarRupias(int rupias)
-        {
-            totalmonedas += rupias;
-            textomonedas.text = totalmonedas.ToString();
-
-        }
+    
 
         public void PowerUps()
         {
@@ -81,11 +77,6 @@ public class UIManager : MonoBehaviour
             
             
 
-        }
-
-        public void Monedas()
-        {
-            
         }
     #endregion
 
@@ -99,4 +90,10 @@ public class UIManager : MonoBehaviour
         Screen.brightness = 0.5f;
     }
     
+    
+    void Update()
+    {
+        monedas.text = gameManager.PuntosTotales.ToString();
+    }
+
 }
