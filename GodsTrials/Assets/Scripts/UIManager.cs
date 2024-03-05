@@ -43,8 +43,17 @@ public class UIManager : MonoBehaviour
 
     public void OnPressResume()
     {
-        print("resume is clicked");
         _stateManager.ChangeGameState("resume");
+    }
+
+    public void OnPressPause()
+    {
+        _stateManager.ChangeGameState("pause");
+    }
+
+    public void OnPressRestart()
+    {
+        _stateManager.ChangeGameState("mainMenu");
     }
 
     public void SetFullScreen (bool isFS){
