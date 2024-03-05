@@ -32,10 +32,6 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            print("pasamos a paused");
-            //print("event sys disable");
-            //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-            //eventSystem.enabled = false;
             _stateManager.ChangeGameState("pause");
         }
     }

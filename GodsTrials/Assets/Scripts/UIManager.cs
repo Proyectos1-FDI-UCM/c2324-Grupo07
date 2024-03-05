@@ -43,41 +43,60 @@ public class UIManager : MonoBehaviour
 
     public void OnPressResume()
     {
-        print("resume is clicked");
         _stateManager.ChangeGameState("resume");
     }
 
+    public void OnPressPause()
+    {
+        _stateManager.ChangeGameState("pause");
+    }
+
+    public void OnPressRestart()
+    {
+        _stateManager.ChangeGameState("mainMenu");
+    }
+
+    public void SetFullScreen (bool isFS){
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
+    public void SetScreenBrightness(float br){
+        Screen.brightness = br;
+    }
+
+    private void SumarRupias(int rupias)
+        {
+            totalmonedas += rupias;
+            textomonedas.text = totalmonedas.ToString();
+
+        }
+
+        public void PowerUps()
+        {
+            Botas.SetActive(true);
+        }
+
+        public void Vidas()
+        {
+            
+            
+
+        }
+
+        public void Monedas()
+        {
+            
+        }
     #endregion
 
     /// <summary>
     /// Initial setup of references and call to StartMenu
     /// </summary>
     void Start()
-    {
+    {        
         _stateManager = GetComponent<StateManager>();
-        
+        Screen.fullScreen = true;
+        Screen.brightness = 0.5f;
     }
-    private void SumarRupias(int rupias)
-    {
-        totalmonedas += rupias;
-        textomonedas.text = totalmonedas.ToString();
-
-    }
-
-    public void PowerUps()
-    {
-        Botas.SetActive(true);
-    }
-
-    public void Vidas()
-    {
-         
-        
-
-    }
-
-    public void Monedas()
-    {
-        
-    }
+    
 }

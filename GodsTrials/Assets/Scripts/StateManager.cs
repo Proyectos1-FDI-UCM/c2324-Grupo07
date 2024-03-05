@@ -17,6 +17,9 @@ public class StateManager : MonoBehaviour
         {
             case "quit":
                 Application.Quit();
+                break;                
+            case "mainMenu":
+                StartCoroutine(ChangeScene(0, true, false));
                 break;
             case "cueva":
                 StartCoroutine(ChangeScene(1, true, false));
