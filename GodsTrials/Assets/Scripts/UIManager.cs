@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public GameObject ralla;
     public GameManager gameManager;
     public TextMeshProUGUI monedas;
+    [SerializeField] 
+    public GameObject BotonesMuerte;
 
 
     #region methods
@@ -57,20 +59,23 @@ public class UIManager : MonoBehaviour
         _stateManager.ChangeGameState("mainMenu");
     }
 
+    public void OnPressRestartLevel()
+    {
+        _stateManager.ChangeGameState("restartLevel");
+    }
+
     public void SetFullScreen (bool isFS){
         Screen.fullScreen = !Screen.fullScreen;
+    }    
+
+    public void PowerUps()
+    {
+        Botas.SetActive(true);
     }
 
-    public void SetScreenBrightness(float br){
-        Screen.brightness = br;
+    public void EncenderBotones(){
+        BotonesMuerte.SetActive(true);
     }
-
-    
-
-        public void PowerUps()
-        {
-            Botas.SetActive(true);
-        }
 
     #endregion
 
@@ -80,6 +85,8 @@ public class UIManager : MonoBehaviour
     void Start()
     {        
         _stateManager = GetComponent<StateManager>();
+        BotonesMuerte.SetActive(false);
+        Invoke("EncenderBotones", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
     }

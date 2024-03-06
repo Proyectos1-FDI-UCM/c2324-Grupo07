@@ -27,22 +27,27 @@ public class StateManager : MonoBehaviour
             case "infierno":
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
+            case "muerte":
+                Load(3, true);
+                break;
             case "options":
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
             case "pause":
                 Load(5, true);
                 paused = true;
-                //StartCoroutine(ChangeScene(4, true, true));
                 break;
             case "resume":                
                 paused = false;
                 Unload(5);
-                //StartCoroutine(ChangeScene(4, false, false));
+                break;            
+            case "restartLevel":
+                Unload(3);
                 break;
             case "back":
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
+                
             default:
                 print("default CGS");
                 break;
@@ -57,12 +62,10 @@ public class StateManager : MonoBehaviour
 
         if (isLoad)
         {
-            print("is load");
             Load(id, isAdditive);
         }
         else
         {
-            print("is unload");
             Unload(id);
         }
     }
@@ -71,12 +74,7 @@ public class StateManager : MonoBehaviour
     {
         if (isAdditive)
         {
-            print("is additive");
-            print(id);
-            var scn = SceneManager.GetSceneByBuildIndex(id);
-            SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
-            //SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(id));
-            print("pause is loaded and active");
+            SceneManager.LoadScene(id, LoadSceneMode.Additive);
         }
         else
         {
@@ -86,8 +84,15 @@ public class StateManager : MonoBehaviour
     
     private void Unload(int id)
     {
-            print("pause is unloaded");
-            SceneManager.UnloadScene(id);
+        SceneManager.UnloadScene(id);
+        if(id == 3){//si era la escena de muerte
+            Scene[] scenes = SceneManager.GetAllScenes();
+            foreach (Scene sc in scenes) {
+                Debug.Log("'" + sc.name + "'");
+            }
+            Application.LoadLevel(Application.loadedLevel);
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
     #endregion
 
