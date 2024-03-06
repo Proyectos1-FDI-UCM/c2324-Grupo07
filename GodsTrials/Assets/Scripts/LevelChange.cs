@@ -17,10 +17,16 @@ public class LevelChange : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
     private VidaSystem _system;
-    private DetectarNivel _detectarNivel;
-    
+    private DetectarNivel _detectarNivel;    
     #endregion
+
     #region methods
+    public void Muerte()
+    {
+        _gameManager.LevelChange("muerte");
+        //SceneManager.LoadScene(3);
+    }
+
     /// <summary>
     /// Method to detect if a bullet reaches the target and inform the GameManager
     /// </summary>
@@ -33,8 +39,11 @@ public class LevelChange : MonoBehaviour
         }
 
     }
+    #endregion
+
     void Update()
     {
+        /*
         if(_detectarNivel.nivel == 1)
         {
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
@@ -49,11 +58,6 @@ public class LevelChange : MonoBehaviour
                 SceneManager.LoadScene(1);
             }
         }
-        
+        */
     }
-    public void Muerte()
-    {
-        SceneManager.LoadScene(3);
-    }
-    #endregion
 }
