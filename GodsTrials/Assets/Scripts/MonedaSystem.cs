@@ -4,35 +4,36 @@ using UnityEngine;
 
 public class MonedaSystem : MonoBehaviour
 {
-    public int valor = 1;
+    public int valor=1;
     public GameManager gameManager;
     public float velocidad = 2.0f; 
-    public float amplitud = 0.3f; 
+    public float amplitud = 1.0f; 
     public float frecuencia = 1.0f;
     private Vector3 posicionInicial;
-    public Transform moneda;
-    public Transform playerTransform;
+    public GameObject moneda;
+    public GameObject hercules;
 
+    // Update is called once per frame
     void Start()
     {
         posicionInicial = moneda.transform.position;
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
-
-    void Update()
+    private void Update()
     {
-
         float offsetY = Mathf.Sin(Time.time * frecuencia) * amplitud;
         Vector3 nuevaPosicion = posicionInicial + new Vector3(0, offsetY, 0);
         moneda.transform.position = Vector3.Lerp(moneda.transform.position, nuevaPosicion, velocidad * Time.deltaTime);
+    }
 
-        float distancia = Vector3.Distance(transform.position, playerTransform.position);
-        if (distancia < 1.5f) 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Entra");
+        if (collision.gameObject == hercules)
         {
-            Debug.Log("Moneda recogida");
+            Debug.Log("Collides");
+
             gameManager.SumarMonedas(valor);
-            gameObject.SetActive(false);
+            Destroy(moneda);
         }
     }
 }
-
