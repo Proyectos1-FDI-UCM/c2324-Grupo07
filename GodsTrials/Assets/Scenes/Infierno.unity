@@ -1085,7 +1085,7 @@ Transform:
   m_GameObject: {fileID: 379711730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.604664, y: 1.3448522, z: -9.949995}
+  m_LocalPosition: {x: 4.604664, y: 1.3448522, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1311,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: hercules
       value: 
-      objectReference: {fileID: 643616100}
+      objectReference: {fileID: 694933496}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: velocity
       value: 5
