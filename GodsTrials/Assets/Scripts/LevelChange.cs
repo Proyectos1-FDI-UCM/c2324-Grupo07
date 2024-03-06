@@ -17,7 +17,7 @@ public class LevelChange : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
     private VidaSystem _system;
-    private DetectarNivel _detectarNivel;    
+       
     #endregion
 
     #region methods
@@ -41,23 +41,5 @@ public class LevelChange : MonoBehaviour
     }
     #endregion
 
-    void Update()
-    {
-        /*
-        if(_detectarNivel.nivel == 1)
-        {
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                SceneManager.LoadScene(2);
-            }
-        }
-        else if (_detectarNivel.nivel == 2) 
-        {
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                SceneManager.LoadScene(1);
-            }
-        }
-        */
-    }
+    
 }
