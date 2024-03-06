@@ -15,53 +15,14 @@ public class UIManager : MonoBehaviour
     public GameObject ralla;
     public GameManager gameManager;
     public TextMeshProUGUI monedas;
-    [SerializeField] 
     public GameObject BotonesMuerte;
+    public GameObject BotonesEscena;
 
 
     #region methods
-    /// <summary>
-    /// Called when the player presses start button.
-    /// Needs to inform GameManager that the button has been pressed.
-    /// </summary>
-    public void OnPressStart()
+    public void OnPress(string s)
     {
-        _stateManager.ChangeGameState("cueva");
-    }
-    
-    public void OnPressExit()
-    {
-        _stateManager.ChangeGameState("quit");
-    }
-
-    public void OnPressOptions()
-    {
-        _stateManager.ChangeGameState("options");
-    }
-    
-    public void OnPressBack()
-    {
-        _stateManager.ChangeGameState("back");
-    }
-
-    public void OnPressResume()
-    {
-        _stateManager.ChangeGameState("resume");
-    }
-
-    public void OnPressPause()
-    {
-        _stateManager.ChangeGameState("pause");
-    }
-
-    public void OnPressRestart()
-    {
-        _stateManager.ChangeGameState("mainMenu");
-    }
-
-    public void OnPressRestartLevel()
-    {
-        _stateManager.ChangeGameState("restartLevel");
+        _stateManager.ChangeGameState(s);
     }
 
     public void SetFullScreen (bool isFS){
@@ -73,7 +34,7 @@ public class UIManager : MonoBehaviour
         Botas.SetActive(true);
     }
 
-    public void EncenderBotones(){
+    public void EncenderBotonesMuerte(){
         BotonesMuerte.SetActive(true);
     }
 
@@ -86,7 +47,7 @@ public class UIManager : MonoBehaviour
     {        
         _stateManager = GetComponent<StateManager>();
         BotonesMuerte.SetActive(false);
-        Invoke("EncenderBotones", 4.0f);
+        Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
     }
