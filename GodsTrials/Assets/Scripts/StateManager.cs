@@ -27,6 +27,9 @@ public class StateManager : MonoBehaviour
             case "infierno":
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
+            case "montaña":
+                StartCoroutine (ChangeScene(6, true, false));
+                break;
             case "muerte":
                 StartCoroutine(ChangeScene(3, true, true));
                 //Load(3, true);
