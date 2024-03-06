@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
 
     #region methods
     public void LevelChange(string _toLevel)
-    {
+    {        
+        if (_toLevel == "muerte"){
+            _UIManager.BotonesEscena.SetActive(false);
+        }
         _stateManager.ChangeGameState(_toLevel);
     }
     #endregion

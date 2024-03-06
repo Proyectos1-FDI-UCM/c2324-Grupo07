@@ -70,8 +70,8 @@ public class VidaSystem : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "Cueva" || SceneManager.GetActiveScene().name == "Infierno")
             {
-                barravida.DañoTotal();
                 morir.Muerte();
+                barravida.DañoTotal();
             }
         }
         else if (hercules == pinchosA || hercules == pinchosD)
