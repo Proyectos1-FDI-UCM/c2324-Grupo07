@@ -229,14 +229,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1323167372}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnPress
-        m_Mode: 5
+        m_MethodName: OnPressExit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: quit
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &127146974
@@ -487,9 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Botas: {fileID: 0}
   ralla: {fileID: 0}
-  gameManager: {fileID: 0}
-  monedas: {fileID: 0}
-  BotonesMuerte: {fileID: 0}
+  textomonedas: {fileID: 0}
 --- !u!4 &1323167373
 Transform:
   m_ObjectHideFlags: 0
@@ -679,14 +677,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1323167372}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnPress
-        m_Mode: 5
+        m_MethodName: OnPressResume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: resume
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1437941680
@@ -914,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621074646420745668, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

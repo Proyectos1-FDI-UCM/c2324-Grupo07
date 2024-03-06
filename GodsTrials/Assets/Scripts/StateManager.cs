@@ -27,29 +27,22 @@ public class StateManager : MonoBehaviour
             case "infierno":
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
-            case "montaña":
-                StartCoroutine (ChangeScene(6, true, false));
-                break;
             case "muerte":
-                StartCoroutine(ChangeScene(3, true, true));
-                //Load(3, true);
+                Load(3, true);
                 break;
             case "options":
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
             case "pause":
-                //StartCoroutine(ChangeScene(5, true, true));
                 Load(5, true);
                 paused = true;
                 break;
             case "resume":                
                 paused = false;
-                //StartCoroutine(ChangeScene(5, false, true));
                 Unload(5);
                 break;            
             case "restartLevel":
-                StartCoroutine(ChangeScene(3, false, true));
-                //Unload(3);
+                Unload(3);
                 break;
             case "back":
                 StartCoroutine(ChangeScene(0, true, false));
@@ -93,12 +86,10 @@ public class StateManager : MonoBehaviour
     {
         SceneManager.UnloadScene(id);
         if(id == 3){//si era la escena de muerte
-            /*
             Scene[] scenes = SceneManager.GetAllScenes();
             foreach (Scene sc in scenes) {
                 Debug.Log("'" + sc.name + "'");
             }
-            */
             Application.LoadLevel(Application.loadedLevel);
            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

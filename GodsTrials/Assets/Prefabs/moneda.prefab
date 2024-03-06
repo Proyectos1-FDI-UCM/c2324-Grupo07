@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2742780946303570795}
   - component: {fileID: 7839973551054883643}
-  - component: {fileID: 8812031846408319798}
-  - component: {fileID: 6997769356193046622}
+  - component: {fileID: -8354949022689691039}
+  - component: {fileID: 8432164053682353515}
   m_Layer: 0
   m_Name: moneda
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5049812781495288446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15.96, y: -6.33, z: 0}
   m_LocalScale: {x: 0.025, y: 0.025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,18 +75,37 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bc2a4d98506bf2e4984654ab9798e949, type: 3}
+  m_Sprite: {fileID: -1558503020, guid: bc2a4d98506bf2e4984654ab9798e949, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 27.92, y: 29.905941}
+  m_Size: {x: 24.929998, y: 28.225605}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8812031846408319798
+--- !u!114 &-8354949022689691039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5049812781495288446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56f604755b8d144e8a0a868e31be1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 1
+  gameManager: {fileID: 0}
+  velocidad: 2
+  amplitud: 0.3
+  frecuencia: 1
+  moneda: {fileID: 2742780946303570795}
+  playerTransform: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+--- !u!58 &8432164053682353515
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,25 +137,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.110435486, y: -1.932621}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 11.695125
---- !u!114 &6997769356193046622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5049812781495288446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56f604755b8d144e8a0a868e31be1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 1
-  gameManager: {fileID: 0}
-  velocidad: 5
-  amplitud: 0.2
-  frecuencia: 1
-  moneda: {fileID: 5049812781495288446}
-  hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_Radius: 14.1128025

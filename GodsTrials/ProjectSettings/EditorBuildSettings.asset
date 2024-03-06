@@ -26,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: 2a9679ec4ea3e844d9240405e652976d
-  - enabled: 1
-    path: "Assets/Scenes/Monta\xF1a.unity"
-    guid: 96525a71159380d4aa1d9e6e23f8dcfd
   m_configObjects: {}
