@@ -322,6 +322,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4805058542723918621, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805058542723918621, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
+      propertyPath: m_SortingOrder
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219676195325571601, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6783739343541567332, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.031414
@@ -514,6 +526,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 922638801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &367442004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2568472303050379648, guid: 202c7c12a1324b74e9da9dd65c17e17d, type: 3}
+  m_PrefabInstance: {fileID: 7899114430742156965}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &434135280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,7 +3097,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
-  BotonesEscena: {fileID: 0}
+  BotonesEscena: {fileID: 367442004}
 --- !u!4 &1518226375
 Transform:
   m_ObjectHideFlags: 0
@@ -3423,7 +3440,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e1c2e6de408cf4bb8b829b215f82b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: 0
 --- !u!1 &1717936237
 GameObject:
   m_ObjectHideFlags: 0

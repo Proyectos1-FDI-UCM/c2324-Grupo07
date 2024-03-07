@@ -691,6 +691,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
+  BotonesEscena: {fileID: 0}
 --- !u!4 &1323167373
 Transform:
   m_ObjectHideFlags: 0
@@ -1146,6 +1147,10 @@ PrefabInstance:
       objectReference: {fileID: 139079562}
     - target: {fileID: 4805058542723918621, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219676195325571601, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6783739343541567332, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}

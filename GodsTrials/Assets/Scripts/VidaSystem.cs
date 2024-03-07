@@ -24,18 +24,21 @@ public class VidaSystem : MonoBehaviour
     public AnimatorController animatorController;
     public Rigidbody2D rb;
     private int numColisiones = 0;
+
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
         jugador = GetComponent<ControlarJugador>();
         rb = GetComponent<Rigidbody2D>();
-        barravida= GameObject.Find("barravida").GetComponent<BarraVida>();
+        barravida = GameObject.Find("barravida").GetComponent<BarraVida>();
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        StartCoroutine(Daño(other));
+        StartCoroutine(Dano(other));
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider == Grid)
@@ -51,6 +54,7 @@ public class VidaSystem : MonoBehaviour
             morir.Muerte();
         }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.collider == Grid)
@@ -62,7 +66,8 @@ public class VidaSystem : MonoBehaviour
             contacto2 = false;
         }
     }
-    private IEnumerator Daño(Collider2D other)
+
+    private IEnumerator Dano(Collider2D other)
     {
         jugador.state = 1;
         hercules = other.gameObject;
@@ -71,15 +76,15 @@ public class VidaSystem : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "Cueva" || SceneManager.GetActiveScene().name == "Infierno")
             {
                 morir.Muerte();
-                barravida.DañoTotal();
+                barravida.DanoTotal();
             }
         }
         else if (hercules == pinchosA || hercules == pinchosD)
         {
-            animatorController.Daño();
+            animatorController.Dano();
             Debug.Log("Lee");
             vida--;
-            barravida.DañoTres();
+            barravida.DanoTres();
             rb.velocity = Vector3.zero;
             Vector3 velocidad = new Vector3(-1, 1, 0) * 5;
             rb.velocity = velocidad;
@@ -91,10 +96,10 @@ public class VidaSystem : MonoBehaviour
         }
         else if (hercules == bolaFuego1 || hercules == bolaFuego2 || hercules == pinchosI)
         {
-            animatorController.Daño();
+            animatorController.Dano();
             Debug.Log("Lee");
             vida--;
-            barravida.DañoTres();
+            barravida.DanoTres();
             rb.velocity = Vector3.zero;
             Vector3 velocidad = new Vector3(1, 1, 0) * 5;
             rb.velocity = velocidad;

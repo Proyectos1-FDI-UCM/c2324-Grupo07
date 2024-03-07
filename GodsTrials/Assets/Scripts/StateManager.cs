@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class StateManager : MonoBehaviour
 {
@@ -27,25 +28,27 @@ public class StateManager : MonoBehaviour
             case "infierno":
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
-            case "montaña":
+            case "montaï¿½a":
                 StartCoroutine (ChangeScene(6, true, false));
                 break;
             case "muerte":
-                StartCoroutine(ChangeScene(3, true, true));
-                //Load(3, true);
+                //StartCoroutine(ChangeScene(3, true, true));
+                Load(3, true);
                 break;
             case "options":
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
             case "pause":
+                //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+                //eventSystem.enabled = false;
                 //StartCoroutine(ChangeScene(5, true, true));
                 Load(5, true);
                 paused = true;
                 break;
             case "resume":                
                 paused = false;
-                //StartCoroutine(ChangeScene(5, false, true));
-                Unload(5);
+                StartCoroutine(ChangeScene(5, false, true));
+                //Unload(5);
                 break;            
             case "restartLevel":
                 StartCoroutine(ChangeScene(3, false, true));
@@ -91,16 +94,9 @@ public class StateManager : MonoBehaviour
     
     private void Unload(int id)
     {
-        SceneManager.UnloadScene(id);
+        SceneManager.UnloadSceneAsync(id);
         if(id == 3){//si era la escena de muerte
-            /*
-            Scene[] scenes = SceneManager.GetAllScenes();
-            foreach (Scene sc in scenes) {
-                Debug.Log("'" + sc.name + "'");
-            }
-            */
             Application.LoadLevel(Application.loadedLevel);
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     #endregion

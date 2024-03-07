@@ -14,8 +14,8 @@ public class UIManager : MonoBehaviour
     public Array rallas;
     public GameObject ralla;
     public GameManager gameManager;
-    public TextMeshProUGUI monedas;
-    public GameObject BotonesMuerte;
+    public TextMeshProUGUI monedas = null;
+    public GameObject BotonesMuerte = null;
     public GameObject BotonesEscena;
 
 
@@ -55,7 +55,9 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        monedas.text = gameManager.PuntosTotales.ToString();
+        if (monedas != null){
+            monedas.text = gameManager.PuntosTotales.ToString();
+        }
     }
 
 }

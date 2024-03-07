@@ -12,7 +12,7 @@ public class MonedaSystem : MonoBehaviour
     public float amplitud = 0.3f;
     public float frecuencia = 1.0f;
     private Vector3 posicionInicial;
-    public Transform moneda;
+    public Transform moneda = null;
     public Transform playerTransform;
 
     // Update is called once per frame
@@ -23,10 +23,11 @@ public class MonedaSystem : MonoBehaviour
     }
     void Update()
     {
-
-        float offsetY = Mathf.Sin(Time.time * frecuencia) * amplitud;
-        Vector3 nuevaPosicion = posicionInicial + new Vector3(0, offsetY, 0);
-        moneda.transform.position = Vector3.Lerp(moneda.transform.position, nuevaPosicion, velocidad * Time.deltaTime);
+        if (moneda != null){
+            float offsetY = Mathf.Sin(Time.time * frecuencia) * amplitud;
+            Vector3 nuevaPosicion = posicionInicial + new Vector3(0, offsetY, 0);
+            moneda.transform.position = Vector3.Lerp(moneda.transform.position, nuevaPosicion, velocidad * Time.deltaTime);
+        }
 
         float distancia = Vector3.Distance(transform.position, playerTransform.position);
         if (distancia < 1.5f)

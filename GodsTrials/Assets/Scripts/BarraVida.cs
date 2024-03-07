@@ -11,12 +11,12 @@ public class BarraVida : MonoBehaviour
     public float vidaMaxima;
     #endregion
 
-    public void DañoTres()
+    public void DanoTres()
     {
         vidaActual -= 10;
     }
 
-    public void DañoTotal()
+    public void DanoTotal()
     {
         vidaActual -= 28;
     }
