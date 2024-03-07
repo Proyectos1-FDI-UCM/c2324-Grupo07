@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
     private StateManager _stateManager;
     #endregion
     [SerializeField] 
-    public GameObject Botas;
+    public GameObject botas;
+    public GameObject carro;
     public Array rallas;
     public GameObject ralla;
     public GameManager gameManager;
@@ -29,12 +30,17 @@ public class UIManager : MonoBehaviour
         Screen.fullScreen = !Screen.fullScreen;
     }    
 
-    public void PowerUps()
+    public void Botas()
     {
-        Botas.SetActive(true);
+        botas.SetActive(true);
     }
 
-    public void EncenderBotonesMuerte(){
+    public void Carro()
+    {
+        carro.SetActive(true);
+    }
+    public void EncenderBotonesMuerte()
+    {
         BotonesMuerte.SetActive(true);
     }
 
