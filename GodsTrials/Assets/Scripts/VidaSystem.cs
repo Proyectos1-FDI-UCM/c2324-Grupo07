@@ -105,6 +105,7 @@ public class VidaSystem : MonoBehaviour
             rb.velocity = velocidad;
             if (vida <= 0)
             {
+                Destroy(this.gameObject);
                 morir.Muerte();
             }
             Debug.Log("Vida restante: " + vida);
