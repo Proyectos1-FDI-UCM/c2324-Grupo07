@@ -14,6 +14,8 @@ public class ControlarJugador : MonoBehaviour
     private bool enSuelo2;
     private bool dobleSalto = true;
     public GameObject botas;
+    public GameObject carro;    
+    public GameObject pez;    
     public GameObject hercules;
     public Transform circulo1;
     public Transform circulo2;
@@ -21,12 +23,15 @@ public class ControlarJugador : MonoBehaviour
     public Transform saltoHercules2;
     public LayerMask capaSuelo;
     public bool tieneSalto = false;
+    public bool dash = false;
+    public bool pistola = false;
     private bool enParedRC1;
     private bool enParedRC2;
     private bool enParedLC1;
     private bool enParedLC2;
     UIManager uiManager;
     public int state = 0;
+
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
         foreach (ContactPoint2D contacto in activarSalto.contacts)
@@ -44,8 +49,23 @@ public class ControlarJugador : MonoBehaviour
         {
             tieneSalto = true;
             botas.SetActive(false);
-            uiManager.PowerUps();
+            uiManager.Botas();
         }
+
+        if (hercules == carro)
+        {
+            dash = true;
+            carro.SetActive(false);
+            uiManager.Carro();
+        }
+
+        if (hercules == pez)
+        {
+            dash = true;
+            pez.SetActive(false);
+            uiManager.Pez();
+        }
+
     }
 
     void Start()
