@@ -15,6 +15,7 @@ public class ControlarJugador : MonoBehaviour
     private bool dobleSalto = true;
     public GameObject botas;
     public GameObject carro;    
+    public GameObject pez;    
     public GameObject hercules;
     public Transform circulo1;
     public Transform circulo2;
@@ -23,6 +24,7 @@ public class ControlarJugador : MonoBehaviour
     public LayerMask capaSuelo;
     public bool tieneSalto = false;
     public bool dash = false;
+    public bool pistola = false;
     private bool enParedRC1;
     private bool enParedRC2;
     private bool enParedLC1;
@@ -55,6 +57,13 @@ public class ControlarJugador : MonoBehaviour
             dash = true;
             carro.SetActive(false);
             uiManager.Carro();
+        }
+
+        if (hercules == pez)
+        {
+            dash = true;
+            pez.SetActive(false);
+            uiManager.Pez();
         }
 
     }
