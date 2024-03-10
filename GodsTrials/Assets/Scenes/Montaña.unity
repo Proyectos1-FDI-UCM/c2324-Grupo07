@@ -410,6 +410,21 @@ MonoBehaviour:
   fuerzaEmpuje: 2
   animatorController: {fileID: 1174641666}
   rb: {fileID: 1174641668}
+--- !u!114 &1174641674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174641664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hercules: {fileID: 1174641664}
+  pez: {fileID: 2099687991}
+  bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
 --- !u!4 &1452322732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7548971834968103021, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
@@ -756,6 +771,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1174641673}
+    - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174641674}
   m_SourcePrefab: {fileID: 100100000, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
 --- !u!1001 &7787590684635086400
 PrefabInstance:
