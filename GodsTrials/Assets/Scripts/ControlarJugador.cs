@@ -29,6 +29,7 @@ public class ControlarJugador : MonoBehaviour
     private bool enParedRC2;
     private bool enParedLC1;
     private bool enParedLC2;
+    private ShootingComponent shoot;
     UIManager uiManager;
     public int state = 0;
 

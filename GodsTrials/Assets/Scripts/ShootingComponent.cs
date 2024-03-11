@@ -5,18 +5,32 @@ using UnityEngine;
 
 public class ShootingComponent : MonoBehaviour
 {
-    public GameObject hercules;
+    private ControlarJugador hercules;
     public GameObject pez;
     public GameObject bala;
     private bool disparo;
+    Rigidbody2D rb;
+    void Shoot()
+    {
+        if (Input.GetMouseButton(0) && disparo)
+        {
+            hercules = gameObject.GetComponent<ControlarJugador>();
+            GameObject valBel = Instantiate(bala, hercules.transform.position + 0.5f * Vector3.up, Quaternion.identity);
+            rb = valBel.GetComponent<Rigidbody2D>();
+            if (bala != null)
+            {
+                rb.velocity = Vector3.right * 5;
+                Debug.Log("gg");
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        hercules = collision.gameObject;
-        if(hercules == pez)
+        if(collision.gameObject == pez)
         {
             disparo = true;
-            pez.gameObject.SetActive(false);
         }
+        Debug.Log(disparo);
     }
     // Start is called before the first frame update
     void Start()
@@ -26,10 +40,6 @@ public class ShootingComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && disparo)
-        {
-            Instantiate(bala, hercules.transform.position + 0.5f * Vector3.up, Quaternion.identity);
-            bala.transform.position += Vector3.right * Time.deltaTime;
-        }
+        Shoot();
     }
 }
