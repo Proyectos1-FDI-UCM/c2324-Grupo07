@@ -24,7 +24,6 @@ public class ControlarJugador : MonoBehaviour
     public LayerMask capaSuelo;
     public bool tieneSalto = false;
     public bool dash = false;
-    public bool pistola = false;
     private bool enParedRC1;
     private bool enParedRC2;
     private bool enParedLC1;
@@ -45,22 +44,21 @@ public class ControlarJugador : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D itemBotas)
     {
-        hercules = itemBotas.gameObject;
-        if (hercules == botas)
+        if (itemBotas.gameObject == botas)
         {
             tieneSalto = true;
             botas.SetActive(false);
             uiManager.Botas();
         }
 
-        if (hercules == carro)
+        if (itemBotas.gameObject == carro)
         {
             dash = true;
             carro.SetActive(false);
             uiManager.Carro();
         }
 
-        if (hercules == pez)
+        if (itemBotas.gameObject == pez)
         {
             dash = true;
             pez.SetActive(false);
@@ -96,10 +94,12 @@ public class ControlarJugador : MonoBehaviour
             if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
             {
                 rb.velocity = new Vector2(velocity, rb.velocity.y);
+                hercules.transform.rotation = Quaternion.identity;
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
                 rb.velocity = new Vector2(-velocity, rb.velocity.y);
+                hercules.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else if (!Input.anyKey)
             {
