@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private StateManager _stateManager;
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
+    public GameObject canvas;
     #endregion
 
     #region methods
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
         _UIManager = GetComponent<UIManager>();
 
         _stateManager = GetComponent<StateManager>();
+
+        canvas= GameObject.Find("Canvas").GetComponent<Canvas>();       
     }
 
     void Update()
@@ -44,5 +47,10 @@ public class GameManager : MonoBehaviour
         {
             _stateManager.ChangeGameState("pause");
         }
+    }
+
+    private void Awake()
+    {
+        
     }
 }
