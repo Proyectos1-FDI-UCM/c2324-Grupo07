@@ -12,15 +12,21 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetMouseButton(0) && disparo)
+        if (Input.GetMouseButtonDown(0) && disparo)
         {
             hercules = gameObject.GetComponent<ControlarJugador>();
             GameObject valBel = Instantiate(bala, hercules.transform.position + 0.5f * Vector3.up, Quaternion.identity);
             rb = valBel.GetComponent<Rigidbody2D>();
-            if (bala != null)
+            if (rb != null)
             {
-                rb.velocity = Vector3.right * 5;
-                Debug.Log("gg");
+                if (hercules.transform.rotation == Quaternion.identity)
+                {
+                    rb.velocity = Vector2.right * 15;
+                }
+                else
+                {
+                    rb.velocity = Vector2.left * 15;
+                }
             }
         }
     }
@@ -32,12 +38,10 @@ public class ShootingComponent : MonoBehaviour
         }
         Debug.Log(disparo);
     }
-    // Start is called before the first frame update
     void Start()
     {
         disparo = false;
     }
-    // Update is called once per frame
     void Update()
     {
         Shoot();

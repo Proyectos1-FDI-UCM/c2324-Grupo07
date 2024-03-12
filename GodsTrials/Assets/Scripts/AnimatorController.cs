@@ -40,20 +40,10 @@ public class AnimatorController : MonoBehaviour
             if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && enSuelo1 || !enSuelo2 && rb.velocity.x > 0.1f)
             {
                 animator.SetInteger("AnimState", 1); //run derecha
-                if (player.rotation == Quaternion.Euler(0, 180, 0))
-                {
-                    player.rotation = Quaternion.identity;                    
-                }
-                else
-                {
-                    animator.SetInteger("AnimState", 1); //run derecha
-                    player.rotation = Quaternion.identity;
-                }
             }
             else if (rb.velocity.x < -0.1f || rb.velocity.x < -0.1f && enSuelo1 || rb.velocity.x < -0.1f && enSuelo2)
             {
                 animator.SetInteger("AnimState", 1); //run izquierda
-                player.rotation = Quaternion.Euler(0, 180, 0);
             }
             else if (enSuelo1 && rb.velocity.x == 0 || enSuelo2 && rb.velocity.x == 0)
             {
