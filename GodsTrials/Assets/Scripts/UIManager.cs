@@ -8,42 +8,45 @@ public class UIManager : MonoBehaviour
 {
     #region references
     private StateManager _stateManager;
-    #endregion
     [SerializeField] 
     public GameObject botas;
     public GameObject carro;
+    public GameObject pez;
     public Array rallas;
     public GameObject ralla;
     public GameManager gameManager;
     public TextMeshProUGUI monedas = null;
     public GameObject BotonesMuerte = null;
     public GameObject BotonesEscena;
-
+    #endregion
 
     #region methods
     public void OnPress(string s)
     {
         _stateManager.ChangeGameState(s);
     }
-
     public void SetFullScreen (bool isFS){
         Screen.fullScreen = !Screen.fullScreen;
-    }    
-
-    public void Botas()
-    {
-        botas.SetActive(true);
-    }
-
-    public void Carro()
-    {
-        carro.SetActive(true);
     }
     public void EncenderBotonesMuerte()
     {
         BotonesMuerte.SetActive(true);
     }
+    #endregion
 
+    #region Power-Ups
+    public void Botas()
+    {
+        botas.SetActive(true);
+    }
+    public void Carro()
+    {
+        carro.SetActive(true);
+    }
+    public void Pez()
+    {
+        pez.SetActive(true);
+    }
     #endregion
 
     /// <summary>
@@ -56,6 +59,8 @@ public class UIManager : MonoBehaviour
         Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
+        pez = GetComponent<GameObject>();
+        carro = GameObject.Find("carro").GetComponent<GameObject>();
     }
     
     
