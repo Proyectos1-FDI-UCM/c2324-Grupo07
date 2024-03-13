@@ -3080,6 +3080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 1518226373}
+  _canvas: {fileID: 4323035009562678005}
 --- !u!114 &1518226374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,7 +3094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46f52bb5a263244ea5d7cf5ce38648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Botas: {fileID: 0}
+  botas: {fileID: 0}
+  carro: {fileID: 0}
+  pez: {fileID: 0}
   ralla: {fileID: 0}
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
@@ -4115,6 +4119,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
+--- !u!1 &4323035009562678005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595731077588679427, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
+  m_PrefabInstance: {fileID: 304503693878422006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7899114430742156965
 PrefabInstance:
   m_ObjectHideFlags: 0
