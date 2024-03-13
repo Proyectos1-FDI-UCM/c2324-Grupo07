@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
+  _canvas: {fileID: 0}
 --- !u!114 &86274565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botas: {fileID: 95734408}
   carro: {fileID: 0}
+  pez: {fileID: 0}
   ralla: {fileID: 0}
   gameManager: {fileID: 86274564}
   monedas: {fileID: 0}
@@ -532,6 +535,7 @@ Transform:
   m_Children:
   - {fileID: 574210522}
   - {fileID: 1350495317}
+  - {fileID: 552100901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &482959974
@@ -687,13 +691,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552100899}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.4135949, y: 2.0405762, z: 0.009729881}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1491129842}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 454129839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569033283
 GameObject:
@@ -9708,7 +9712,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &868309108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10269,8 +10273,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1874286179
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11908,6 +11912,14 @@ PrefabInstance:
       propertyPath: saltoHercules2
       value: 
       objectReference: {fileID: 1020569805}
+    - target: {fileID: 5779997475782886627, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779997475782886627, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1337078907
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 132786282498388985, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
     m_RemovedGameObjects: []
@@ -12187,4 +12199,3 @@ SceneRoots:
   - {fileID: 6084875250156111942}
   - {fileID: 482959975}
   - {fileID: 454129839}
-  - {fileID: 552100901}
