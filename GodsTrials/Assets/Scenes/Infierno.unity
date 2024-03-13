@@ -6598,11 +6598,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 112705277254751839, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
   m_PrefabInstance: {fileID: 947378677}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &947378679 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
-  m_PrefabInstance: {fileID: 947378677}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &953672733
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,7 +7291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46f52bb5a263244ea5d7cf5ce38648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Botas: {fileID: 947378679}
+  botas: {fileID: 0}
+  carro: {fileID: 0}
   ralla: {fileID: 0}
   gameManager: {fileID: 1071708421}
   monedas: {fileID: 1614972464}
