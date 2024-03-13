@@ -16,7 +16,6 @@ public class ControlarJugador : MonoBehaviour
     public GameObject botas;
     public GameObject carro;    
     public GameObject pez;    
-    public GameObject hercules;
     public Transform circulo1;
     public Transform circulo2;
     public Transform saltoHercules1;
@@ -94,12 +93,12 @@ public class ControlarJugador : MonoBehaviour
             if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
             {
                 rb.velocity = new Vector2(velocity, rb.velocity.y);
-                hercules.transform.rotation = Quaternion.identity;
+                transform.rotation = Quaternion.identity;
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
                 rb.velocity = new Vector2(-velocity, rb.velocity.y);
-                hercules.transform.rotation = Quaternion.Euler(0, 180, 0);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else if (!Input.anyKey)
             {

@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
 
         _stateManager = GetComponent<StateManager>();
 
+        _canvas = GetComponent<GameObject>();
+
     }
 
     void Update()

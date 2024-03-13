@@ -513,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 454129839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grids
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 552100901}
   - component: {fileID: 552100900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 574210522}
   - component: {fileID: 574210523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 768282301}
   - component: {fileID: 768282303}
   - component: {fileID: 768282302}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bordes pantalla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5218,7 +5218,7 @@ GameObject:
   - component: {fileID: 847059762}
   - component: {fileID: 847059766}
   - component: {fileID: 847059765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Monta\xF1a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9991,16 +9991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hercules: {fileID: 1174641664}
-  lavaHueco: {fileID: 0}
-  pinchosA: {fileID: 0}
-  pinchosI: {fileID: 0}
-  pinchosD: {fileID: 0}
-  bolaFuego1: {fileID: 0}
-  bolaFuego2: {fileID: 0}
-  Grid: {fileID: 0}
-  Plataforma: {fileID: 0}
   vida: 3
-  fuerzaEmpuje: 2
   animatorController: {fileID: 1174641666}
   rb: {fileID: 1174641668}
 --- !u!114 &1174641674
@@ -10028,7 +10019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350495317}
   - component: {fileID: 1350495318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10213,7 +10204,7 @@ GameObject:
   - component: {fileID: 1491129842}
   - component: {fileID: 1491129844}
   - component: {fileID: 1491129843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: parte atras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
