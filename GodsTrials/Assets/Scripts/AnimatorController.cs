@@ -9,9 +9,11 @@ public class AnimatorController : MonoBehaviour
     private Rigidbody2D rb;
     private bool enSuelo1;
     private bool enSuelo2;
+    private bool enSuelo3;
     public LayerMask capaSuelo;
     public Transform _circuloPies;
     public Transform _circuloPies2;
+    public Transform _circuloPies1;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -25,25 +27,26 @@ public class AnimatorController : MonoBehaviour
     {
         enSuelo1 = (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f,capaSuelo));
         enSuelo2 = (Physics2D.Raycast(_circuloPies2.position, Vector3.down, 0.5f,capaSuelo));
-        if (!enSuelo1 && !enSuelo2 && rb.velocity.x > 0.1f || !enSuelo1  && rb.velocity.x < -0.1f && !enSuelo2)
+        enSuelo3 = (Physics2D.Raycast(_circuloPies1.position, Vector3.down, 0.5f,capaSuelo));
+        if (!enSuelo1 && !enSuelo2 && !enSuelo3 && rb.velocity.x > 0.1f || !enSuelo1 && !enSuelo3 && rb.velocity.x < -0.1f && !enSuelo2)
         {
             animator.SetInteger("AnimState", 2); //jump
         }
-        else if(!enSuelo1 && rb.velocity.x == 0 && !enSuelo2)
+        else if(!enSuelo1 && rb.velocity.x == 0 && !enSuelo2 && !enSuelo3)
         {
             animator.SetInteger("AnimState", 3); //jump parado
         }
         else
         {
-            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && enSuelo1 || enSuelo2 && rb.velocity.x > 0.1f)
+            if (rb.velocity.x > 0.1f && enSuelo3 || rb.velocity.x > 0.1f && enSuelo1 || enSuelo2 && rb.velocity.x > 0.1f)
             {
                 animator.SetInteger("AnimState", 1); //run derecha
             }
-            else if (rb.velocity.x < -0.1f || rb.velocity.x < -0.1f && enSuelo1 || rb.velocity.x < -0.1f && enSuelo2)
+            else if (rb.velocity.x < -0.1f && enSuelo3 || rb.velocity.x < -0.1f && enSuelo1 || rb.velocity.x < -0.1f && enSuelo2)
             {
                 animator.SetInteger("AnimState", 1); //run izquierda
             }
-            else if (enSuelo1 && rb.velocity.x == 0 || enSuelo2 && rb.velocity.x == 0)
+            else if (enSuelo1 && rb.velocity.x == 0 || enSuelo2 && rb.velocity.x == 0 || enSuelo3 && rb.velocity.x == 0)
             {
                 animator.SetInteger("AnimState", 0); //idle
             }

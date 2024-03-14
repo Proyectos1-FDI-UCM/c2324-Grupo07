@@ -19,7 +19,36 @@ public class VidaSystem : MonoBehaviour
     private float time;
     private float timeToEnter = 0.5f;
     private bool contador;
-
+    public GameObject plataforma;
+    public GameObject tilemap;
+    private bool colisionandoConObjeto1 = false;
+    private bool colisionandoConObjeto2 = false;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject == plataforma)
+        {
+            colisionandoConObjeto1 = true;
+        }
+        if (collision.gameObject == tilemap)
+        {
+            colisionandoConObjeto2 = true;
+        }
+        if (colisionandoConObjeto1 && colisionandoConObjeto2)
+        {
+            MuerteCompleta();
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject == plataforma)
+        {
+            colisionandoConObjeto1 = false;
+        }
+        if (collision.gameObject == tilemap)
+        {
+            colisionandoConObjeto2 = false;
+        }
+    }
     private void Start()
     {
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();

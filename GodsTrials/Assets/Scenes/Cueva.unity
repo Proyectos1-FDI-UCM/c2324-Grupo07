@@ -958,6 +958,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 566319842}
     - target: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: _circuloPies1
+      value: 
+      objectReference: {fileID: 1511934283}
+    - target: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: _circuloPies2
       value: 
       objectReference: {fileID: 566319841}
@@ -3433,6 +3437,8 @@ MonoBehaviour:
   vida: 3
   animatorController: {fileID: 1708743710}
   rb: {fileID: 1708743704}
+  plataforma: {fileID: 0}
+  tilemap: {fileID: 0}
 --- !u!114 &1708743710 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}

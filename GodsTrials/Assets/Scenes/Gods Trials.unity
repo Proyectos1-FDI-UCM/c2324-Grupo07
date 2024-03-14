@@ -283,8 +283,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.4601349, y: 0.58}
-    newSize: {x: 0.4601349, y: 0.58}
+    oldSize: {x: 0.44, y: 0.6}
+    newSize: {x: 0.44, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -467,9 +467,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2167ddc737329e84cb0a5e5d80304e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocidad: 0.1
-  _salto: 5
-  _gravity: -5
+  jumpvelocity: 10
+  velocity: 5
+  enSuelo1: 0
+  enSuelo2: 0
+  enSuelo3: 0
+  botas: {fileID: 0}
+  carro: {fileID: 0}
+  pez: {fileID: 0}
+  circulo1: {fileID: 0}
+  circulo2: {fileID: 0}
+  saltoHercules1: {fileID: 0}
+  saltoHercules2: {fileID: 0}
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 0
+  tieneSalto: 0
+  dash: 0
+  state: 0
 --- !u!143 &1352873182
 CharacterController:
   m_ObjectHideFlags: 0

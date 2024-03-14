@@ -10,8 +10,9 @@ public class ControlarJugador : MonoBehaviour
     public float jumpvelocity = 10;
     public float velocity = 5;
     private Rigidbody2D rb;
-    private bool enSuelo1;
-    private bool enSuelo2;
+    public bool enSuelo1;
+    public bool enSuelo2;
+    public bool enSuelo3;
     private bool dobleSalto = true;
     public GameObject botas;
     public GameObject carro;    
@@ -77,11 +78,12 @@ public class ControlarJugador : MonoBehaviour
         {
             enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
             enSuelo2 = Physics2D.Raycast(saltoHercules2.position, Vector3.down, 0.1f, capaSuelo);
+            enSuelo3 = Physics2D.Raycast(circulo2.position, Vector3.down, 0.1f, capaSuelo);
             enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaSuelo);
             enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaSuelo);
             enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaSuelo);
             enParedLC2 = Physics2D.Raycast(circulo2.position, Vector3.left, 1f, capaSuelo);
-            if (enSuelo1 && Input.GetKeyDown(KeyCode.Space) || enSuelo2 && Input.GetKeyDown(KeyCode.Space))
+            if (enSuelo1 && Input.GetKeyDown(KeyCode.Space) || enSuelo2 && Input.GetKeyDown(KeyCode.Space) || enSuelo3 && Input.GetKeyDown(KeyCode.Space))
             {
                 Salto();
             }
@@ -103,7 +105,7 @@ public class ControlarJugador : MonoBehaviour
             else if (!Input.anyKey)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-                if (enSuelo1 || enSuelo2)
+                if (enSuelo1 || enSuelo2 || enSuelo3)
                 {
                     rb.velocity = new Vector2(0, -2.5f);
                 }
