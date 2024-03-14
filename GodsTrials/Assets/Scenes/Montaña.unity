@@ -11193,6 +11193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
+  animator: {fileID: 0}
 --- !u!4 &1726861515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7502860156706194031, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
