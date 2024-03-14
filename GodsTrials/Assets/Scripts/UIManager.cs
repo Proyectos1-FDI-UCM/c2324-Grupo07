@@ -53,9 +53,10 @@ public class UIManager : MonoBehaviour
     /// Initial setup of references and call to StartMenu
     /// </summary>
     void Start()
-    {        
+    {
         _stateManager = GetComponent<StateManager>();
-        BotonesMuerte.SetActive(false);
+        GameObject botonesMuerteInstance = BotonesMuerte;
+        botonesMuerteInstance.SetActive(false);
         Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;

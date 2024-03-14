@@ -5,7 +5,6 @@ using UnityEngine;
 public class AnimatorController : MonoBehaviour
 {
     #region parametros
-    private Transform player;
     Animator animator;
     private Rigidbody2D rb;
     private bool enSuelo1;
@@ -17,7 +16,6 @@ public class AnimatorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = transform;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -37,7 +35,7 @@ public class AnimatorController : MonoBehaviour
         }
         else
         {
-            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && enSuelo1 || !enSuelo2 && rb.velocity.x > 0.1f)
+            if (rb.velocity.x > 0.1f || rb.velocity.x > 0.1f && enSuelo1 || enSuelo2 && rb.velocity.x > 0.1f)
             {
                 animator.SetInteger("AnimState", 1); //run derecha
             }
