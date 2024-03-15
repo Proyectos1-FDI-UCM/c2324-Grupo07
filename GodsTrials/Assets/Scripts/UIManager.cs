@@ -9,15 +9,15 @@ public class UIManager : MonoBehaviour
     #region references
     private StateManager _stateManager;
     [SerializeField] 
-    public GameObject botas;
-    public GameObject carro;
-    public GameObject pez;
+    public GameObject botas = null;
+    public GameObject carro = null;
+    public GameObject pez = null;
     public Array rallas;
-    public GameObject ralla;
+    public GameObject ralla = null;
     public GameManager gameManager;
     public TextMeshProUGUI monedas = null;
     public GameObject BotonesMuerte = null;
-    public GameObject BotonesEscena;
+    public GameObject BotonesEscena = null;
     #endregion
 
     #region methods
