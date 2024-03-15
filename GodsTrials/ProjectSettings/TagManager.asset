@@ -8,6 +8,7 @@ TagManager:
   - Infierno
   - Mazmorra
   - Moneda
+  - bala
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Pared
   - collider camara arriba
   - collider camara abajo
-  - 
+  - hercules
   - 
   - 
   - 

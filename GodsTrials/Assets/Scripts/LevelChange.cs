@@ -24,7 +24,6 @@ public class LevelChange : MonoBehaviour
     public void Muerte()
     {
         _gameManager.LevelChange("muerte");
-        //SceneManager.LoadScene(3);
     }
 
     /// <summary>

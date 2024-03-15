@@ -958,6 +958,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 566319842}
     - target: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: _circuloPies1
+      value: 
+      objectReference: {fileID: 1511934283}
+    - target: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: _circuloPies2
       value: 
       objectReference: {fileID: 566319841}
@@ -1077,9 +1081,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1708743709}
-    - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1708743716}
   m_SourcePrefab: {fileID: 100100000, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
 --- !u!4 &566319841 stripped
 Transform:
@@ -2045,6 +2046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045987357}
   - component: {fileID: 1045987356}
+  - component: {fileID: 1045987358}
   m_Layer: 0
   m_Name: SueloCaida
   m_TagString: Untagged
@@ -2112,6 +2114,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1045987358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045987354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e5390983b79ca4a81d1e827a69e5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1290076525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3080,6 +3094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 1518226373}
+  _canvas: {fileID: 4323035009562678005}
 --- !u!114 &1518226374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,7 +3108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46f52bb5a263244ea5d7cf5ce38648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Botas: {fileID: 0}
+  botas: {fileID: 0}
+  carro: {fileID: 0}
+  pez: {fileID: 0}
   ralla: {fileID: 0}
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
@@ -3416,28 +3434,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hercules: {fileID: 1675755597}
-  lavaHueco: {fileID: 1045987354}
-  pinchosA: {fileID: 0}
-  pinchosI: {fileID: 0}
-  pinchosD: {fileID: 0}
-  bolaFuego1: {fileID: 0}
-  bolaFuego2: {fileID: 0}
-  Grid: {fileID: 0}
-  Plataforma: {fileID: 0}
   vida: 3
-  fuerzaEmpuje: 2
-  animatorController: {fileID: 0}
-  rb: {fileID: 0}
---- !u!114 &1708743716
+  animatorController: {fileID: 1708743710}
+  rb: {fileID: 1708743704}
+  plataforma: {fileID: 0}
+  tilemap: {fileID: 0}
+--- !u!114 &1708743710 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: -2130489635583246647, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 566319840}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675755597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84e1c2e6de408cf4bb8b829b215f82b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fc0c8d9f4ff2cd47b7384c20226962d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1717936237
@@ -4115,6 +4125,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
+--- !u!1 &4323035009562678005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595731077588679427, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
+  m_PrefabInstance: {fileID: 304503693878422006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7899114430742156965
 PrefabInstance:
   m_ObjectHideFlags: 0

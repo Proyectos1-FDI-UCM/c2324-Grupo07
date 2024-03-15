@@ -4,18 +4,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region references
-    private GameManager _gameManager;
+    //creacion del Singleton del GameManager
+    private GameManager _instance;
+    public GameManager Instance;
+
     private UIManager _UIManager;
     private StateManager _stateManager;
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
-    public GameObject canvas;
+    [SerializeField]
+    private GameObject _canvas;
     #endregion
 
     #region methods
     public void LevelChange(string _toLevel)
-    {        
-        if (_toLevel == "muerte"){
+    {
+        if (_toLevel == "muerte")
+        {
             _UIManager.BotonesEscena.SetActive(false);
         }
         _stateManager.ChangeGameState(_toLevel);
@@ -27,18 +32,18 @@ public class GameManager : MonoBehaviour
         Debug.Log(puntosTotales);
     }
 
-    /// <summary>
+
     /// Initial setup of references and call to StartMenu
-    /// </summary>
     void Start()
     {
-        _gameManager = GetComponent<GameManager>();
+        _instance = GetComponent<GameManager>();
 
         _UIManager = GetComponent<UIManager>();
 
         _stateManager = GetComponent<StateManager>();
 
-        //canvas = GameObject.Find("Canvas").GetComponent<Canvas>();       
+        _canvas = GetComponent<GameObject>();
+
     }
 
     void Update()
@@ -51,6 +56,16 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        DontDestroyOnLoad(_canvas);
+
+        if (_instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
