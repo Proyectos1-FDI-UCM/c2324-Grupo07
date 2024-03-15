@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
         _stateManager = GetComponent<StateManager>();
 
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();       
+        //canvas = GameObject.Find("Canvas").GetComponent<Canvas>();       
     }
 
     void Update()
