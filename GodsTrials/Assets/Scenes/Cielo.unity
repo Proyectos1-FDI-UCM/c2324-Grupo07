@@ -124,6 +124,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1001 &69351128
 PrefabInstance:
@@ -468,6 +469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 >>>>>>> parent of 0a50a86 (si)
+=======
+>>>>>>> parent of 33fc983 (Nivel cielo)
 --- !u!1 &344132783
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +563,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1001 &752152412
@@ -1250,14 +1254,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 >>>>>>> parent of 0a50a86 (si)
+=======
+>>>>>>> parent of 33fc983 (Nivel cielo)
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 344132786}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   - {fileID: 1232234976}
   - {fileID: 1974512247}
   - {fileID: 69351128}
 >>>>>>> parent of 0a50a86 (si)
+=======
+>>>>>>> parent of 33fc983 (Nivel cielo)
