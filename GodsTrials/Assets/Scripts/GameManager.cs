@@ -5,16 +5,15 @@ public class GameManager : MonoBehaviour
 {
     #region references
     //creacion del Singleton del GameManager
-    private static GameManager _instance;
-    public static GameManager Instance { get { return _instance; } }
+    private GameManager _instance;
+    public GameManager Instance;
 
     private UIManager _UIManager;
     private StateManager _stateManager;
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
-
-
-    
+    [SerializeField]
+    private GameObject _canvas;
     #endregion
 
     #region methods
@@ -43,6 +42,8 @@ public class GameManager : MonoBehaviour
 
         _stateManager = GetComponent<StateManager>();
 
+        _canvas = GetComponent<GameObject>();
+
     }
 
     void Update()
@@ -51,11 +52,11 @@ public class GameManager : MonoBehaviour
         {
             _stateManager.ChangeGameState("pause");
         }
-        _UIManager.botas = GameObject.Find("BotasCanvas");
     }
 
-   /* private void Awake()
+    private void Awake()
     {
+        DontDestroyOnLoad(_canvas);
 
         if (_instance != null)
         {
@@ -66,7 +67,5 @@ public class GameManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-      
-    }*/
+    }
 }

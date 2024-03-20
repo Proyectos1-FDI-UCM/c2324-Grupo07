@@ -23,9 +23,5 @@ public class BarraVida : MonoBehaviour
     private void Update()
     {
         barraVida.fillAmount = vidaActual/vidaMaxima;
-        if (vidaActual == 0)
-        {
-            vidaActual = vidaMaxima;
-        }
     }
 }

@@ -473,8 +473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
-  _canvas: {fileID: 0}
 --- !u!114 &1323167372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,15 +485,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46f52bb5a263244ea5d7cf5ce38648c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botas: {fileID: 0}
-  carro: {fileID: 0}
-  pez: {fileID: 0}
+  Botas: {fileID: 0}
   ralla: {fileID: 0}
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
   BotonesEscena: {fileID: 0}
-  buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &1323167373
 Transform:
   m_ObjectHideFlags: 0
