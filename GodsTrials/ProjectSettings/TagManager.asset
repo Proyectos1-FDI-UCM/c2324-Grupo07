@@ -9,6 +9,10 @@ TagManager:
   - Mazmorra
   - Moneda
   - bala
+  - doble
+  - pez
+  - carro
+  - botas
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using Unity.VisualScripting;
+
 public class UIManager : MonoBehaviour
 {
     #region references
@@ -60,11 +62,26 @@ public class UIManager : MonoBehaviour
         Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
-        pez = GetComponent<GameObject>();
+        pez =GameObject.Find("pez").GetComponent<GameObject>();
+        botas = GameObject.Find("Botas").GetComponent<GameObject>();
         carro = GameObject.Find("carro").GetComponent<GameObject>();
+        
     }
-    
-    
+    public void OnLevelWasLoaded()
+    {
+        
+        //canvas = GameObject.Find("Canvas");
+        Canvas[] canvases = FindObjectsOfType<Canvas>();
+
+        
+        foreach (Canvas canvas2 in canvases)
+        {
+
+            Transform child = canvas2.transform.FindChild("BotasCanvas").transform;
+            botas = child.gameObject;
+            break;
+        }
+    }
     void Update()
     {
         if (monedas != null){
