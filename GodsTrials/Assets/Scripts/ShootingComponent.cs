@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShootingComponent : MonoBehaviour
 {
+    private Animator animator;
     private ControlarJugador hercules;
     public GameObject pez;
     public GameObject bala;
@@ -25,12 +26,14 @@ public class ShootingComponent : MonoBehaviour
             if(hercules.transform.rotation == Quaternion.identity)
             {
                 instantiate = new Vector3(hercules.transform.position.x + 0.8f, hercules.transform.position.y + 0.4f, 0);
+                bala.transform.rotation = Quaternion.Euler(0, 0, 90);
             }
             else
             {
                 instantiate = new Vector3(hercules.transform.position.x - 0.8f, hercules.transform.position.y + 0.4f, 0);
+                bala.transform.rotation = Quaternion.Euler(0, 0, 270);
             }
-            GameObject valBel = Instantiate(bala, instantiate, Quaternion.identity);
+            GameObject valBel = Instantiate(bala, instantiate, bala.transform.rotation);
             rb = valBel.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
