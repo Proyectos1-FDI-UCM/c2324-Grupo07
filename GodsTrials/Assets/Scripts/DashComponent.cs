@@ -47,7 +47,10 @@ public class DashComponent : MonoBehaviour
         time += Time.deltaTime;
         if (time > timeToDash)
         {
-            hercules.velocity = new Vector3(0, hercules.velocity.y, 0);
+            if (jugador.state == 3)
+            {
+                hercules.velocity = new Vector3(0, hercules.velocity.y, 0);
+            }
             if (time > 1f)
             {
                 dashea = true;

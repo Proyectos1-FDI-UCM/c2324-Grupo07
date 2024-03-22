@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SoundMixerManager : MonoBehaviour
+/*public class SoundMixerManager : MonoBehaviour
 {
     #region references
     [SerializeField] 
@@ -29,3 +29,4 @@ public class SoundMixerManager : MonoBehaviour
     }
     #endregion
 }
+*/

@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
         foreach (Canvas canvas2 in canvases)
         {
 
-            Transform child = canvas2.transform.FindChild("BotasCanvas").transform;
+            Transform child = canvas2.transform.Find("BotasCanvas").transform;
             botas = child.gameObject;
             break;
         }
