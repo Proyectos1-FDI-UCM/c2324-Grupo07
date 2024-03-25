@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cielo.unity
     guid: 372187e07aee55d4abfc08701969af2e
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 6a937dcfbc2ef034884482f3097f7aa9
   m_configObjects: {}
