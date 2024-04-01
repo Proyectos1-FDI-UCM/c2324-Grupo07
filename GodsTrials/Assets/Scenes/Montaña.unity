@@ -1871,6 +1871,11 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &633142340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666285253119690982, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
+  m_PrefabInstance: {fileID: 6084875250156111942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &768282300
 GameObject:
   m_ObjectHideFlags: 0
@@ -15299,6 +15304,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
   animator: {fileID: 0}
+--- !u!114 &1664900530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664900524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fcbcc5de27eff4685c7d8b8e541fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hercules: {fileID: 1174641664}
+  bola: {fileID: 633142340}
 --- !u!4 &1726861515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7502860156706194031, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
@@ -15823,6 +15842,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6229957473730815168, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1664900529}
+    - targetCorrespondingSourceObject: {fileID: 6229957473730815168, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1664900530}
   m_SourcePrefab: {fileID: 100100000, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
 --- !u!1001 &6012091731189956366
 PrefabInstance:
@@ -16100,6 +16122,14 @@ PrefabInstance:
     - target: {fileID: 1666285253119690982, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
       propertyPath: m_Name
       value: roca
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869907006533639860, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869907006533639860, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1337078907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
