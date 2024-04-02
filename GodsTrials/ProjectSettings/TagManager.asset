@@ -15,6 +15,7 @@ TagManager:
   - botas
   - bola
   - Plataforma salto
+  - Plataforma horziontal
   layers:
   - Default
   - TransparentFX
