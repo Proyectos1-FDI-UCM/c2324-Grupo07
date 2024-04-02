@@ -416,6 +416,10 @@ PrefabInstance:
       propertyPath: saltoHercules2
       value: 
       objectReference: {fileID: 454572341}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: platformJumpVelocity
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5779997475782886627, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -9846,7 +9850,7 @@ GameObject:
   - component: {fileID: 1110062993}
   m_Layer: 3
   m_Name: Nubes rebotan
-  m_TagString: Untagged
+  m_TagString: Plataforma salto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
