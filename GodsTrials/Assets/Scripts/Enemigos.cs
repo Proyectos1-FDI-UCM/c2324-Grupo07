@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemigos : MonoBehaviour
@@ -14,34 +15,58 @@ public class Enemigos : MonoBehaviour
     float tiempo;
     [SerializeField]
     public GameObject bola;
+    private Rigidbody2D bb;
+    [SerializeField]
+    private float veloc = 1.0f;
+
+    public float distanciaLinea = 3f;
+    public LayerMask capaJugador;
+    private bool jugadorEnRango;
     #endregion
-    // Start is called before the first frame update
+
     void Start()
     {
-        tiempo = 0;
+        tiempo = 3;
         _mytransform = transform;
         _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-       
-        float disty = Mathf.Abs(transform.position.y - hercules.transform.position.y);
-        tiempo += Time.deltaTime; 
-        //float distx = Mathf.Abs(transform.position.x - hercules.transform.position.x);
-        if (disty <= 10)
+        tiempo += Time.deltaTime;
+       Vector3 direc= (hercules.transform.position - transform.position-Vector3.up);
+        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
+     
+        if (jugadorEnRango)
+
         {
+            
             if (tiempo > tiemporep)
             {
-                _animator.Play("lazapiedra");
-                Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
-                //Shoot();
+               
+                GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
+                _animator.SetTrigger("New Trigger");
+                bb = bols.GetComponent<Rigidbody2D>();
+                float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
+                bb.velocity = (direc/mod) * veloc;
                 tiempo = 0;
 
             }
-                bola.transform.position +=( new Vector3(1,0,0))*Time.deltaTime;
+        }
+        else if (!jugadorEnRango) // Si el jugador está fuera del rango y hay una última bola instanciada
+        {
+           
 
         }
+
+    }
+
+    public void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, distanciaLinea);
     }
 }
+

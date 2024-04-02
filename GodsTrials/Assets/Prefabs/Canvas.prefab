@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7139533621531335124}
   - component: {fileID: 1226904728699227716}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: monedas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8084133191335736619}
   - component: {fileID: 5148283821974434333}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: power up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,8 +576,12 @@ PrefabInstance:
       value: Botas (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4529177095190518345, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
       propertyPath: m_SortingLayer
@@ -613,6 +617,10 @@ PrefabInstance:
     - target: {fileID: 6858146762234058716, guid: 388589a3c873d5e44bdf8ce7ba5045de, type: 3}
       propertyPath: m_Name
       value: vidavacia
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858146762234058716, guid: 388589a3c873d5e44bdf8ce7ba5045de, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8060690668460648088, guid: 388589a3c873d5e44bdf8ce7ba5045de, type: 3}
       propertyPath: m_LocalPosition.x
