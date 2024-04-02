@@ -8,6 +8,7 @@ using System.Collections;
 public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
+    public float platformJumpVelocity = 20;
     public float velocity = 5;
     private Rigidbody2D rb;
     public bool enSuelo1;
@@ -41,6 +42,13 @@ public class ControlarJugador : MonoBehaviour
                 dobleSalto = true;
             }
         }
+        if (activarSalto.gameObject.CompareTag("Plataforma salto")&& activarSalto.contacts[0].point.y < transform.position.y)
+        {
+
+            rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity); 
+
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D itemBotas)
     {
@@ -107,7 +115,8 @@ public class ControlarJugador : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 if (enSuelo1 || enSuelo2 || enSuelo3)
                 {
-                    rb.velocity = new Vector2(0, -2.5f);
+                    //bloquea el rebote de las plataformas, buscar mejor integracion?
+                    //rb.velocity = new Vector2(0, -2.5f);
                 }
             }
         }
@@ -117,5 +126,6 @@ public class ControlarJugador : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
+  
 }
 
