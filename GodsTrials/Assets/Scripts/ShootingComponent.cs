@@ -10,7 +10,7 @@ public class ShootingComponent : MonoBehaviour
     public GameObject pez;
     public GameObject bala;
     public GameObject ciclope;
-    private bool disparo;
+    public bool disparo = false;
     private bool shoot;
     private float time;
     private float timeToShoot = 0.5f;
@@ -18,7 +18,7 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetMouseButton(0) && disparo && shoot)
+        if (Input.GetKey(KeyCode.J) && disparo && shoot)
         {
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();
@@ -58,7 +58,6 @@ public class ShootingComponent : MonoBehaviour
     }
     void Start()
     {
-        disparo = false;
         shoot = true;
         time = 0;
     }
