@@ -17,7 +17,7 @@ public class Enemigos : MonoBehaviour
     public GameObject bola;
     private Rigidbody2D bb;
     [SerializeField]
-    private float veloc = 1.0f;
+    private float veloc = 5.0f;
 
     public float distanciaLinea = 3f;
     public LayerMask capaJugador;
@@ -34,24 +34,24 @@ public class Enemigos : MonoBehaviour
 
     void Update()
     {
-        tiempo += Time.deltaTime;
+       tiempo += Time.deltaTime;
        Vector3 direc= (hercules.transform.position - transform.position-Vector3.up);
-        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
+       jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
      
         if (jugadorEnRango)
         {
             if (tiempo > tiemporep)
             {
                
-                _animator.SetInteger("ciclope",1);
                 GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
+                _animator.SetInteger("ciclope",1);
                 bb = bols.GetComponent<Rigidbody2D>();
                 float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
                 bb.velocity = (direc/mod) * veloc;
                 tiempo = 0;
 
             }
-            else if(tiempo<1) 
+            else if(tiempo<0.1f) 
             {
                 _animator.SetInteger("ciclope", 0);
             }
