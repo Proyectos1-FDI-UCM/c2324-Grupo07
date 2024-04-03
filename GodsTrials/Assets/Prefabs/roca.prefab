@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3596761183240665163}
   - component: {fileID: 484070268445661835}
   - component: {fileID: -3909475382602079962}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: roca
   m_TagString: bola
   m_Icon: {fileID: 0}

@@ -51,7 +51,7 @@ public class Enemigos : MonoBehaviour
                 tiempo = 0;
 
             }
-            else if(tiempo<1) 
+            else if(tiempo<0.1f) 
             {
                 _animator.SetInteger("ciclope", 0);
             }

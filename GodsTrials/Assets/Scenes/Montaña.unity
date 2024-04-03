@@ -828,11 +828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7804528760406193298, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7804528760406193298, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1337078907
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1193,7 +1193,7 @@ Transform:
   m_GameObject: {fileID: 574210521}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4135949, y: 2.0405762, z: 0.009729881}
+  m_LocalPosition: {x: -0.4135949, y: 2.0405762, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10955,6 +10955,7 @@ MonoBehaviour:
   pez: {fileID: 2099687991}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 6229957473730815168, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
+  disparo: 0
 --- !u!1 &1350495316
 GameObject:
   m_ObjectHideFlags: 0
@@ -12444,11 +12445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7804528760406193298, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7804528760406193298, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1337078907
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
