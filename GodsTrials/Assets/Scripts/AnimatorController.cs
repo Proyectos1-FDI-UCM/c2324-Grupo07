@@ -54,7 +54,7 @@ public class AnimatorController : MonoBehaviour
     }
     public void Dano()
     {
-        Debug.Log("entra");
+        
         animator.SetTrigger("AnimTrigger");//dano
     }
 }

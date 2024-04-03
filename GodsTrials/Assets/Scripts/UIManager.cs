@@ -70,9 +70,9 @@ public class UIManager : MonoBehaviour
         Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
-        pez =GameObject.Find("pez").GetComponent<GameObject>();
+        pez = GameObject.Find("pez").GetComponent<GameObject>();
+        carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
         botas = GameObject.Find("Botas").GetComponent<GameObject>();
-        carro = GameObject.Find("carro").GetComponent<GameObject>();
         
     }
     public void OnLevelWasLoaded()

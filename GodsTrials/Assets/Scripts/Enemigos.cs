@@ -26,7 +26,7 @@ public class Enemigos : MonoBehaviour
 
     void Start()
     {
-        tiempo = 3;
+        tiempo = 0;
         _mytransform = transform;
         _animator = GetComponent<Animator>();
     }
@@ -39,27 +39,27 @@ public class Enemigos : MonoBehaviour
         jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
      
         if (jugadorEnRango)
-
         {
-            
             if (tiempo > tiemporep)
             {
                
+                _animator.SetInteger("ciclope",1);
                 GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
-                _animator.SetTrigger("New Trigger");
                 bb = bols.GetComponent<Rigidbody2D>();
                 float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
                 bb.velocity = (direc/mod) * veloc;
                 tiempo = 0;
 
             }
+            else if(tiempo<1) 
+            {
+                _animator.SetInteger("ciclope", 0);
+            }
         }
         else if (!jugadorEnRango) // Si el jugador está fuera del rango y hay una última bola instanciada
         {
-           
-
+            _animator.SetInteger("ciclope", 0);
         }
-
     }
 
     public void OnDrawGizmos()
