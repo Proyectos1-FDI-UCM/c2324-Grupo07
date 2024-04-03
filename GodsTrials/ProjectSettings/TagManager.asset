@@ -16,6 +16,7 @@ TagManager:
   - bola
   - Plataforma salto
   - Plataforma horziontal
+  - Plataforma horizontal
   layers:
   - Default
   - TransparentFX
