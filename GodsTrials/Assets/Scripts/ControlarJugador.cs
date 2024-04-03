@@ -9,6 +9,7 @@ public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
     public float platformJumpVelocity = 20;
+    public float velocidadHorizontal = -30;
     public float velocity = 5;
     private Rigidbody2D rb;
     public bool enSuelo1;
@@ -44,9 +45,13 @@ public class ControlarJugador : MonoBehaviour
         }
         if (activarSalto.gameObject.CompareTag("Plataforma salto")&& activarSalto.contacts[0].point.y < transform.position.y)
         {
-
             rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity); 
 
+        }
+        if(activarSalto.gameObject.CompareTag("Plataforma horizontal"))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.velocity = new Vector2(velocidadHorizontal, 0f);
         }
 
     }
