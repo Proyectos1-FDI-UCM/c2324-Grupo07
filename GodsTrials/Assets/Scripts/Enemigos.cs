@@ -22,6 +22,8 @@ public class Enemigos : MonoBehaviour
     public float distanciaLinea = 3f;
     public LayerMask capaJugador;
     private bool jugadorEnRango;
+
+    private SpriteRenderer spriteRenderer;
     #endregion
 
     void Start()
@@ -29,6 +31,8 @@ public class Enemigos : MonoBehaviour
         tiempo = 0;
         _mytransform = transform;
         _animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.rotation = Quaternion.identity;
     }
 
 
@@ -37,24 +41,38 @@ public class Enemigos : MonoBehaviour
        tiempo += Time.deltaTime;
        Vector3 direc= (hercules.transform.position - transform.position-Vector3.up);
        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
-     
+       float distenemx = hercules.transform.position.x - transform.position.x;
+        //Debug.Log(distenemx);
+       //float direccionX = transform.forward.x;
+
         if (jugadorEnRango)
         {
             if (tiempo > tiemporep)
             {
-               
+                
+                    _animator.SetInteger("ciclope", 1);
+                if (distenemx <= 0 )
+                {
+                    Debug.Log("izqu miando deech");
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                    //spriteRenderer.flipX = true;
+                }
+                else if (distenemx > 0 )
+                {
+                    Debug.Log("deech miando izqu");
+                    transform.rotation = Quaternion.Euler(0, -180, 0);
+                    //spriteRenderer.flipX = !spriteRenderer.flipX;
+
+                }
+                
                 GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
-                _animator.SetInteger("ciclope",1);
                 bb = bols.GetComponent<Rigidbody2D>();
                 float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
                 bb.velocity = (direc/mod) * veloc;
                 tiempo = 0;
 
             }
-            else if(tiempo<0.1f) 
-            {
-                _animator.SetInteger("ciclope", 0);
-            }
+            
         }
         else if (!jugadorEnRango) // Si el jugador está fuera del rango y hay una última bola instanciada
         {

@@ -11,14 +11,6 @@ public class Zeus : MonoBehaviour
     private float vel = 2f;
     private Rigidbody2D zeusRB;
     private bool changeVel = false;
-    [SerializeField]
-    private bool enSueloU;
-    [SerializeField]
-    private bool enSueloD;
-    [SerializeField]
-    private bool enSueloL;
-    [SerializeField]
-    private bool enSueloR;
     private Vector3 randomVelocity;
     public LayerMask suelo;
     // Start is called before the first frame update
