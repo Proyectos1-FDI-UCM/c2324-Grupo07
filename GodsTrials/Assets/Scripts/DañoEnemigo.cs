@@ -7,8 +7,7 @@ public class DañoEnemigo : MonoBehaviour
 {
     #region parametros
     private VidaSystem vida;
-    [SerializeField]
-    private GameObject cam;
+    
     #endregion
 
 

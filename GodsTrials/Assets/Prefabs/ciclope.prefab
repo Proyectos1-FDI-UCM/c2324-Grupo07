@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 2062280305368764618}
   - component: {fileID: 7804528760406193298}
   - component: {fileID: 3781822738195441811}
-  - component: {fileID: -8836790329354375507}
   - component: {fileID: 664854317763814536}
   - component: {fileID: 1812663020937242110}
   - component: {fileID: 4421358165843735764}
@@ -166,25 +165,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.44}
   m_EdgeRadius: 0
---- !u!114 &-8836790329354375507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6229957473730815168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5fcbcc5de27eff4685c7d8b8e541fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
-  bola: {fileID: 1666285253119690982, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
-  veloc: 5
-  distanciaLinea: 6
-  capaJugador:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!95 &664854317763814536
 Animator:
   serializedVersion: 5
@@ -219,7 +199,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
-  animator: {fileID: 0}
 --- !u!114 &4421358165843735764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,10 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5fcbcc5de27eff4685c7d8b8e541fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hercules: {fileID: 0}
+  hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
   bola: {fileID: 1666285253119690982, guid: 4809b7b07c92c2b4b983bc5555a5aef8, type: 3}
-  veloc: 3.5
-  distanciaLinea: 6
+  veloc: 5
+  distanciaLinea: 15
   capaJugador:
     serializedVersion: 2
     m_Bits: 512
