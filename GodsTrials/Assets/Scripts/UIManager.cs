@@ -10,8 +10,8 @@ public class UIManager : MonoBehaviour
 {
     #region references
     private StateManager _stateManager;
-    [SerializeField] 
-    public GameObject botas = null;
+    
+    public GameObject botas;
     public GameObject carro = null;
     public GameObject pez = null;
     public Array rallas;
@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
 
     #region Power-Ups
     public void Botas()
-    {
+    { 
         botas.SetActive(true);
     }
     public void Carro()
@@ -70,12 +70,12 @@ public class UIManager : MonoBehaviour
         Invoke("EncenderBotonesMuerte", 4.0f);
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
+        //botas = GameObject.Find("BotasCanvas").GetComponent<GameObject>();
         pez = GameObject.Find("pez").GetComponent<GameObject>();
         carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
-        botas = GameObject.Find("Botas").GetComponent<GameObject>();
         
     }
-    public void OnLevelWasLoaded()
+   /* public void OnLevelWasLoaded()
     {
         
         //canvas = GameObject.Find("Canvas");
@@ -89,7 +89,7 @@ public class UIManager : MonoBehaviour
             botas = child.gameObject;
             break;
         }
-    }
+    }*/
     void Update()
     {
         if (monedas != null){

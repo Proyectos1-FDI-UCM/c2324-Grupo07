@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         {
             _stateManager.ChangeGameState("pause");
         }
-        _UIManager.botas = GameObject.Find("BotasCanvas");
+        
     }
 
    /* private void Awake()

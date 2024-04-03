@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: botas
@@ -7285,6 +7285,10 @@ PrefabInstance:
       value: pez
       objectReference: {fileID: 0}
     - target: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -8132,6 +8136,10 @@ PrefabInstance:
       value: carro
       objectReference: {fileID: 0}
     - target: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -8199,11 +8207,6 @@ PrefabInstance:
 --- !u!4 &1023445731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7462036321817759624, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
-  m_PrefabInstance: {fileID: 1023445730}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1023445732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
   m_PrefabInstance: {fileID: 1023445730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1027399953
@@ -8649,13 +8652,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botas: {fileID: 1719175152}
-  carro: {fileID: 1023445732}
+  carro: {fileID: 0}
   pez: {fileID: 676810263}
   ralla: {fileID: 1125175393973127987, guid: ff50931a7cc955449a3411c3ebe31931, type: 3}
   gameManager: {fileID: 1071708421}
   monedas: {fileID: 1686502934}
-  BotonesMuerte: {fileID: 4595731077588679427, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
+  BotonesMuerte: {fileID: 0}
   BotonesEscena: {fileID: 451740237}
+  buttonClickFXClip: {fileID: 0}
 --- !u!4 &1071708423
 Transform:
   m_ObjectHideFlags: 0
@@ -15506,6 +15510,10 @@ PrefabInstance:
       value: BotasCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969485483362550930, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -15520,6 +15528,10 @@ PrefabInstance:
     - target: {fileID: 4529177095190518345, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
       propertyPath: m_SortingLayerID
       value: -434573291
+      objectReference: {fileID: 0}
+    - target: {fileID: 5456549395520806553, guid: 2c327361aea67b84cb852dd858b0d502, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15822,7 +15834,7 @@ GameObject:
   - component: {fileID: 2061379977}
   - component: {fileID: 2061379976}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: CanvasCamara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
