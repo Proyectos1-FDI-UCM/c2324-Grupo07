@@ -722,9 +722,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pez: {fileID: 0}
+  pez: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
-  ciclope: {fileID: 0}
+  ciclope: {fileID: 8477860137209712703, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
+  disparo: 1
 --- !u!114 &454572346
 MonoBehaviour:
   m_ObjectHideFlags: 0
