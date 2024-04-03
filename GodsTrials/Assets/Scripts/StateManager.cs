@@ -31,6 +31,12 @@ public class StateManager : MonoBehaviour
             case "montaña":
                 StartCoroutine (ChangeScene(6, true, false));
                 break;
+            case "cielo":
+                StartCoroutine(ChangeScene(7,true, false));
+                break;
+            case "final":
+                StartCoroutine(ChangeScene(8,true, false));
+                break;
             case "muerte":
                 //StartCoroutine(ChangeScene(3, true, true));
                 Load(3, true);

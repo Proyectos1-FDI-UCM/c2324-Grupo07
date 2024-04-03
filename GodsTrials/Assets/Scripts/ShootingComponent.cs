@@ -55,7 +55,6 @@ public class ShootingComponent : MonoBehaviour
         {
             disparo = true;
         }
-        Debug.Log(disparo);
     }
     void Start()
     {

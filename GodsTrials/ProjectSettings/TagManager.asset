@@ -9,6 +9,13 @@ TagManager:
   - Mazmorra
   - Moneda
   - bala
+  - doble
+  - pez
+  - carro
+  - botas
+  - bola
+  - Plataforma salto
+  - Plataforma horziontal
   layers:
   - Default
   - TransparentFX
@@ -20,7 +27,7 @@ TagManager:
   - collider camara arriba
   - collider camara abajo
   - hercules
-  - 
+  - enemigos
   - 
   - 
   - 
