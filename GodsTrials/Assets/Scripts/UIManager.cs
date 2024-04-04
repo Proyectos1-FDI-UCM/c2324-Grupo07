@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 {
     #region references
     private StateManager _stateManager;
-    
+
     public GameObject botas;
     public GameObject carro = null;
     public GameObject pez = null;
@@ -27,13 +27,16 @@ public class UIManager : MonoBehaviour
     public void OnPress(string s)
     {
         //play sound FX
-        if ( buttonClickFXClip != null){
+        if (buttonClickFXClip != null)
+        {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }
         _stateManager.ChangeGameState(s);
     }
-    public void SetFullScreen (bool isFS){
-        if ( buttonClickFXClip != null){
+    public void SetFullScreen(bool isFS)
+    {
+        if (buttonClickFXClip != null)
+        {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }
         Screen.fullScreen = !Screen.fullScreen;
@@ -46,7 +49,7 @@ public class UIManager : MonoBehaviour
 
     #region Power-Ups
     public void Botas()
-    { 
+    {
         botas.SetActive(true);
     }
     public void Carro()
@@ -73,26 +76,27 @@ public class UIManager : MonoBehaviour
         //botas = GameObject.Find("BotasCanvas").GetComponent<GameObject>();
         pez = GameObject.Find("pez").GetComponent<GameObject>();
         carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
-        
+
     }
-   /* public void OnLevelWasLoaded()
-    {
-        
-        //canvas = GameObject.Find("Canvas");
-        Canvas[] canvases = FindObjectsOfType<Canvas>();
+    /* public void OnLevelWasLoaded()
+     {
 
-        
-        foreach (Canvas canvas2 in canvases)
-        {
+         //canvas = GameObject.Find("Canvas");
+         Canvas[] canvases = FindObjectsOfType<Canvas>();
 
-            Transform child = canvas2.transform.Find("BotasCanvas").transform;
-            botas = child.gameObject;
-            break;
-        }
-    }*/
+
+         foreach (Canvas canvas2 in canvases)
+         {
+
+             Transform child = canvas2.transform.Find("BotasCanvas").transform;
+             botas = child.gameObject;
+             break;
+         }
+     }*/
     void Update()
     {
-        if (monedas != null){
+        if (monedas != null)
+        {
             monedas.text = gameManager.PuntosTotales.ToString();
         }
     }

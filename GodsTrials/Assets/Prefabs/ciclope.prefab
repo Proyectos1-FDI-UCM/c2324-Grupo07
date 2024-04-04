@@ -218,3 +218,6 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 512
+  capasuelo:
+    serializedVersion: 2
+    m_Bits: 8

@@ -4,6 +4,7 @@ using System.Runtime.ConstrainedExecution;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class Enemigos : MonoBehaviour
 {
     #region parametros
@@ -23,7 +24,8 @@ public class Enemigos : MonoBehaviour
     public LayerMask capaJugador;
     private bool jugadorEnRango;
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private LayerMask capasuelo;
     #endregion
 
     void Start()
@@ -31,55 +33,58 @@ public class Enemigos : MonoBehaviour
         tiempo = 0;
         _mytransform = transform;
         _animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         transform.rotation = Quaternion.identity;
     }
 
 
     void Update()
     {
-       tiempo += Time.deltaTime;
-       Vector3 direc= (hercules.transform.position - transform.position-Vector3.up);
-       jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
-       float distenemx = hercules.transform.position.x - transform.position.x;
-        //Debug.Log(distenemx);
-       //float direccionX = transform.forward.x;
+        tiempo += Time.deltaTime;
+        Vector3 direc = (hercules.transform.position - transform.position - Vector3.up);
+        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
+        float distenemx = hercules.transform.position.x - transform.position.x;
+
 
         if (jugadorEnRango)
         {
             if (tiempo > tiemporep)
             {
-                
-                    _animator.SetInteger("ciclope", 1);
-                if (distenemx <= 0 )
+                if (distenemx <= 0 && transform.rotation == Quaternion.identity)
                 {
-                    Debug.Log("izqu miando deech");
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                    //spriteRenderer.flipX = true;
+                    Debug.Log("gire izqu");
+                    Quaternion targetRotation = Quaternion.Euler(0, 180, 0); // Quaternion de rotación deseada
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1000f); // Interpolar hacia la rotación deseada
                 }
-                else if (distenemx > 0 )
+                else if (distenemx <= 0 && transform.rotation != Quaternion.identity)
                 {
-                    Debug.Log("deech miando izqu");
-                    transform.rotation = Quaternion.Euler(0, -180, 0);
-                    //spriteRenderer.flipX = !spriteRenderer.flipX;
-
+                    //tiene que mirar a la izqu y lo hacia antes no cambia
                 }
-                
+                else if (distenemx > 0 && transform.rotation == Quaternion.identity)
+                {
+                    //debe ve dech y ya lo hace
+                }
+                else if (distenemx > 0 && transform.rotation != Quaternion.identity)
+                {
+                    Debug.Log("gire a dcha");
+                    Quaternion targetRotation = Quaternion.Euler(0, 0, 0); // Quaternion de rotación deseada
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 100f); // Interpolar hacia la rotación deseada
+                }
+                _animator.SetInteger("ciclope", 1);
                 GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
                 bb = bols.GetComponent<Rigidbody2D>();
                 float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
-                bb.velocity = (direc/mod) * veloc;
+                bb.velocity = (direc / mod) * veloc;
+
                 tiempo = 0;
 
             }
-            
+
         }
         else if (!jugadorEnRango) // Si el jugador está fuera del rango y hay una última bola instanciada
         {
             _animator.SetInteger("ciclope", 0);
         }
     }
-
     public void OnDrawGizmos()
     {
 
