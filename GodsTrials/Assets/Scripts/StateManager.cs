@@ -8,7 +8,7 @@ public class StateManager : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    
+
     private bool paused = false;
 
     #region methods
@@ -18,7 +18,7 @@ public class StateManager : MonoBehaviour
         {
             case "quit":
                 Application.Quit();
-                break;                
+                break;
             case "mainMenu":
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
@@ -29,13 +29,13 @@ public class StateManager : MonoBehaviour
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
             case "montaña":
-                StartCoroutine (ChangeScene(6, true, false));
+                StartCoroutine(ChangeScene(6, true, false));
                 break;
             case "cielo":
-                StartCoroutine(ChangeScene(7,true, false));
+                StartCoroutine(ChangeScene(7, true, false));
                 break;
             case "final":
-                StartCoroutine(ChangeScene(8,true, false));
+                StartCoroutine(ChangeScene(8, true, false));
                 break;
             case "muerte":
                 //StartCoroutine(ChangeScene(3, true, true));
@@ -51,11 +51,11 @@ public class StateManager : MonoBehaviour
                 Load(5, true);
                 paused = true;
                 break;
-            case "resume":                
+            case "resume":
                 paused = false;
                 StartCoroutine(ChangeScene(5, false, true));
                 //Unload(5);
-                break;            
+                break;
             case "restartLevel":
                 StartCoroutine(ChangeScene(3, false, true));
                 //Unload(3);
@@ -63,7 +63,7 @@ public class StateManager : MonoBehaviour
             case "back":
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
-                
+
             default:
                 print("default CGS");
                 break;
@@ -97,11 +97,12 @@ public class StateManager : MonoBehaviour
             SceneManager.LoadScene(id);
         }
     }
-    
+
     private void Unload(int id)
     {
         SceneManager.UnloadSceneAsync(id);
-        if(id == 3){//si era la escena de muerte
+        if (id == 3)
+        {//si era la escena de muerte
             Application.LoadLevel(Application.loadedLevel);
         }
     }

@@ -2,8 +2,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
-using System.Collections;
 
 public class ControlarJugador : MonoBehaviour
 {
@@ -17,8 +15,8 @@ public class ControlarJugador : MonoBehaviour
     public bool enSuelo3;
     private bool dobleSalto = true;
     public GameObject botas;
-    public GameObject carro;    
-    public GameObject pez;    
+    public GameObject carro;
+    public GameObject pez;
     public Transform circulo1;
     public Transform circulo2;
     public Transform saltoHercules1;
@@ -43,12 +41,12 @@ public class ControlarJugador : MonoBehaviour
                 dobleSalto = true;
             }
         }
-        if (activarSalto.gameObject.CompareTag("Plataforma salto")&& activarSalto.contacts[0].point.y < transform.position.y)
+        if (activarSalto.gameObject.CompareTag("Plataforma salto") && activarSalto.contacts[0].point.y < transform.position.y)
         {
-            rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity); 
+            rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity);
 
         }
-        if(activarSalto.gameObject.CompareTag("Plataforma horizontal"))
+        if (activarSalto.gameObject.CompareTag("Plataforma horizontal"))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             rb.velocity = new Vector2(velocidadHorizontal, 0f);
@@ -126,11 +124,11 @@ public class ControlarJugador : MonoBehaviour
             }
         }
     }
-    
+
     public void Salto()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
-  
+
 }
 
