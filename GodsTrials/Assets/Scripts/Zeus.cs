@@ -36,10 +36,15 @@ public class Zeus : MonoBehaviour
     Vector3 marca = Vector3.zero;
     Vector3 ataca = Vector3.zero;
     float caeRayo = 0;
+    bool instancia = true;
+    bool instancia1 = true;
+    bool instancia2 = true;
+    private GameObject marc;
+    private GameObject ray;
     public void VidaZeus()
     {
         vidaZ--;
-        if(vidaZ == 0)
+        if (vidaZ == 0)
         {
             Destroy(gameObject);
         }
@@ -154,7 +159,7 @@ public class Zeus : MonoBehaviour
             if (timeDisparos1 < 10 && timeDisparos1 > 0)
             {
                 //Direccion disparos
-                if (dispara1 < 0.04)
+                if (dispara1 < 0.04 && instancia)
                 {
                     Vector3 direc = (hercules.transform.position - transform.position);
                     GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.identity);
@@ -162,16 +167,21 @@ public class Zeus : MonoBehaviour
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                     float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
                     proyectilRB.velocity = (direc / mod) * 12;
+                    instancia = false;
                 }
                 //Tiempo entre disparos
                 if (dispara1 > 1.25f)
                 {
+                    instancia = true;
                     dispara1 = 0;
                 }
             }
             //Cambio de estados e inicializacion de los tiempos del nuevo estado para que al hacer el bucle funcione
             if (timeDisparos1 > 10)
             {
+                instancia = true;
+                instancia1 = true;
+                instancia2 = true;
                 timeDisparos2 = 0;
                 dispara2 = 0;
                 estado = 1;
@@ -200,7 +210,7 @@ public class Zeus : MonoBehaviour
             {
                 dispara2 += Time.deltaTime;
                 //Disparo medio
-                if (dispara2 < 0.04 && transform.localScale != new Vector3(10, 10))
+                if (dispara2 < 0.04 && transform.localScale != new Vector3(10, 10) && instancia)
                 {
                     GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.Euler(0, 0, 90));
                     dispara2 += 0.01f;
@@ -209,9 +219,10 @@ public class Zeus : MonoBehaviour
                     sizeX -= 0.2f;
                     sizeY -= 0.2f;
                     transform.localScale = new Vector3(sizeX, sizeY);
+                    instancia = false;
                 }
                 //Disparo arriba
-                if (dispara2 > 0.50 && dispara2 < 0.54 && transform.localScale != new Vector3(10, 10))
+                if (dispara2 > 0.50 && dispara2 < 0.54 && transform.localScale != new Vector3(10, 10) && instancia1)
                 {
                     GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * 2, Quaternion.Euler(0, 0, 90));
                     dispara2 += 0.01f;
@@ -220,9 +231,10 @@ public class Zeus : MonoBehaviour
                     sizeX -= 0.2f;
                     sizeY -= 0.2f;
                     transform.localScale = new Vector3(sizeX, sizeY);
+                    instancia1 = false;
                 }
                 //Disparo abajo
-                if (dispara2 > 1 && dispara2 < 1.04 && transform.localScale != new Vector3(10, 10))
+                if (dispara2 > 1 && dispara2 < 1.04 && transform.localScale != new Vector3(10, 10) && instancia2)
                 {
                     GameObject proyectil = Instantiate(rayo, transform.position + Vector3.down * 2, Quaternion.Euler(0, 0, 90));
                     dispara2 += 0.01f;
@@ -231,16 +243,21 @@ public class Zeus : MonoBehaviour
                     sizeX -= 0.2f;
                     sizeY -= 0.2f;
                     transform.localScale = new Vector3(sizeX, sizeY);
+                    instancia2 = false;
                 }
                 //Tiempo entre disparos
                 if (dispara2 > 1.5f)
                 {
+                    instancia = true;
+                    instancia1 = true;
+                    instancia2 = true;
                     dispara2 = 0;
                 }
                 //Cambia a la fase anterior e inicializa las variables de la fase para que comience desde el principio
                 //creando bucle infinito
                 if (transform.localScale == new Vector3(10, 10))
                 {
+                    instancia = true;
                     time2 = 0;
                     timeDisparos1 = -1;
                     dispara1 = 0;
@@ -248,11 +265,15 @@ public class Zeus : MonoBehaviour
                 }
             }
         }
-        if (vidaZ <= 35 && vidaZ > 20 && estado != 3)
+        if (vidaZ <= 35 && vidaZ > 15 && estado != 3)
         {
+            instancia = true;
+            instancia1 = true;
+            instancia2 = true;
             time2 = 0;
             timeDisparos1 = 0;
             dispara1 = 0;
+            dispara2 = 0;
             estado = 3;
         }
         if (estado == 3)
@@ -267,11 +288,11 @@ public class Zeus : MonoBehaviour
                 zeusRB.velocity = new Vector3(0, 0);
                 timeDisparos1 += Time.deltaTime;
                 dispara1 += Time.deltaTime;
+                dispara2 += Time.deltaTime;
                 if (timeDisparos1 > 0 && timeDisparos1 < 9)
                 {
-                    if(dispara1 < 0.04 && !pos)
+                    if (dispara1 < 0.04 && !pos)
                     {
-                        Debug.Log(dispara1);
                         caeRayo = Random.Range(-10.7f, 4.1f);
                         marca = new Vector3(caeRayo, -6.3f, 0);
                         ataca = new Vector3(caeRayo, 0, 0);
@@ -279,23 +300,48 @@ public class Zeus : MonoBehaviour
                     }
                     if (pos)
                     {
-                        Debug.Log(dispara1);
-                        if (dispara1 > 0.04 && dispara1 < 0.09)
+                        if (dispara1 > 0.04 && dispara1 < 0.09 && instancia)
                         {
-                            Instantiate(marcador, marca, Quaternion.identity);
-                            dispara1 += 0.01f;
+                            marc = Instantiate(marcador, marca, Quaternion.identity);
+                            instancia = false;
                         }
-                        if (dispara1 > 0.75 && dispara1 < 0.8f)
+                        if (dispara1 > 0.6 && dispara1 < 0.8f && instancia1)
                         {
-                            Instantiate(rayoCielo, ataca, Quaternion.identity);
-                            dispara1 += 0.01f;
+                            ray = Instantiate(rayoCielo, ataca, Quaternion.identity);
+                            instancia1 = false;
+                        }
+                        if(dispara1 > 1)
+                        {
+                            Destroy(ray);
+                            Destroy(marc);
                         }
                         if (dispara1 > 1.5f)
-                        {
+                        {    
                             pos = false;
+                            instancia = true;
+                            instancia1 = true;
                             dispara1 = 0;
                         }
+                        if (dispara2 < 0.04 && instancia2)
+                        {
+                            Vector3 direc = (hercules.transform.position - transform.position);
+                            GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.identity);
+                            proyectilRB = proyectil.GetComponent<Rigidbody2D>();
+                            float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
+                            proyectilRB.velocity = (direc / mod) * 10;
+                            instancia2 = false;
+                        }
+                        //Tiempo entre disparos
+                        if (dispara2 > 1f)
+                        {
+                            instancia2 = true;
+                            dispara2 = 0;
+                        }
                     }
+                }
+                if(dispara1 > 9)
+                {
+
                 }
             }
         }

@@ -371,6 +371,19 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 3724266399923614141, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
   m_PrefabInstance: {fileID: 1612221465}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &346822936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346822924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab21b8e0dc54fb94aa9104f99ff23f5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaHercules: 25
 --- !u!1 &389704690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,6 +1700,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 346822925}
+    - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 346822936}
   m_SourcePrefab: {fileID: 100100000, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
 --- !u!4 &1746278935 stripped
 Transform:
@@ -1954,7 +1970,7 @@ PrefabInstance:
       objectReference: {fileID: 4845925995528673857, guid: e9c440b56a3bf334e8553d5b13be4131, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: vidaZ
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: hercules

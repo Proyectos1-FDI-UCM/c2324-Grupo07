@@ -17,6 +17,8 @@ TagManager:
   - Plataforma salto
   - Plataforma horziontal
   - Plataforma horizontal
+  - rayo
+  - stun
   layers:
   - Default
   - TransparentFX
