@@ -11,6 +11,7 @@ public class ShootingComponent : MonoBehaviour
     public GameObject bala;
     public GameObject ciclope;
     public bool disparo = false;
+    [SerializeField]
     private bool shoot;
     private float time;
     private float timeToShoot = 0.5f;

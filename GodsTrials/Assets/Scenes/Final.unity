@@ -317,7 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4738ecbee90454141aed4f128ce4df2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carro: {fileID: 0}
+  dashea: 0
+  dashActive: 1
+  carro: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
 --- !u!114 &346822926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,10 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pez: {fileID: 0}
+  pez: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 0}
-  disparo: 0
+  disparo: 1
+  shoot: 0
 --- !u!114 &346822927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,6 +1540,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1522160489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7059390372585727425, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+  m_PrefabInstance: {fileID: 5635369969672784700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1522160495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522160489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4ef5ec74535f847ae735a369b5e5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1612221465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1933,9 +1953,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4845925995528673857, guid: e9c440b56a3bf334e8553d5b13be4131, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: vidaZ
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: hercules
       value: 
       objectReference: {fileID: 346822924}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: marcador
+      value: 
+      objectReference: {fileID: 1031955121263744784, guid: 733e11ebd9e085246bff737429b69509, type: 3}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: rayoCielo
+      value: 
+      objectReference: {fileID: 787901226541736172, guid: 2a7b64a3342f7754ab6d76fbf6d22a3e, type: 3}
     - target: {fileID: 7059390372585727425, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: m_Name
       value: Zeus
@@ -1943,7 +1975,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7059390372585727425, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1522160495}
   m_SourcePrefab: {fileID: 100100000, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

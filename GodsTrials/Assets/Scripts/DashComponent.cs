@@ -6,10 +6,12 @@ public class DashComponent : MonoBehaviour
 {
     private float time;
     private float timeToDash = 0.2f;
+    [SerializeField]
     bool dashea;
     private ControlarJugador jugador;
     private Rigidbody2D hercules;
-    private bool dashActive;
+    [SerializeField]
+    private bool dashActive = false;
     public GameObject carro;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,7 +25,6 @@ public class DashComponent : MonoBehaviour
     {
         hercules = GetComponent<Rigidbody2D>();
         dashea = true;
-        dashActive = false;
         jugador = GetComponent<ControlarJugador>();
     }
 
