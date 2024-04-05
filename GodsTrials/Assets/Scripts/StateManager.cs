@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back};
-//                        0       1          2        3       4           5           6       7     8     9       10      11      12
+public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio};
+//                        0       1          2        3       4           5           6       7     8     9       10      11      12    13
 
 public class StateManager : MonoBehaviour
 {
@@ -25,6 +25,9 @@ public class StateManager : MonoBehaviour
                 break;                
             case SceneID.MainMenu:
                 StartCoroutine(ChangeScene(0, true, false));
+                break;
+            case SceneID.Inicio:
+                StartCoroutine(ChangeScene(9,true, false));
                 break;
             case SceneID.Cueva:
                 StartCoroutine(ChangeScene(1, true, false));
