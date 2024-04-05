@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     #region references
     private StateManager _stateManager;
 
-    public GameObject botas;
+    public GameObject botas = null;
     public GameObject carro = null;
     public GameObject pez = null;
     public Array rallas;
@@ -24,15 +24,18 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region methods
-    public void OnPress(string s)
+
+    public void OnPress(int _toScene)
     {
+        Debug.Log(_toScene);
         //play sound FX
         if (buttonClickFXClip != null)
         {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }
-        _stateManager.ChangeGameState(s);
+        _stateManager.ChangeGameState((SceneID)_toScene);
     }
+
     public void SetFullScreen(bool isFS)
     {
         if (buttonClickFXClip != null)
@@ -41,6 +44,7 @@ public class UIManager : MonoBehaviour
         }
         Screen.fullScreen = !Screen.fullScreen;
     }
+
     public void EncenderBotonesMuerte()
     {
         BotonesMuerte.SetActive(true);
@@ -48,18 +52,22 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Power-Ups
+
     public void Botas()
     {
         botas.SetActive(true);
     }
+
     public void Carro()
     {
         carro.SetActive(true);
     }
+
     public void Pez()
     {
         pez.SetActive(true);
     }
+
     #endregion
 
     /// <summary>
@@ -68,31 +76,23 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _stateManager = GetComponent<StateManager>();
-        GameObject botonesMuerteInstance = BotonesMuerte;
-        botonesMuerteInstance.SetActive(false);
-        Invoke("EncenderBotonesMuerte", 4.0f);
+        if (BotonesMuerte != null){
+            BotonesMuerte.SetActive(false);
+            Invoke("EncenderBotonesMuerte", 4.0f);
+        }
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
-        //botas = GameObject.Find("BotasCanvas").GetComponent<GameObject>();
-        pez = GameObject.Find("pez").GetComponent<GameObject>();
-        carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
-
+        if (botas != null){
+            botas = GameObject.Find("BotasCanvas").GetComponent<GameObject>();
+        }
+        if (pez != null){
+            pez = GameObject.Find("pez").GetComponent<GameObject>();
+        }
+        if (carro != null){
+            carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
+        }
     }
-    /* public void OnLevelWasLoaded()
-     {
-
-         //canvas = GameObject.Find("Canvas");
-         Canvas[] canvases = FindObjectsOfType<Canvas>();
-
-
-         foreach (Canvas canvas2 in canvases)
-         {
-
-             Transform child = canvas2.transform.Find("BotasCanvas").transform;
-             botas = child.gameObject;
-             break;
-         }
-     }*/
+    
     void Update()
     {
         if (monedas != null)

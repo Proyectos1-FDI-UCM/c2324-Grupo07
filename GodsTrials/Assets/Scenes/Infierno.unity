@@ -8340,8 +8340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac52b0b2a2b3aa94180ffdadd3920bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toLevel: "monta\xF1a"
   _gameManager: {fileID: 1071708421}
+  _toLevel: 6
 --- !u!61 &974187264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8899,8 +8899,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 1071708421}
-  _canvas: {fileID: 914084016}
 --- !u!114 &1071708422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8949,8 +8947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac52b0b2a2b3aa94180ffdadd3920bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toLevel: 
   _gameManager: {fileID: 1071708421}
+  _toLevel: 0
 --- !u!1 &1093887857
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
+public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back};
+
 public class StateManager : MonoBehaviour
 {
     public Animator transition;
@@ -12,55 +14,56 @@ public class StateManager : MonoBehaviour
     private bool paused = false;
 
     #region methods
-    public void ChangeGameState(string id)
+    public void ChangeGameState(SceneID id)
     {
+        Debug.Log(id);
         switch (id)
         {
-            case "quit":
+            case SceneID.Quit:
                 Application.Quit();
-                break;
-            case "mainMenu":
+                break;                
+            case SceneID.MainMenu:
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
-            case "cueva":
+            case SceneID.Cueva:
                 StartCoroutine(ChangeScene(1, true, false));
                 break;
-            case "infierno":
+            case SceneID.Infierno:
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
-            case "montaña":
-                StartCoroutine(ChangeScene(6, true, false));
+            case SceneID.Montaña:
+                StartCoroutine (ChangeScene(6, true, false));
                 break;
-            case "cielo":
-                StartCoroutine(ChangeScene(7, true, false));
+            case SceneID.Cielo:
+                StartCoroutine(ChangeScene(7,true, false));
                 break;
-            case "final":
-                StartCoroutine(ChangeScene(8, true, false));
+            case SceneID.Final:
+                StartCoroutine(ChangeScene(8,true, false));
                 break;
-            case "muerte":
+            case SceneID.Muerte:
                 //StartCoroutine(ChangeScene(3, true, true));
                 Load(3, true);
                 break;
-            case "options":
+            case SceneID.OptionsMenu:
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
-            case "pause":
+            case SceneID.PauseMenu:
                 //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
                 //eventSystem.enabled = false;
                 //StartCoroutine(ChangeScene(5, true, true));
                 Load(5, true);
                 paused = true;
                 break;
-            case "resume":
+            case SceneID.Resume:                
                 paused = false;
                 StartCoroutine(ChangeScene(5, false, true));
                 //Unload(5);
-                break;
-            case "restartLevel":
+                break;            
+            case SceneID.Restart:
                 StartCoroutine(ChangeScene(3, false, true));
                 //Unload(3);
                 break;
-            case "back":
+            case SceneID.Back:
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
 

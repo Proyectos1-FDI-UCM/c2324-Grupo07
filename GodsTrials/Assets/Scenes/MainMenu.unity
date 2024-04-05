@@ -314,13 +314,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1323167372}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnPress
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
-          m_StringArgument: quit
+          m_StringArgument: Quit
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &127146974
@@ -751,8 +751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Instance: {fileID: 0}
-  _canvas: {fileID: 0}
 --- !u!114 &1323167372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,13 +887,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1323167372}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnPress
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: cueva
+          m_StringArgument: SceneID.Cueva
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1437941680
@@ -1168,13 +1166,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1323167372}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnPress
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: options
+          m_StringArgument: 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1826480173

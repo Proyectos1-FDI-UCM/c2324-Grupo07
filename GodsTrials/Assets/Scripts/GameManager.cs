@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class GameManager : MonoBehaviour
 {
     #region references
@@ -18,13 +19,13 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region methods
-    public void LevelChange(string _toLevel)
+    public void LevelChange(SceneID _toScene)
     {
-        if (_toLevel == "muerte")
+        if (_toScene == SceneID.Muerte)
         {
             _UIManager.BotonesEscena.SetActive(false);
         }
-        _stateManager.ChangeGameState(_toLevel);
+        _stateManager.ChangeGameState(_toScene);
     }
     #endregion
     public void SumarMonedas(int puntosASumar)
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            _stateManager.ChangeGameState("pause");
+            _stateManager.ChangeGameState(SceneID.PauseMenu);
         }
         
     }
