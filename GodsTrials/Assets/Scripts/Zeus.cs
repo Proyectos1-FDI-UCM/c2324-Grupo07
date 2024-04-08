@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Zeus : MonoBehaviour
@@ -41,6 +42,9 @@ public class Zeus : MonoBehaviour
     bool instancia2 = true;
     private GameObject marc;
     private GameObject ray;
+    [SerializeField]
+    private float si;
+    public LayerMask herculesLayer;
     public void VidaZeus()
     {
         vidaZ--;
@@ -52,6 +56,7 @@ public class Zeus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        si = hercules.transform.position.x - transform.position.x;
         time1 = 0;
         time2 = 0;
         dispara1 = 0;
@@ -289,11 +294,11 @@ public class Zeus : MonoBehaviour
                 timeDisparos1 += Time.deltaTime;
                 dispara1 += Time.deltaTime;
                 dispara2 += Time.deltaTime;
-                if (timeDisparos1 > 0 && timeDisparos1 < 9)
+                if (timeDisparos1 > 0)
                 {
                     if (dispara1 < 0.04 && !pos)
                     {
-                        caeRayo = Random.Range(-10.7f, 4.1f);
+                        caeRayo = Random.Range(-10f, 10f);
                         marca = new Vector3(caeRayo, -6.3f, 0);
                         ataca = new Vector3(caeRayo, 0, 0);
                         pos = true;
@@ -310,13 +315,13 @@ public class Zeus : MonoBehaviour
                             ray = Instantiate(rayoCielo, ataca, Quaternion.identity);
                             instancia1 = false;
                         }
-                        if(dispara1 > 1)
+                        if (dispara1 > 1)
                         {
                             Destroy(ray);
                             Destroy(marc);
                         }
                         if (dispara1 > 1.5f)
-                        {    
+                        {
                             pos = false;
                             instancia = true;
                             instancia1 = true;
@@ -339,11 +344,15 @@ public class Zeus : MonoBehaviour
                         }
                     }
                 }
-                if(dispara1 > 9)
-                {
-
-                }
             }
+        }
+        if (hercules.transform.position.x - transform.position.x > 0)
+        {
+            transform.rotation = Quaternion.identity;
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 }
