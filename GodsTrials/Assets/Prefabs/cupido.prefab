@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4313532265746876999}
   - component: {fileID: 25602576184640346}
   - component: {fileID: 6032180010707577049}
-  - component: {fileID: -6830965707231824840}
+  - component: {fileID: -1436923569305887921}
   m_Layer: 0
   m_Name: cupido
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-6830965707231824840
+--- !u!114 &-1436923569305887921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,13 +116,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8477860137209712703}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5fcbcc5de27eff4685c7d8b8e541fcd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aa122ba839b49746b5d8e3864ec6adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
-  bola: {fileID: 0}
-  veloc: 5
+  bola: {fileID: 1182137726947982071, guid: 125fd8897baa8fe4680769394e77860b, type: 3}
+  veloc: 8
   distanciaLinea: 3
   capaJugador:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 512
+  capasuelo:
+    serializedVersion: 2
+    m_Bits: 8
