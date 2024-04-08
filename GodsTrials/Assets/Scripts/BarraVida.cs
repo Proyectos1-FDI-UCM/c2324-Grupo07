@@ -9,16 +9,22 @@ public class BarraVida : MonoBehaviour
     public Image barraVida;
     public float vidaActual;
     public float vidaMaxima;
+    private float muerteinst = 28f;
+    private float muertetres = 10f;
     #endregion
 
+    public void DanoSiete ()
+    {
+        vidaActual -= 4;
+    }
     public void DanoTres()
     {
-        vidaActual -= 10;
+        vidaActual -= muertetres;
     }
 
     public void DanoTotal()
     {
-        vidaActual -= 28;
+        vidaActual -= muerteinst;
     }
     private void Update()
     {

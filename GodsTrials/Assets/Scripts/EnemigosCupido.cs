@@ -9,7 +9,7 @@ public class EnemigosCupido : MonoBehaviour
     private GameObject hercules;
     private Transform _mytransform;
     Animator _animator;
-    float tiemporep = 2f;
+    float tiemporep = 0.5f;
     float tiempo;
     [SerializeField]
     public GameObject bola;

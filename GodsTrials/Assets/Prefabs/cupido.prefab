@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 25602576184640346}
   - component: {fileID: 6032180010707577049}
   - component: {fileID: -1436923569305887921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cupido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
-  bola: {fileID: 1182137726947982071, guid: 125fd8897baa8fe4680769394e77860b, type: 3}
+  bola: {fileID: 1666285253119690982, guid: 91bac279f7e48da46acebb216347b288, type: 3}
   veloc: 8
   distanciaLinea: 3
   capaJugador:
