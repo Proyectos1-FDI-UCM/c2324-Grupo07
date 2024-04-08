@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
+<<<<<<< HEAD
 public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio};
 //                        0       1          2        3       4           5           6       7     8     9       10      11      12    13
+=======
+public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back};
+>>>>>>> parent of 35e8987 (enum StateManager)
 
 public class StateManager : MonoBehaviour
 {
