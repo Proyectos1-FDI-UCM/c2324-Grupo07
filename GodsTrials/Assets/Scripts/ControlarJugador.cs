@@ -8,6 +8,7 @@ public class ControlarJugador : MonoBehaviour
     public float jumpvelocity = 10;
     public float platformJumpVelocity = 20;
     public float velocidadHorizontal = -30;
+    public float time = 0;
     public float velocity = 5;
     private Rigidbody2D rb;
     public bool enSuelo1;
@@ -48,8 +49,12 @@ public class ControlarJugador : MonoBehaviour
         }
         if (activarSalto.gameObject.CompareTag("Plataforma horizontal"))
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            rb.velocity = new Vector2(velocidadHorizontal, 0f);
+            state = 9;
+            if (state == 9)
+            {
+                Vector3 velocity = new Vector3(-1, 1, 0) * platformJumpVelocity;
+                rb.velocity = velocity;
+            }
         }
 
     }
@@ -85,6 +90,14 @@ public class ControlarJugador : MonoBehaviour
     }
     void Update()
     {
+        if (state == 9)
+        {
+            time += Time.deltaTime;
+            if (time > 0.5)
+            {
+                state = 0;
+            }
+        }
         if (state == 0)
         {
             enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
@@ -123,7 +136,7 @@ public class ControlarJugador : MonoBehaviour
                 }
             }
         }
-        if(state == 6)
+        if (state == 6)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
         }
