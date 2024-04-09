@@ -42,7 +42,7 @@ public class ControlarJugador : MonoBehaviour
                 dobleSalto = true;
             }
         }
-        if (activarSalto.gameObject.CompareTag("Plataforma salto") && activarSalto.contacts[0].point.y < transform.position.y)
+        /*if (activarSalto.gameObject.CompareTag("Plataforma salto") && activarSalto.contacts[0].point.y < transform.position.y)
         {
             rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity);
 
@@ -56,6 +56,8 @@ public class ControlarJugador : MonoBehaviour
                 rb.velocity = velocity;
             }
         }
+        */
+        
 
     }
     private void OnTriggerEnter2D(Collider2D itemBotas)
@@ -118,15 +120,21 @@ public class ControlarJugador : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
             {
-                rb.velocity = new Vector2(velocity, rb.velocity.y);
+                if (rb.velocity.x <= velocity)
+                {
+                    rb.velocity = new Vector2(velocity, rb.velocity.y);
+                }
                 transform.rotation = Quaternion.identity;
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
-                rb.velocity = new Vector2(-velocity, rb.velocity.y);
+                if (rb.velocity.x <= velocity)
+                {
+                    rb.velocity = new Vector2(-velocity, rb.velocity.y);
+                }
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else if (!Input.anyKey)
+            else if (Input.GetKeyUp(KeyCode.A)||Input.GetKeyUp(KeyCode.D))
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 if (enSuelo1 || enSuelo2 || enSuelo3)

@@ -82,7 +82,7 @@ public class Enemigos : MonoBehaviour
         }
         else if (!jugadorEnRango) // Si el jugador está fuera del rango y hay una última bola instanciada
         {
-            _animator.SetInteger("ciclope", 0);
+            //_animator.SetInteger("ciclope", 0);
         }
     }
     public void OnDrawGizmos()
