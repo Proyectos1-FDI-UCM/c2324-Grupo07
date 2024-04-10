@@ -25,10 +25,17 @@ public class Zeus : MonoBehaviour
     private GameObject rayoCielo;
     [SerializeField]
     private GameObject marcador;
+    [SerializeField]
+    private GameObject marcadorSuelo;
+    [SerializeField]
+    private GameObject stun;
+    private GameObject marcSuelo;
+    private GameObject stunSuelo;
     private Rigidbody2D proyectilRB;
     public GameObject hercules;
     float dispara1;
     float dispara2;
+    float dispara3;
     float sizeX = 15;
     float sizeY = 15;
     [SerializeField]
@@ -40,11 +47,14 @@ public class Zeus : MonoBehaviour
     bool instancia = true;
     bool instancia1 = true;
     bool instancia2 = true;
+    bool instancia3 = true;
+    bool instancia4 = true;
+    bool state4 = false;
+    bool simultaneo = false;
     private GameObject marc;
     private GameObject ray;
     [SerializeField]
     private float si;
-    public LayerMask herculesLayer;
     public void VidaZeus()
     {
         vidaZ--;
@@ -61,6 +71,7 @@ public class Zeus : MonoBehaviour
         time2 = 0;
         dispara1 = 0;
         dispara2 = 0;
+        dispara3 = 0;
         timeDisparos1 = -1;
         timeDisparos2 = 0;
         zeusRB = GetComponent<Rigidbody2D>();
@@ -72,7 +83,7 @@ public class Zeus : MonoBehaviour
     void Update()
     {
         //Inicio de primera fase, solo se hara al iniciar la escena
-        if (estado == 2)
+        if (estado == 2 && !simultaneo)
         {
             time1 += Time.deltaTime;
             //Sube y se agranda
@@ -93,7 +104,7 @@ public class Zeus : MonoBehaviour
                 }
             }
         }
-        if (estado == 0)
+        if (estado == 0 && !simultaneo)
         {
             //Contadores 
             time2 += Time.deltaTime;
@@ -195,7 +206,7 @@ public class Zeus : MonoBehaviour
             }
         }
         //Segundo estado
-        if (estado == 1)
+        if (estado == 1 && !simultaneo)
         {
             timeDisparos2 += Time.deltaTime;
             //Crece
@@ -270,7 +281,7 @@ public class Zeus : MonoBehaviour
                 }
             }
         }
-        if (vidaZ <= 35 && vidaZ > 15 && estado != 3)
+        if (vidaZ <= 40 && vidaZ > 15 && estado != 3 && !state4)
         {
             instancia = true;
             instancia1 = true;
@@ -281,22 +292,22 @@ public class Zeus : MonoBehaviour
             dispara2 = 0;
             estado = 3;
         }
-        if (estado == 3)
+        if (estado == 3 || estado == 5)
         {
             time2 += Time.deltaTime;
-            if (time2 < 3f)
+            if (time2 < 1f && !simultaneo)
             {
                 zeusRB.velocity = new Vector3(Random.Range(4, -5), Random.Range(4, -5));
             }
-            if (time2 > 3f)
+            if (time2 > 1f)
             {
                 zeusRB.velocity = new Vector3(0, 0);
                 timeDisparos1 += Time.deltaTime;
                 dispara1 += Time.deltaTime;
                 dispara2 += Time.deltaTime;
-                if (timeDisparos1 > 0)
+                if (timeDisparos1 > 0 && timeDisparos1 < 9)
                 {
-                    if (dispara1 < 0.04 && !pos)
+                    if (dispara1 < 0.1 && !pos)
                     {
                         caeRayo = Random.Range(-10f, 10f);
                         marca = new Vector3(caeRayo, -6.3f, 0);
@@ -305,7 +316,7 @@ public class Zeus : MonoBehaviour
                     }
                     if (pos)
                     {
-                        if (dispara1 > 0.04 && dispara1 < 0.09 && instancia)
+                        if (dispara1 > 0.1 && dispara1 < 0.2 && instancia)
                         {
                             marc = Instantiate(marcador, marca, Quaternion.identity);
                             instancia = false;
@@ -327,7 +338,7 @@ public class Zeus : MonoBehaviour
                             instancia1 = true;
                             dispara1 = 0;
                         }
-                        if (dispara2 < 0.04 && instancia2)
+                        if (dispara2 < 0.1 && instancia2)
                         {
                             Vector3 direc = (hercules.transform.position - transform.position);
                             GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.identity);
@@ -344,6 +355,130 @@ public class Zeus : MonoBehaviour
                         }
                     }
                 }
+                if (timeDisparos1 > 9)
+                {
+                    if (simultaneo)
+                    {
+                        instancia = true;
+                        instancia1 = true;
+                        instancia2 = true;
+                        time2 = 0;
+                        timeDisparos1 = 0;
+                        dispara1 = 0;
+                        dispara2 = 0;
+                        estado = 5;
+                    }
+                    if (!simultaneo)
+                    {
+                        timeDisparos2 = 0;
+                        time1 = 0;
+                        dispara3 = 0;
+                        instancia3 = true;
+                        instancia4 = true;
+                        estado = 4;
+                    }
+                }
+            }
+        }
+        if (estado == 4 || estado == 5)
+        {
+            state4 = true;
+            time1 += Time.deltaTime;
+            if (time1 < 1)
+            {
+                transform.position = new Vector3(8, -3.4f, 0);
+            }
+            if (time1 > 1)
+            {
+                timeDisparos2 += Time.deltaTime;
+                dispara3 += Time.deltaTime;
+                if (timeDisparos2 > 0 && timeDisparos2 < 10)
+                {
+                    if (dispara3 < 0.1 && instancia3)
+                    {
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        instancia3 = false;
+                    }
+                    if (dispara3 > 0.3 && dispara3 < 0.4)
+                    {
+                        Destroy(marcSuelo);
+                    }
+                    if (dispara3 > 0.6 && dispara3 < 0.7 && !instancia3)
+                    {
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        instancia3 = true;
+                    }
+                    if (dispara3 > 0.9 && dispara3 < 1)
+                    {
+                        Destroy(marcSuelo);
+                    }
+                    if (dispara3 > 1.2 && dispara3 < 1.3 && instancia4)
+                    {
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        instancia4 = false;
+                    }
+                    if (dispara3 > 1.5 && dispara3 < 1.6)
+                    {
+                        Destroy(marcSuelo);
+                    }
+                    if (dispara3 > 2 && dispara3 < 2.1 && !instancia4)
+                    {
+                        stunSuelo = Instantiate(stun, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        instancia4 = true;
+                    }
+                    if (dispara3 > 2.5 && dispara3 < 2.6)
+                    {
+                        Destroy(stunSuelo);
+                    }
+                    if (dispara3 > 3.5)
+                    {
+                        dispara3 = 0;
+                    }
+                }
+                if (timeDisparos2 > 10)
+                {
+                    if (simultaneo)
+                    {
+                        time1 = 0;
+                        dispara3 = 0;
+                        timeDisparos2 = 0;
+                        instancia3 = true;
+                        instancia4 = true;
+                        estado = 5;
+                    }
+                    if (!simultaneo)
+                    {
+                        instancia = true;
+                        instancia1 = true;
+                        instancia2 = true;
+                        time2 = 0;
+                        timeDisparos1 = 0;
+                        dispara1 = 0;
+                        dispara2 = 0;
+                        estado = 3;
+                    }
+                }
+            }
+            if (vidaZ <= 15 && estado != 5)
+            {
+                Destroy(marc);
+                Destroy(ray);
+                Destroy(marcSuelo);
+                Destroy(stunSuelo);
+                instancia = true;
+                instancia1 = true;
+                instancia2 = true;
+                time2 = 0;
+                timeDisparos1 = 0;
+                dispara1 = 0;
+                dispara2 = 0;
+                timeDisparos2 = 0;
+                time1 = 0;
+                dispara3 = 0;
+                instancia3 = true;
+                instancia4 = true;
+                simultaneo = true;
+                estado = 5;
             }
         }
         if (hercules.transform.position.x - transform.position.x > 0)
