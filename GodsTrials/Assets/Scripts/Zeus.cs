@@ -36,6 +36,7 @@ public class Zeus : MonoBehaviour
     float dispara1;
     float dispara2;
     float dispara3;
+    float dispara5;
     float sizeX = 15;
     float sizeY = 15;
     [SerializeField]
@@ -49,6 +50,7 @@ public class Zeus : MonoBehaviour
     bool instancia2 = true;
     bool instancia3 = true;
     bool instancia4 = true;
+    bool instancia5 = true;
     bool state4 = false;
     bool simultaneo = false;
     private GameObject marc;
@@ -73,6 +75,7 @@ public class Zeus : MonoBehaviour
         dispara1 = 0;
         dispara2 = 0;
         dispara3 = 0;
+        dispara5 = 0;
         timeDisparos1 = -1;
         timeDisparos2 = 0;
         zeusRB = GetComponent<Rigidbody2D>();
@@ -378,8 +381,10 @@ public class Zeus : MonoBehaviour
                         timeDisparos2 = 0;
                         time1 = 0;
                         dispara3 = 0;
+                        dispara5 = 0;
                         instancia3 = true;
                         instancia4 = true;
+                        instancia5 = true;
                         estado = 4;
                     }
                 }
@@ -439,6 +444,23 @@ public class Zeus : MonoBehaviour
                     {
                         dispara3 = 0;
                     }
+                    if (dispara5 < 0.1 && instancia5)
+                    {
+                        Vector3 direc = (hercules.transform.position - transform.position);
+                        float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
+                        rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
+                        GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
+                        proyectilRB = proyectil.GetComponent<Rigidbody2D>();
+                        float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
+                        proyectilRB.velocity = (direc / mod) * 10;
+                        instancia5 = false;
+                    }
+                    //Tiempo entre disparos
+                    if (dispara5 > 1f)
+                    {
+                        instancia5 = true;
+                        dispara5 = 0;
+                    }
                 }
                 if (timeDisparos2 > 10)
                 {
@@ -446,9 +468,11 @@ public class Zeus : MonoBehaviour
                     {
                         time1 = 0;
                         dispara3 = 0;
+                        dispara5 = 0;
                         timeDisparos2 = 0;
                         instancia3 = true;
                         instancia4 = true;
+                        instancia5 = true;
                         estado = 5;
                     }
                     if (!simultaneo)
