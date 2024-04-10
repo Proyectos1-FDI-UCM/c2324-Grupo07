@@ -406,7 +406,7 @@ public class Zeus : MonoBehaviour
                 {
                     if (dispara3 < 0.1 && instancia3)
                     {
-                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
                         instancia3 = false;
                     }
                     if (dispara3 > 0.3 && dispara3 < 0.4)
@@ -415,7 +415,7 @@ public class Zeus : MonoBehaviour
                     }
                     if (dispara3 > 0.6 && dispara3 < 0.7 && !instancia3)
                     {
-                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
                         instancia3 = true;
                     }
                     if (dispara3 > 0.9 && dispara3 < 1)
@@ -424,7 +424,7 @@ public class Zeus : MonoBehaviour
                     }
                     if (dispara3 > 1.2 && dispara3 < 1.3 && instancia4)
                     {
-                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
                         instancia4 = false;
                     }
                     if (dispara3 > 1.5 && dispara3 < 1.6)
@@ -433,7 +433,7 @@ public class Zeus : MonoBehaviour
                     }
                     if (dispara3 > 2 && dispara3 < 2.1 && !instancia4)
                     {
-                        stunSuelo = Instantiate(stun, new Vector3(0, -5.5f, 0), Quaternion.identity);
+                        stunSuelo = Instantiate(stun, new Vector3(0, -5.5f, 0), Quaternion.Euler(0, 0, 90));
                         instancia4 = true;
                     }
                     if (dispara3 > 2.5 && dispara3 < 2.6)
@@ -488,7 +488,7 @@ public class Zeus : MonoBehaviour
                     }
                 }
             }
-            if (vidaZ <= 15 && estado != 5)
+            if (vidaZ <= 20 && estado != 5)
             {
                 Destroy(marc);
                 Destroy(ray);
