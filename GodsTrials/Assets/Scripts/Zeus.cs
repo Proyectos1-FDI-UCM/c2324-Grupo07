@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Zeus : MonoBehaviour
 {
-    Vector3 direccion;
     private float time1;
     private float time2;
     float randomX;
@@ -68,7 +67,6 @@ public class Zeus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        direccion = hercules.transform.position - rayo.transform.position;
         si = hercules.transform.position.x - transform.position.x;
         time1 = 0;
         time2 = 0;
@@ -181,8 +179,8 @@ public class Zeus : MonoBehaviour
                 if (dispara1 < 0.04 && instancia)
                 {
                     Vector3 direc = (hercules.transform.position - transform.position);
-                    float anguloZ = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
-                    rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ));
+                    float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
+                    rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
                     GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
                     dispara1 += 0.01f;
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
@@ -346,8 +344,8 @@ public class Zeus : MonoBehaviour
                         if (dispara2 < 0.1 && instancia2)
                         {
                             Vector3 direc = (hercules.transform.position - transform.position);
-                            float anguloZ = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
-                            rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ));
+                            float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
+                            rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
                             GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
                             proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                             float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
