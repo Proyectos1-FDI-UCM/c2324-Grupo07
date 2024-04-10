@@ -4359,8 +4359,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4845925995528673857, guid: e9c440b56a3bf334e8553d5b13be4131, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: stun
+      value: 
+      objectReference: {fileID: 6972632736965829298, guid: f10a71729248d7d41926170bd6a855b4, type: 3}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: vidaZ
-      value: 60
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: hercules
@@ -4374,6 +4378,10 @@ PrefabInstance:
       propertyPath: rayoCielo
       value: 
       objectReference: {fileID: 787901226541736172, guid: 2a7b64a3342f7754ab6d76fbf6d22a3e, type: 3}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: marcadorSuelo
+      value: 
+      objectReference: {fileID: 3462345075257202278, guid: 524700fdffa306b4abfea19944976aff, type: 3}
     - target: {fileID: 7059390372585727425, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: m_Name
       value: Zeus
