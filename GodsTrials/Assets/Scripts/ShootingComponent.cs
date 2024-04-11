@@ -7,6 +7,8 @@ public class ShootingComponent : MonoBehaviour
 {
     private Animator animator;
     private ControlarJugador hercules;
+    [SerializeField]
+    private ControlarJugador player;
     public GameObject pez;
     public GameObject bala;
     public GameObject ciclope;
@@ -19,7 +21,7 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetKey(KeyCode.J) && disparo && shoot)
+        if (Input.GetKeyDown(KeyCode.J) && disparo && shoot && player.state != 6)
         {
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();
@@ -61,6 +63,7 @@ public class ShootingComponent : MonoBehaviour
     {
         shoot = true;
         time = 0;
+        player = GetComponent<ControlarJugador>();
     }
     void Update()
     {
