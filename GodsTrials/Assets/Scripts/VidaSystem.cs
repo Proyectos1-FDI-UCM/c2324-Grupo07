@@ -85,6 +85,17 @@ public class VidaSystem : MonoBehaviour
             morir.Muerte();
         }
     }
+
+    public void DanoStunsZeus()
+    {
+        animatorController.Dano();
+        barravida.DanoStuns();
+        if(vida <= 0)
+        {
+            morir.Muerte();
+        }
+    }
+
     public void ImpulsoPorDaño()
     {
         jugador.state = 1;

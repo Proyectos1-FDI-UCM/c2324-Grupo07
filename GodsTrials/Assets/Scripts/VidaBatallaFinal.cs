@@ -10,12 +10,16 @@ public class VidaBatallaFinal : MonoBehaviour
     private LevelChange morir;
     bool stun = false;
     private ControlarJugador player;
+    BarraVida barravida;
+    AnimatorController animator;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("rayo"))
         {
             vidaHercules--;
+            animator.Dano();
+            barravida.DanoRayo();
             Destroy(collision.gameObject);
             if (vidaHercules == 0)
             {
@@ -25,12 +29,22 @@ public class VidaBatallaFinal : MonoBehaviour
         if (collision.gameObject.CompareTag("stun"))
         {
             stun = true;
+            vidaHercules-= 0.25f;
+            animator.Dano();
+            barravida.DanoStuns();
+            Destroy(collision.gameObject);
+            if (vidaHercules == 0)
+            {
+                morir.Muerte();
+            }
         }
     }
     private void Start()
     {
         player = GetComponent<ControlarJugador>();
         morir = GameObject.Find("GameManager").GetComponent<LevelChange>();
+        animator = GetComponent<AnimatorController>();
+        barravida = GameObject.Find("barravidahercules").GetComponent<BarraVida>();
     }
     private void Update()
     {
