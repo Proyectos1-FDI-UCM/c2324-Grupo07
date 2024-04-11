@@ -192,7 +192,7 @@ public class Zeus : MonoBehaviour
                     instancia = false;
                 }
                 //Tiempo entre disparos
-                if (dispara1 > 1.25f)
+                if (dispara1 > 1f)
                 {
                     instancia = true;
                     dispara1 = 0;
@@ -268,7 +268,7 @@ public class Zeus : MonoBehaviour
                     instancia2 = false;
                 }
                 //Tiempo entre disparos
-                if (dispara2 > 1f)
+                if (dispara2 > 1.5f)
                 {
                     instancia = true;
                     instancia1 = true;
@@ -402,6 +402,7 @@ public class Zeus : MonoBehaviour
             {
                 timeDisparos2 += Time.deltaTime;
                 dispara3 += Time.deltaTime;
+                dispara5 += Time.deltaTime;
                 if (timeDisparos2 > 0 && timeDisparos2 < 10)
                 {
                     if (dispara3 < 0.1 && instancia3)

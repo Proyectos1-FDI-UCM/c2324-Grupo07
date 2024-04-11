@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 346822939}
   pez: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 0}
@@ -384,6 +385,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaHercules: 25
+--- !u!114 &346822939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 1612221465}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346822924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167ddc737329e84cb0a5e5d80304e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &347299872
 GameObject:
   m_ObjectHideFlags: 0
@@ -4784,7 +4796,7 @@ PrefabInstance:
       objectReference: {fileID: 6972632736965829298, guid: f10a71729248d7d41926170bd6a855b4, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: vidaZ
-      value: 35
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: hercules
