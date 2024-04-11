@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio};
-//                        0       1          2        3       4           5           6       7     8     9       10      11      12    13
+//                        0       1       2        3         4           5         6       7      8      9     10       11     12     13
 
 public class StateManager : MonoBehaviour
 {
@@ -51,17 +51,22 @@ public class StateManager : MonoBehaviour
             case SceneID.OptionsMenu:
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
-            case SceneID.PauseMenu:
-                //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                //eventSystem.enabled = false;
+            case SceneID.PauseMenu: {
+                EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+                eventSystem.enabled = false;
                 //StartCoroutine(ChangeScene(5, true, true));
                 Load(5, true);
-                paused = true;
+                paused = true; 
+                }
                 break;
-            case SceneID.Resume:                
+            case SceneID.Resume: {
+                Debug.Log("Resume");    
+                EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+                eventSystem.enabled = true;            
                 paused = false;
                 StartCoroutine(ChangeScene(5, false, true));
                 //Unload(5);
+                }
                 break;            
             case SceneID.Restart:
                 StartCoroutine(ChangeScene(3, false, true));

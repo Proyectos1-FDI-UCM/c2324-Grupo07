@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log(_toScene);
         //play sound FX
-        if (buttonClickFXClip != null)
+        if (buttonClickFXClip != null && SoundFXManager.instance != null)
         {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }

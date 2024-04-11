@@ -454,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac52b0b2a2b3aa94180ffdadd3920bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toLevel: 
   _gameManager: {fileID: 1738252919}
+  _toLevel: 0
 --- !u!4 &1738252921
 Transform:
   m_ObjectHideFlags: 0
@@ -491,6 +491,7 @@ MonoBehaviour:
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 334119737}
   BotonesEscena: {fileID: 0}
+  buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!114 &1738252923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,9 +657,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 988284867}
     - target: {fileID: 2352501490382211565, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352501490382211565, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1738252922}
+    - target: {fileID: 2352501490382211565, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2844901636610939940, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -744,9 +753,21 @@ PrefabInstance:
       value: CanvasMuete
       objectReference: {fileID: 0}
     - target: {fileID: 8516023679194665236, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516023679194665236, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1738252922}
+    - target: {fileID: 8516023679194665236, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516023679194665236, guid: 21d2e03097b07d44f99036f25cd4d5f6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

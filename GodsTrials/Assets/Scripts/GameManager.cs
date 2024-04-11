@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
             _UIManager.BotonesEscena.SetActive(false);
         }
         _stateManager.ChangeGameState(_toScene);
-        Testing.Instance.escribe("Cambiamos de nivel.\n");
     }
     #endregion
     public void SumarMonedas(int puntosASumar)
