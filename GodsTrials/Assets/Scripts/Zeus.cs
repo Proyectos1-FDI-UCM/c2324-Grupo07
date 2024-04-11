@@ -234,7 +234,7 @@ public class Zeus : MonoBehaviour
                 //Disparo medio
                 if (dispara2 < 0.04 && transform.localScale != new Vector3(10, 10) && instancia)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.Euler(0, 0, 90));
+                    GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.Euler(0, 0, 270));
                     dispara2 += 0.01f;
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                     proyectilRB.velocity = Vector3.left * 8.5f;
@@ -246,7 +246,7 @@ public class Zeus : MonoBehaviour
                 //Disparo arriba
                 if (dispara2 > 0.50 && dispara2 < 0.54 && transform.localScale != new Vector3(10, 10) && instancia1)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * 2, Quaternion.Euler(0, 0, 90));
+                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * 2.1f, Quaternion.Euler(0, 0, 270));
                     dispara2 += 0.01f;
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                     proyectilRB.velocity = Vector3.left * 8.5f;
@@ -258,7 +258,7 @@ public class Zeus : MonoBehaviour
                 //Disparo abajo
                 if (dispara2 > 1 && dispara2 < 1.04 && transform.localScale != new Vector3(10, 10) && instancia2)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.down * 2, Quaternion.Euler(0, 0, 90));
+                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.down * 2.1f, Quaternion.Euler(0, 0, 270));
                     dispara2 += 0.01f;
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                     proyectilRB.velocity = Vector3.left * 8.5f;
@@ -268,7 +268,7 @@ public class Zeus : MonoBehaviour
                     instancia2 = false;
                 }
                 //Tiempo entre disparos
-                if (dispara2 > 1.5f)
+                if (dispara2 > 1f)
                 {
                     instancia = true;
                     instancia1 = true;
@@ -316,7 +316,7 @@ public class Zeus : MonoBehaviour
                     if (dispara1 < 0.1 && !pos)
                     {
                         caeRayo = Random.Range(-10f, 10f);
-                        marca = new Vector3(caeRayo, -6.3f, 0);
+                        marca = new Vector3(caeRayo, -5.9f, 0);
                         ataca = new Vector3(caeRayo, 0, 0);
                         pos = true;
                     }
