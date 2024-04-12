@@ -19,6 +19,7 @@ TagManager:
   - Plataforma horizontal
   - rayo
   - stun
+  - perimetro
   layers:
   - Default
   - TransparentFX
