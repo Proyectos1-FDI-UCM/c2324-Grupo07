@@ -11,6 +11,8 @@ public class BarraVida : MonoBehaviour
     public float vidaMaxima;
     private float muerteinst = 28f;
     private float muertetres = 10f;
+    private float muertestuns = 0.5f;
+    private float muerterayo = 1f;
     #endregion
 
     public void DanoSiete ()
@@ -33,5 +35,14 @@ public class BarraVida : MonoBehaviour
         {
             vidaActual = vidaMaxima;
         }
+    }
+    public void DanoStuns()
+    {
+        vidaActual -= muertestuns;
+    }
+
+    public void DanoRayo()
+    {
+        vidaActual -= muerterayo;
     }
 }
