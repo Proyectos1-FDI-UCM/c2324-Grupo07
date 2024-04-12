@@ -32,7 +32,6 @@ public class VidaBatallaFinal : MonoBehaviour
             vidaHercules-= 0.25f;
             animator.Dano();
             barravida.DanoStuns();
-            Destroy(collision.gameObject);
             if (vidaHercules == 0)
             {
                 morir.Muerte();
