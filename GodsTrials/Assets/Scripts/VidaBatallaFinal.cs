@@ -12,6 +12,8 @@ public class VidaBatallaFinal : MonoBehaviour
     private ControlarJugador player;
     BarraVida barravida;
     AnimatorController animator;
+    [SerializeField]
+    private Zeus _zeus;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,11 +22,7 @@ public class VidaBatallaFinal : MonoBehaviour
             vidaHercules--;
             animator.Dano();
             barravida.DanoRayo();
-            Destroy(collision.gameObject);
-            if (vidaHercules == 0)
-            {
-                morir.Muerte();
-            }
+            Destroy(collision.gameObject);    
         }
         if (collision.gameObject.CompareTag("stun"))
         {
@@ -32,10 +30,12 @@ public class VidaBatallaFinal : MonoBehaviour
             vidaHercules-= 0.25f;
             animator.Dano();
             barravida.DanoStuns();
-            if (vidaHercules == 0)
-            {
-                morir.Muerte();
-            }
+        }
+        if (vidaHercules <= 0)
+        {
+            Destroy(this.gameObject);
+            Destroy(_zeus.gameObject);
+            morir.Muerte();
         }
     }
     private void Start()
