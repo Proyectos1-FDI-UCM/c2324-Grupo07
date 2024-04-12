@@ -61,6 +61,7 @@ public class VidaSystem : MonoBehaviour
     }
     public void MuerteCompleta()
     {
+        Destroy(hercules);
         barravida.DanoTotal();
         morir.Muerte();
     }
@@ -71,6 +72,7 @@ public class VidaSystem : MonoBehaviour
         vida--;
         if (vida <= 0)
         {
+            Destroy(hercules);
             morir.Muerte();
         }
     }
@@ -82,6 +84,7 @@ public class VidaSystem : MonoBehaviour
         vida-=vidacupido;
         if (vida <= 0)
         {
+            Destroy(hercules);
             morir.Muerte();
         }
     }
