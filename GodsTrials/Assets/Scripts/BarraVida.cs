@@ -45,4 +45,9 @@ public class BarraVida : MonoBehaviour
     {
         vidaActual -= muerterayo;
     }
+
+    public void DanoHercules()
+    {
+        vidaActual --;
+    }
 }
