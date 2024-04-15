@@ -332,7 +332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   pez: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 0}
@@ -385,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaHercules: 25
+  _zeus: {fileID: 1522160505}
 --- !u!1 &389704690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1375,7 +1375,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1385,7 +1385,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1685,7 +1685,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4505,7 +4505,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 10
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4568,32 +4568,32 @@ Tilemap:
     m_Data: {fileID: 1907180667, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: -902747102, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -922709474, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -476163616, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1265854539, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1270267460, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 23
     m_Data: {fileID: 490235604, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1265854539, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -476163616, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -902747102, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 732541207, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -922709474, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1270267460, guid: 643b7be418ef3664fa37b99383f4722f, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 344
     m_Data:
@@ -4774,6 +4774,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1522160505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+  m_PrefabInstance: {fileID: 5635369969672784700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522160489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9319d2760b2c48b31f355aa36fcf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1612221465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5494,7 +5505,7 @@ PrefabInstance:
       objectReference: {fileID: 1522160502}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: vidaZ
-      value: 35
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: trueno
