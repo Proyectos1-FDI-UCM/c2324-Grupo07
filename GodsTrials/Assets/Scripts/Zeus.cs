@@ -66,9 +66,11 @@ public class Zeus : MonoBehaviour
     Quaternion rotationZ;
     [SerializeField]
     private Animator _animator;
+    private BarraVida barravida;
     public void VidaZeus()
     {
         vidaZ--;
+        barravida.DanoHercules();
         if (vidaZ == 0)
         {
             Destroy(gameObject);
@@ -89,6 +91,7 @@ public class Zeus : MonoBehaviour
         zeusRB = GetComponent<Rigidbody2D>();
         estado = 2;
         pos = false;
+        barravida= GameObject.Find("vidazeus").GetComponent<BarraVida>();
     }
 
     // Update is called once per frame
