@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,8 +15,8 @@ public class GameManager : MonoBehaviour
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
 
-
-    
+    [SerializeField]
+    private bool isMenu;
     #endregion
 
     #region methods
@@ -48,11 +49,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu)
         {
-            _stateManager.ChangeGameState(SceneID.PauseMenu);
-        }
-        
+            //Debug.Log("KeyDownESC");
+            _stateManager.ChangeGameState(SceneID.PauseMenu);          
+        }        
     }
 
    /* private void Awake()
