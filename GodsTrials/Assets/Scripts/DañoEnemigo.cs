@@ -12,7 +12,8 @@ public class DañoEnemigo : MonoBehaviour
     private Animator animator;
     private float tiempoesp = 3f;
     private float time;
-
+    public AudioSource audiosource;
+    public AudioClip rocarota;
     #endregion
     private void Start()
     {
@@ -30,15 +31,17 @@ public class DañoEnemigo : MonoBehaviour
         if (vida != null)
         {
             vida.Daño();
-            animator.SetInteger("bola", 1);
-            Destroy(gameObject);
+            //animator.SetInteger("bola", 1);
+            audiosource.PlayOneShot(rocarota);
+            Destroy(gameObject,2f);
+
         }
 
         wall = bola.GetComponent<TilemapCollider2D>();
         if (wall != null)
         {
-            animator.SetInteger("bola", 1);
-            Destroy(gameObject);
+            //animator.SetInteger("bola", 1);
+            Destroy(gameObject,1.5f);
         }
 
     }
