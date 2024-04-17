@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
 
     public void OnPress(int _toScene)
     {
-        Debug.Log(_toScene);
         //play sound FX
         if (buttonClickFXClip != null && SoundFXManager.instance != null)
         {
