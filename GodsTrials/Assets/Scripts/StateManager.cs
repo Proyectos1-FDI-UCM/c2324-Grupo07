@@ -17,7 +17,7 @@ public class StateManager : MonoBehaviour
     #region methods
     public void ChangeGameState(SceneID id)
     {
-        Debug.Log(id);
+        Debug.Log("CGS" + id);
         switch (id)
         {
             case SceneID.Quit:
@@ -51,23 +51,21 @@ public class StateManager : MonoBehaviour
             case SceneID.OptionsMenu:
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
-            case SceneID.PauseMenu: {
-                EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                eventSystem.enabled = false;
-                //StartCoroutine(ChangeScene(5, true, true));
-                Load(5, true);
-                paused = true; 
+            case SceneID.PauseMenu:{
+                if (paused){
+                    //Debug.Log("changing from PAUSED");
+                    paused = false;
+                    Unload(5);
+                    Time.timeScale = 1;
+                }
+                else {
+                    //Debug.Log("changing from NOT PAUSED");
+                    paused = true;
+                    Load(5, true);
+                    Time.timeScale = 0;
+                }
                 }
                 break;
-            case SceneID.Resume: {
-                Debug.Log("Resume");    
-                EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                eventSystem.enabled = true;            
-                paused = false;
-                StartCoroutine(ChangeScene(5, false, true));
-                //Unload(5);
-                }
-                break;            
             case SceneID.Restart:
                 StartCoroutine(ChangeScene(3, false, true));
                 //Unload(3);
@@ -117,6 +115,10 @@ public class StateManager : MonoBehaviour
         {//si era la escena de muerte
             Application.LoadLevel(Application.loadedLevel);
         }
+    }
+
+    public bool isPaused(){
+        return paused;
     }
     #endregion
 }

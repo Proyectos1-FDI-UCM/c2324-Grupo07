@@ -9,6 +9,7 @@ public class Zeus : MonoBehaviour
     private AudioSource audio;
     [SerializeField] private AudioClip trueno;
     [SerializeField] private AudioClip descarga;
+    [SerializeField] private AudioClip marcaAudio;
     [SerializeField]
     private Rigidbody2D cam;
     private float time1;
@@ -341,6 +342,7 @@ public class Zeus : MonoBehaviour
                         if (dispara1 > 0.1 && dispara1 < 0.2 && instancia)
                         {
                             marc = Instantiate(marcador, marca, Quaternion.identity);
+                            audio.PlayOneShot(marcaAudio);
                             instancia = false;
                         }
                         //rayo stun
@@ -441,6 +443,7 @@ public class Zeus : MonoBehaviour
                     if (dispara3 < 0.1 && instancia3)
                     {
                         marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
+                        audio.PlayOneShot(marcaAudio);
                         instancia3 = false;
                     }
                     //Destruye marca stun suelo
@@ -452,6 +455,7 @@ public class Zeus : MonoBehaviour
                     if (dispara3 > 0.6 && dispara3 < 0.7 && !instancia3)
                     {
                         marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
+                        audio.PlayOneShot(marcaAudio);
                         instancia3 = true;
                     }
                     //Destruye marca stun suelo
@@ -463,6 +467,7 @@ public class Zeus : MonoBehaviour
                     if (dispara3 > 1.2 && dispara3 < 1.3 && instancia4)
                     {
                         marcSuelo = Instantiate(marcadorSuelo, new Vector3(0, -5.9f, 0), Quaternion.Euler(0, 0, 90));
+                        audio.PlayOneShot(marcaAudio);
                         instancia4 = false;
                     }
                     //Destruye marca stun suelo

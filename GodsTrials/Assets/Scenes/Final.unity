@@ -6152,7 +6152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.399
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6793,6 +6793,8 @@ GameObject:
   - component: {fileID: 2101059583}
   - component: {fileID: 2101059582}
   - component: {fileID: 2101059585}
+  - component: {fileID: 2101059586}
+  - component: {fileID: 2101059587}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6902,6 +6904,116 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &2101059586
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101059581}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 84b02c269b8ca7c45a2c904e33635d7b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.192
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2101059587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101059581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8650f4d60536864e976078f6a363a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 2101059586}
+  musicaBatalla: {fileID: 8300000, guid: 84b02c269b8ca7c45a2c904e33635d7b, type: 3}
 --- !u!1001 &5635369969672784700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6977,7 +7089,7 @@ PrefabInstance:
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: descarga
       value: 
-      objectReference: {fileID: 8300000, guid: 6a460b347587437428b7f7781977a68c, type: 3}
+      objectReference: {fileID: 8300000, guid: b55609ab06f62bf4d960e2984c95b277, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: hercules
       value: 
@@ -6994,6 +7106,10 @@ PrefabInstance:
       propertyPath: rayoCielo
       value: 
       objectReference: {fileID: 787901226541736172, guid: 2a7b64a3342f7754ab6d76fbf6d22a3e, type: 3}
+    - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: marcaAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: ac91fb2ae47f8014289fe78305ae1b80, type: 3}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: marcadorSuelo
       value: 
