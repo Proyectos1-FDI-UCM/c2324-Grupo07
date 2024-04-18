@@ -500,6 +500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724266399923614141, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5340e5c21b3e5a44694f1a15aa0cf211, type: 2}
     - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_Name
       value: Hercules
@@ -8777,7 +8781,6 @@ MonoBehaviour:
   gameManager: {fileID: 1071708421}
   monedas: {fileID: 1614972464}
   BotonesMuerte: {fileID: 4595731077588679427, guid: 6c71855d71257d8438004e0368dfba9f, type: 3}
-  BotonesEscena: {fileID: 0}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &1071708423
 Transform:

@@ -1330,6 +1330,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0010636151
       objectReference: {fileID: 0}
+    - target: {fileID: 3724266399923614141, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5340e5c21b3e5a44694f1a15aa0cf211, type: 2}
     - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_Name
       value: Hercules
@@ -1643,6 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMenu: 0
 --- !u!114 &510495382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,7 +1667,6 @@ MonoBehaviour:
   gameManager: {fileID: 510495381}
   monedas: {fileID: 1655270204}
   BotonesMuerte: {fileID: 0}
-  BotonesEscena: {fileID: 8551426930408354466, guid: 202c7c12a1324b74e9da9dd65c17e17d, type: 3}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &510495383
 Transform:
@@ -13318,6 +13322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
+  animator: {fileID: 0}
 --- !u!61 &1700974043
 BoxCollider2D:
   m_ObjectHideFlags: 0
