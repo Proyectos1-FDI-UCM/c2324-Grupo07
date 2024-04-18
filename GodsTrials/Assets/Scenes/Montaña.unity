@@ -12690,10 +12690,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 3607060759189552656, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5340e5c21b3e5a44694f1a15aa0cf211, type: 2}
+    - target: {fileID: 3724266399923614141, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 5340e5c21b3e5a44694f1a15aa0cf211, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_Name
       value: Hercules
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: pez
       value: 
