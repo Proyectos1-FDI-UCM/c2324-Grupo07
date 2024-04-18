@@ -45,26 +45,26 @@ public class Enemigos : MonoBehaviour
         float distenemx = hercules.transform.position.x - transform.position.x;
 
 
-        if (jugadorEnRango)
+        if (tiempo > 2 && tiempo < 3)
         {
-            if (tiempo > 2 && tiempo < 3)
+            if (_animator.GetInteger("ciclope") != 2)
             {
-                if (_animator.GetInteger("ciclope") != 2)
-                {
-                    _animator.SetInteger("ciclope", 1);
-                }
-                else
-                {
-                    tiempo = 0;
-                }
+                _animator.SetInteger("ciclope", 1);
             }
             else
             {
-                if (_animator.GetInteger("ciclope") != 2)
-                {
-                    _animator.SetInteger("ciclope", 0);
-                }
+                tiempo = 0;
             }
+        }
+        else
+        {
+            if (_animator.GetInteger("ciclope") != 2)
+            {
+                _animator.SetInteger("ciclope", 0);
+            }
+        }
+        if (jugadorEnRango)
+        {
             if (tiempo > tiemporep)
             {
                 if (distenemx <= 0 && transform.rotation == Quaternion.identity)
