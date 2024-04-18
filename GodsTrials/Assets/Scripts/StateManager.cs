@@ -42,6 +42,8 @@ public class StateManager : MonoBehaviour
                 StartCoroutine(ChangeScene(7,true, false));
                 break;
             case SceneID.Final:
+                GameObject MusicM = GameObject.Find("SoundSystem/MusicManager");
+                Destroy(MusicM);
                 StartCoroutine(ChangeScene(8,true, false));
                 break;
             case SceneID.Muerte:
