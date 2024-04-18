@@ -47,6 +47,14 @@ public class Enemigos : MonoBehaviour
 
         if (jugadorEnRango)
         {
+            if (tiempo > 2 && tiempo < 3)
+            {
+                _animator.SetInteger("ciclope", 1);
+            }
+            else
+            {
+                _animator.SetInteger("ciclope", 0);
+            }
             if (tiempo > tiemporep)
             {
                 if (distenemx <= 0 && transform.rotation == Quaternion.identity)
@@ -69,7 +77,6 @@ public class Enemigos : MonoBehaviour
                     Quaternion targetRotation = Quaternion.Euler(0, 0, 0); // Quaternion de rotación deseada
                     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 100f); // Interpolar hacia la rotación deseada
                 }
-                _animator.SetInteger("ciclope", 1);
                 GameObject bols = Instantiate(bola, transform.position + Vector3.up, Quaternion.identity);
                 bb = bols.GetComponent<Rigidbody2D>();
                 float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);

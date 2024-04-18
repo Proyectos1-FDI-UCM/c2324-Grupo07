@@ -6,6 +6,8 @@ using UnityEngine;
 public class ShootingComponent : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField]
+    private ControlarJugador player;
     private ControlarJugador hercules;
     public GameObject pez;
     public GameObject bala;
@@ -19,7 +21,7 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.J) && disparo && shoot)
+        if (Input.GetKeyDown(KeyCode.J) && disparo && shoot && player.state == 0)
         {
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();
@@ -59,6 +61,7 @@ public class ShootingComponent : MonoBehaviour
     }
     void Start()
     {
+        player = GameObject.Find("Hercules").GetComponent<ControlarJugador>();
         shoot = true;
         time = 0;
     }

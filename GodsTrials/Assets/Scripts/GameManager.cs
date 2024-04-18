@@ -22,10 +22,6 @@ public class GameManager : MonoBehaviour
     #region methods
     public void LevelChange(SceneID _toScene)
     {
-        if (_toScene == SceneID.Muerte)
-        {
-            _UIManager.BotonesEscena.SetActive(false);
-        }
         _stateManager.ChangeGameState(_toScene);
     }
     #endregion

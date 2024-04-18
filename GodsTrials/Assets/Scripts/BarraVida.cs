@@ -11,7 +11,7 @@ public class BarraVida : MonoBehaviour
     public float vidaMaxima;
     private float muerteinst = 28f;
     private float muertetres = 10f;
-    private float muertestuns = 0.5f;
+    private float muertestuns = 0.25f;
     private float muerterayo = 1f;
     #endregion
 
