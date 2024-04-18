@@ -21,6 +21,7 @@ TagManager:
   - stun
   - perimetro
   - Ciclope
+  - Cupido
   layers:
   - Default
   - TransparentFX

@@ -32,7 +32,7 @@ public class SufrirDaño : MonoBehaviour
                 }
                 else if (gameObject.CompareTag("Cupido"))
                 {
-
+                    animator.SetInteger("cupido 0", 1);
                 }
 
                 Destroy(GetComponent<Enemigos>());

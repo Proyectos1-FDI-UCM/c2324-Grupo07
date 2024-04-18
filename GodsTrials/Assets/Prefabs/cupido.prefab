@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3824472291181340184}
   m_Layer: 10
   m_Name: cupido
-  m_TagString: Untagged
+  m_TagString: Cupido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,4 +189,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
-  animator: {fileID: 0}
+  animator: {fileID: 6032180010707577049}
