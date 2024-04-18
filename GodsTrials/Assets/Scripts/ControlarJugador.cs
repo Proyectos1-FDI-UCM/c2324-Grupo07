@@ -31,7 +31,7 @@ public class ControlarJugador : MonoBehaviour
     private bool enParedLC2;
     private ShootingComponent shoot;
     UIManager uiManager;
-    public int state = 0;
+    public int state;
 
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
@@ -85,6 +85,7 @@ public class ControlarJugador : MonoBehaviour
 
     void Start()
     {
+        state = 0;
         rb = GetComponent<Rigidbody2D>();
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
     }

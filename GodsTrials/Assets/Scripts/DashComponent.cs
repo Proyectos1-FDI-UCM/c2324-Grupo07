@@ -31,7 +31,7 @@ public class DashComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashea && dashActive)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashea && dashActive && jugador.state != 20)
         {
             time = 0;
             jugador.state = 3;

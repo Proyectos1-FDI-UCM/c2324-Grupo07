@@ -14,6 +14,7 @@ public class VidaBatallaFinal : MonoBehaviour
     AnimatorController animator;
     [SerializeField]
     private Zeus _zeus;
+    private float time1 = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,6 +48,11 @@ public class VidaBatallaFinal : MonoBehaviour
     }
     private void Update()
     {
+        time1 += Time.deltaTime;
+        if(time1 < 4)
+        {
+            player.state = 20;
+        }
         if (stun)
         {
             player.state = 6;    
