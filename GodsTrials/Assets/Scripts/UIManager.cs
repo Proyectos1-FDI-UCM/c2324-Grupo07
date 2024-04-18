@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
     public GameManager gameManager;
     public TextMeshProUGUI monedas = null;
     public GameObject BotonesMuerte = null;
-    public GameObject BotonesEscena = null;
     public AudioClip buttonClickFXClip = null;
     #endregion
 
