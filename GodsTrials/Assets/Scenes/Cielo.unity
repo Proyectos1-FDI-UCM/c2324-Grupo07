@@ -12266,7 +12266,7 @@ PrefabInstance:
       objectReference: {fileID: 454572338}
     - target: {fileID: -1436923569305887921, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: distanciaLinea
-      value: 10
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12286,15 +12286,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.22407995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9745708
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12306,7 +12306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -25.898
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8477860137209712703, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_Name
@@ -13352,7 +13352,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.036299124, y: 0}
@@ -13382,15 +13382,15 @@ PrefabInstance:
       objectReference: {fileID: 454572338}
     - target: {fileID: -1436923569305887921, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: distanciaLinea
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.21
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.61
+      value: 45.7
       objectReference: {fileID: 0}
     - target: {fileID: 4313532265746876999, guid: cff659f2f4eb51844a38e832372dd9da, type: 3}
       propertyPath: m_LocalPosition.z
