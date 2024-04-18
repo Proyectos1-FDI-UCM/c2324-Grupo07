@@ -1254,6 +1254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMenu: 0
 --- !u!114 &1323167372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,7 +1274,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
-  BotonesEscena: {fileID: 0}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &1323167373
 Transform:

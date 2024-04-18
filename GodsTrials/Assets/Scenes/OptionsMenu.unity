@@ -2252,7 +2252,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
-  BotonesEscena: {fileID: 0}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &1323167373
 Transform:
@@ -3548,9 +3547,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 90686e14f2eb3814c994417a2951c1b8, type: 2}
-  musicSlider: {fileID: 0}
-  fxSlider: {fileID: 0}
-  masterSlider: {fileID: 0}
+  musicSlider: {fileID: 419936753}
+  fxSlider: {fileID: 1227238185}
+  masterSlider: {fileID: 544554285}
 --- !u!1 &4476232775946570269
 GameObject:
   m_ObjectHideFlags: 0
