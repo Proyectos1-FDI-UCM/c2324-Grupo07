@@ -20,6 +20,7 @@ TagManager:
   - rayo
   - stun
   - perimetro
+  - Ciclope
   layers:
   - Default
   - TransparentFX

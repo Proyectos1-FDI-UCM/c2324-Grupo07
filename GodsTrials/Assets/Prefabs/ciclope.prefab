@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4421358165843735764}
   m_Layer: 10
   m_Name: ciclope
-  m_TagString: Untagged
+  m_TagString: Ciclope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaEnemiga: 3
+  animator: {fileID: 664854317763814536}
 --- !u!114 &4421358165843735764
 MonoBehaviour:
   m_ObjectHideFlags: 0

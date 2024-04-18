@@ -12,14 +12,14 @@ public class DañoEnemigo : MonoBehaviour
     private Animator animator;
     private float tiempoesp = 3f;
     private float time;
-    public AudioSource audiosource;
-    public AudioClip rocarota;
+    private SonidoMontaña sonido;
     #endregion
     private void Start()
     {
         time = 0;
         animator = GetComponent<Animator>();
         //animator.SetInteger("bola", 0);
+        sonido =GameObject.Find("Grids").GetComponent<SonidoMontaña>();
     }
     private void Update()
     {
@@ -32,8 +32,8 @@ public class DañoEnemigo : MonoBehaviour
         {
             vida.Daño();
             //animator.SetInteger("bola", 1);
-            audiosource.PlayOneShot(rocarota);
-            Destroy(gameObject,2f);
+            sonido.RocaRota();
+            Destroy(gameObject);
 
         }
 
@@ -41,7 +41,8 @@ public class DañoEnemigo : MonoBehaviour
         if (wall != null)
         {
             //animator.SetInteger("bola", 1);
-            Destroy(gameObject,1.5f);
+            sonido.RocaRota();
+            Destroy(gameObject);
         }
 
     }
