@@ -9,10 +9,11 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     private float typingTime = 0.05f;
 
-    private bool didDialogueStart;
-    private int lineIndex;
+    private bool didDialogueStart = false;
+    private int lineIndex = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("dialog");
         if (collision.gameObject.CompareTag("Player"))
         {
             if(!didDialogueStart) 
@@ -21,8 +22,8 @@ public class Dialogue : MonoBehaviour
             }
             else if(dialogueText.text == dialogueLines[lineIndex])
             {
-                
-                    NextDialogueLine();   
+                Debug.Log("NEXTdialog");
+                NextDialogueLine();   
             }
            
         }
@@ -31,6 +32,7 @@ public class Dialogue : MonoBehaviour
 
     private void StartDialogue()
     {
+        Debug.Log("start dialog");
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
@@ -51,13 +53,19 @@ public class Dialogue : MonoBehaviour
     }
     private IEnumerator ShowLine()
     {
+        Debug.Log("show line coroutine");
         dialogueText.text = string.Empty;
 
         foreach(char ch in dialogueLines[lineIndex])
         {
-            dialogueText.text += ch;
+            Debug.Log("foreach");
             yield return new WaitForSeconds(typingTime);
+            dialogueText.text += ch;
         }
+
+        int tiempoEntreLines = 3;
+        yield return new WaitForSeconds(tiempoEntreLines);
+        NextDialogueLine();
     }
 
 }
