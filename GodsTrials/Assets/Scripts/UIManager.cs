@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 {
     #region references
     private StateManager _stateManager;
-    [SerializeField] 
+
     public GameObject botas = null;
     public GameObject carro = null;
     public GameObject pez = null;
@@ -19,25 +19,30 @@ public class UIManager : MonoBehaviour
     public GameManager gameManager;
     public TextMeshProUGUI monedas = null;
     public GameObject BotonesMuerte = null;
-    public GameObject BotonesEscena = null;
     public AudioClip buttonClickFXClip = null;
     #endregion
 
     #region methods
-    public void OnPress(string s)
+
+    public void OnPress(int _toScene)
     {
         //play sound FX
-        if ( buttonClickFXClip != null){
+        if (buttonClickFXClip != null && SoundFXManager.instance != null)
+        {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }
-        _stateManager.ChangeGameState(s);
+        _stateManager.ChangeGameState((SceneID)_toScene);
     }
-    public void SetFullScreen (bool isFS){
-        if ( buttonClickFXClip != null){
+
+    public void SetFullScreen(bool isFS)
+    {
+        if (buttonClickFXClip != null)
+        {
             SoundFXManager.instance.PlaySoundFXClip(buttonClickFXClip, transform, 1f);
         }
         Screen.fullScreen = !Screen.fullScreen;
     }
+
     public void EncenderBotonesMuerte()
     {
         BotonesMuerte.SetActive(true);
@@ -45,18 +50,22 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region Power-Ups
+
     public void Botas()
     {
         botas.SetActive(true);
     }
+
     public void Carro()
     {
         carro.SetActive(true);
     }
+
     public void Pez()
     {
         pez.SetActive(true);
     }
+
     #endregion
 
     /// <summary>
@@ -65,34 +74,27 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _stateManager = GetComponent<StateManager>();
-        GameObject botonesMuerteInstance = BotonesMuerte;
-        botonesMuerteInstance.SetActive(false);
-        Invoke("EncenderBotonesMuerte", 4.0f);
+        if (BotonesMuerte != null){
+            BotonesMuerte.SetActive(false);
+            Invoke("EncenderBotonesMuerte", 4.0f);
+        }
         Screen.fullScreen = true;
         Screen.brightness = 0.5f;
-        pez =GameObject.Find("pez").GetComponent<GameObject>();
-        botas = GameObject.Find("Botas").GetComponent<GameObject>();
-        carro = GameObject.Find("carro").GetComponent<GameObject>();
-        
-    }
-    public void OnLevelWasLoaded()
-    {
-        
-        //canvas = GameObject.Find("Canvas");
-        Canvas[] canvases = FindObjectsOfType<Canvas>();
-
-        
-        foreach (Canvas canvas2 in canvases)
-        {
-
-            Transform child = canvas2.transform.FindChild("BotasCanvas").transform;
-            botas = child.gameObject;
-            break;
+        if (botas != null){
+            botas = GameObject.Find("BotasCanvas").GetComponent<GameObject>();
+        }
+        if (pez != null){
+            pez = GameObject.Find("pez").GetComponent<GameObject>();
+        }
+        if (carro != null){
+            carro = GameObject.Find("carrocanvas").GetComponent<GameObject>();
         }
     }
+    
     void Update()
     {
-        if (monedas != null){
+        if (monedas != null)
+        {
             monedas.text = gameManager.PuntosTotales.ToString();
         }
     }

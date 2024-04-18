@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     #region references
@@ -13,18 +15,14 @@ public class GameManager : MonoBehaviour
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
 
-
-    
+    [SerializeField]
+    private bool isMenu;
     #endregion
 
     #region methods
-    public void LevelChange(string _toLevel)
+    public void LevelChange(SceneID _toScene)
     {
-        if (_toLevel == "muerte")
-        {
-            _UIManager.BotonesEscena.SetActive(false);
-        }
-        _stateManager.ChangeGameState(_toLevel);
+        _stateManager.ChangeGameState(_toScene);
     }
     #endregion
     public void SumarMonedas(int puntosASumar)
@@ -47,11 +45,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu)
         {
-            _stateManager.ChangeGameState("pause");
-        }
-        _UIManager.botas = GameObject.Find("BotasCanvas");
+            //Debug.Log("KeyDownESC");
+            _stateManager.ChangeGameState(SceneID.PauseMenu);          
+        }        
     }
 
    /* private void Awake()

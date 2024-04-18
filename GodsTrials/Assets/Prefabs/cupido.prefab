@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4313532265746876999}
   - component: {fileID: 25602576184640346}
   - component: {fileID: 6032180010707577049}
-  m_Layer: 0
+  - component: {fileID: -1436923569305887921}
+  m_Layer: 10
   m_Name: cupido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.74, y: -3.946704, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1436923569305887921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8477860137209712703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aa122ba839b49746b5d8e3864ec6adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hercules: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  bola: {fileID: 1666285253119690982, guid: 91bac279f7e48da46acebb216347b288, type: 3}
+  veloc: 8
+  distanciaLinea: 3
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 512
+  capasuelo:
+    serializedVersion: 2
+    m_Bits: 8

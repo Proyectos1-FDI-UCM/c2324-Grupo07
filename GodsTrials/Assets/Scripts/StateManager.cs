@@ -4,60 +4,76 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
+public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio};
+//                        0       1       2        3         4           5         6       7      8      9     10       11     12     13
+
 public class StateManager : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
-    
+
     private bool paused = false;
 
     #region methods
-    public void ChangeGameState(string id)
+    public void ChangeGameState(SceneID id)
     {
+        Debug.Log("CGS" + id);
         switch (id)
         {
-            case "quit":
+            case SceneID.Quit:
                 Application.Quit();
                 break;                
-            case "mainMenu":
+            case SceneID.MainMenu:
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
-            case "cueva":
+            case SceneID.Inicio:
+                StartCoroutine(ChangeScene(9,true, false));
+                break;
+            case SceneID.Cueva:
                 StartCoroutine(ChangeScene(1, true, false));
                 break;
-            case "infierno":
+            case SceneID.Infierno:
                 StartCoroutine(ChangeScene(2, true, false));
                 break;
-            case "montaña":
+            case SceneID.Montaña:
                 StartCoroutine (ChangeScene(6, true, false));
                 break;
-            case "muerte":
+            case SceneID.Cielo:
+                StartCoroutine(ChangeScene(7,true, false));
+                break;
+            case SceneID.Final:
+                StartCoroutine(ChangeScene(8,true, false));
+                break;
+            case SceneID.Muerte:
                 //StartCoroutine(ChangeScene(3, true, true));
                 Load(3, true);
                 break;
-            case "options":
+            case SceneID.OptionsMenu:
                 StartCoroutine(ChangeScene(4, true, false));
                 break;
-            case "pause":
-                //EventSystem eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-                //eventSystem.enabled = false;
-                //StartCoroutine(ChangeScene(5, true, true));
-                Load(5, true);
-                paused = true;
+            case SceneID.PauseMenu:{
+                if (paused){
+                    //Debug.Log("changing from PAUSED");
+                    paused = false;
+                    Unload(5);
+                    Time.timeScale = 1;
+                }
+                else {
+                    //Debug.Log("changing from NOT PAUSED");
+                    paused = true;
+                    Load(5, true);
+                    Time.timeScale = 0;
+                }
+                }
                 break;
-            case "resume":                
-                paused = false;
-                StartCoroutine(ChangeScene(5, false, true));
-                //Unload(5);
-                break;            
-            case "restartLevel":
+            case SceneID.Restart:
                 StartCoroutine(ChangeScene(3, false, true));
                 //Unload(3);
                 break;
-            case "back":
+            case SceneID.Back:
                 StartCoroutine(ChangeScene(0, true, false));
                 break;
-                
+
             default:
                 print("default CGS");
                 break;
@@ -91,13 +107,18 @@ public class StateManager : MonoBehaviour
             SceneManager.LoadScene(id);
         }
     }
-    
+
     private void Unload(int id)
     {
         SceneManager.UnloadSceneAsync(id);
-        if(id == 3){//si era la escena de muerte
+        if (id == 3)
+        {//si era la escena de muerte
             Application.LoadLevel(Application.loadedLevel);
         }
+    }
+
+    public bool isPaused(){
+        return paused;
     }
     #endregion
 }

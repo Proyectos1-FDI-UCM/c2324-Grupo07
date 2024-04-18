@@ -2,12 +2,13 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
-using System.Collections;
 
 public class ControlarJugador : MonoBehaviour
 {
     public float jumpvelocity = 10;
+    public float platformJumpVelocity = 20;
+    public float velocidadHorizontal = -30;
+    public float time = 0;
     public float velocity = 5;
     private Rigidbody2D rb;
     public bool enSuelo1;
@@ -15,8 +16,8 @@ public class ControlarJugador : MonoBehaviour
     public bool enSuelo3;
     private bool dobleSalto = true;
     public GameObject botas;
-    public GameObject carro;    
-    public GameObject pez;    
+    public GameObject carro;
+    public GameObject pez;
     public Transform circulo1;
     public Transform circulo2;
     public Transform saltoHercules1;
@@ -30,7 +31,7 @@ public class ControlarJugador : MonoBehaviour
     private bool enParedLC2;
     private ShootingComponent shoot;
     UIManager uiManager;
-    public int state = 0;
+    public int state;
 
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
@@ -41,6 +42,21 @@ public class ControlarJugador : MonoBehaviour
                 dobleSalto = true;
             }
         }
+        if (activarSalto.gameObject.CompareTag("Plataforma salto") && activarSalto.contacts[0].point.y < transform.position.y)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, platformJumpVelocity);
+
+        }
+        if (activarSalto.gameObject.CompareTag("Plataforma horizontal"))
+        {
+            state = 9;
+            if (state == 9)
+            {
+                Vector3 velocity = new Vector3(-1, 1, 0) * platformJumpVelocity;
+                rb.velocity = velocity;
+            }
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D itemBotas)
     {
@@ -69,11 +85,20 @@ public class ControlarJugador : MonoBehaviour
 
     void Start()
     {
+        state = 0;
         rb = GetComponent<Rigidbody2D>();
         uiManager = GameObject.Find("GameManager").GetComponent<UIManager>();
     }
     void Update()
     {
+        if (state == 9)
+        {
+            time += Time.deltaTime;
+            if (time > 0.5)
+            {
+                state = 0;
+            }
+        }
         if (state == 0)
         {
             enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
@@ -107,15 +132,21 @@ public class ControlarJugador : MonoBehaviour
                 rb.velocity = new Vector2(0, rb.velocity.y);
                 if (enSuelo1 || enSuelo2 || enSuelo3)
                 {
-                    rb.velocity = new Vector2(0, -2.5f);
+                    //bloquea el rebote de las plataformas, buscar mejor integracion?
+                    //rb.velocity = new Vector2(0, -2.5f);
                 }
             }
         }
+        if (state == 6)
+        {
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        }
     }
-    
+
     public void Salto()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
+
 }
 

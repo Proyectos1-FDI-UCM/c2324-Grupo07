@@ -10,6 +10,7 @@ public class VidaSystem : MonoBehaviour
     private GameObject hercules;
     [SerializeField]
     private float vida = 3.0f;
+    private float vidacupido = 0.43f;//para matar a hercules cada 7 golpes
     BarraVida barravida;
     private ControlarJugador jugador;
     [SerializeField]
@@ -60,6 +61,7 @@ public class VidaSystem : MonoBehaviour
     }
     public void MuerteCompleta()
     {
+        Destroy(hercules);
         barravida.DanoTotal();
         morir.Muerte();
     }
@@ -70,9 +72,23 @@ public class VidaSystem : MonoBehaviour
         vida--;
         if (vida <= 0)
         {
+            Destroy(hercules);
             morir.Muerte();
         }
     }
+
+    public void DañoCupido()//para los cupidos modificado por Jule
+    {
+        animatorController.Dano();
+        barravida.DanoSiete();
+        vida-=vidacupido;
+        if (vida <= 0)
+        {
+            Destroy(hercules);
+            morir.Muerte();
+        }
+    }
+
     public void ImpulsoPorDaño()
     {
         jugador.state = 1;

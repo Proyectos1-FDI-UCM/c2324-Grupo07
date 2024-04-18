@@ -13,6 +13,14 @@ TagManager:
   - pez
   - carro
   - botas
+  - bola
+  - Plataforma salto
+  - Plataforma horziontal
+  - Plataforma horizontal
+  - rayo
+  - stun
+  - perimetro
+  - Ciclope
   layers:
   - Default
   - TransparentFX
@@ -24,7 +32,7 @@ TagManager:
   - collider camara arriba
   - collider camara abajo
   - hercules
-  - 
+  - enemigos
   - 
   - 
   - 
@@ -49,6 +57,9 @@ TagManager:
   m_SortingLayers:
   - name: collider camara
     uniqueID: 3552362719
+    locked: 0
+  - name: margenes
+    uniqueID: 655170937
     locked: 0
   - name: Default
     uniqueID: 0

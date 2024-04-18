@@ -6,24 +6,24 @@ using UnityEngine.SceneManagement;
 public class LevelChange : MonoBehaviour
 {
     #region references
-    /// <summary>
-    /// Level id to load when triggered
-    /// </summary>
-    [SerializeField]
-    private string _toLevel;
-    /// <summary>
+        /// <summary>
     /// Reference to Game Manager
     /// </summary>
     [SerializeField]
     private GameManager _gameManager;
     private VidaSystem _system;
-       
+    /// <summary>
+    /// Level id to load when triggered
+    /// </summary>
+    [SerializeField]
+    private SceneID _toLevel;
     #endregion
 
     #region methods
     public void Muerte()
     {
-        _gameManager.LevelChange("muerte");
+        Debug.Log("Muerte()");
+        _gameManager.LevelChange(SceneID.Muerte);
     }
 
     /// <summary>

@@ -6,11 +6,14 @@ using UnityEngine;
 public class ShootingComponent : MonoBehaviour
 {
     private Animator animator;
+    [SerializeField]
+    private ControlarJugador player;
     private ControlarJugador hercules;
     public GameObject pez;
     public GameObject bala;
     public GameObject ciclope;
-    private bool disparo;
+    public bool disparo = false;
+    [SerializeField]
     private bool shoot;
     private float time;
     private float timeToShoot = 0.5f;
@@ -18,7 +21,7 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetMouseButton(0) && disparo && shoot)
+        if (Input.GetKeyDown(KeyCode.J) && disparo && shoot && player.state == 0)
         {
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();
@@ -55,11 +58,10 @@ public class ShootingComponent : MonoBehaviour
         {
             disparo = true;
         }
-        Debug.Log(disparo);
     }
     void Start()
     {
-        disparo = false;
+        player = GameObject.Find("Hercules").GetComponent<ControlarJugador>();
         shoot = true;
         time = 0;
     }

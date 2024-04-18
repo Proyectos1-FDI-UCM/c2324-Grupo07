@@ -6,10 +6,12 @@ public class DashComponent : MonoBehaviour
 {
     private float time;
     private float timeToDash = 0.2f;
+    [SerializeField]
     bool dashea;
     private ControlarJugador jugador;
     private Rigidbody2D hercules;
-    private bool dashActive;
+    [SerializeField]
+    private bool dashActive = false;
     public GameObject carro;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,14 +25,13 @@ public class DashComponent : MonoBehaviour
     {
         hercules = GetComponent<Rigidbody2D>();
         dashea = true;
-        dashActive = false;
         jugador = GetComponent<ControlarJugador>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashea && dashActive)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashea && dashActive && jugador.state != 20)
         {
             time = 0;
             jugador.state = 3;
@@ -47,7 +48,10 @@ public class DashComponent : MonoBehaviour
         time += Time.deltaTime;
         if (time > timeToDash)
         {
-            hercules.velocity = new Vector3(0, hercules.velocity.y, 0);
+            if (jugador.state == 3)
+            {
+                hercules.velocity = new Vector3(0, hercules.velocity.y, 0);
+            }
             if (time > 1f)
             {
                 dashea = true;
