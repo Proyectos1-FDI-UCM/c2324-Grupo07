@@ -49,11 +49,21 @@ public class Enemigos : MonoBehaviour
         {
             if (tiempo > 2 && tiempo < 3)
             {
-                _animator.SetInteger("ciclope", 1);
+                if (_animator.GetInteger("ciclope") != 2)
+                {
+                    _animator.SetInteger("ciclope", 1);
+                }
+                else
+                {
+                    tiempo = 0;
+                }
             }
             else
             {
-                _animator.SetInteger("ciclope", 0);
+                if (_animator.GetInteger("ciclope") != 2)
+                {
+                    _animator.SetInteger("ciclope", 0);
+                }
             }
             if (tiempo > tiemporep)
             {

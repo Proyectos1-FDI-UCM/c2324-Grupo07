@@ -36,7 +36,7 @@ public class SufrirDaño : MonoBehaviour
                 }
 
                 Destroy(GetComponent<Enemigos>());
-                Destroy(gameObject, 2f);
+                Destroy(gameObject, 1.8f);
                    // gameObject.SetActive(false);
                 
             }
