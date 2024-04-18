@@ -22,6 +22,7 @@ public class LevelChange : MonoBehaviour
     #region methods
     public void Muerte()
     {
+        Debug.Log("Muerte()");
         _gameManager.LevelChange(SceneID.Muerte);
     }
 
