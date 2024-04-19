@@ -75,6 +75,7 @@ public class Zeus : MonoBehaviour
         if (vidaZ == 0)
         {
             Destroy(gameObject);
+            GameObject.Find("GameManager").GetComponent<LevelChange>().MuerteFinal();
         }
     }
     // Start is called before the first frame update
@@ -547,7 +548,7 @@ public class Zeus : MonoBehaviour
                     }
                 }
             }
-            //Si 20 de daño pasa al ultimo y penultimo estado de forma simultanea inicializando las variables de ambos
+            //Si 20 de daï¿½o pasa al ultimo y penultimo estado de forma simultanea inicializando las variables de ambos
             if (vidaZ <= 20 && estado != 5)
             {
                 Destroy(marc);

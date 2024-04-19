@@ -22,8 +22,12 @@ public class LevelChange : MonoBehaviour
     #region methods
     public void Muerte()
     {
-        Debug.Log("Muerte()");
         _gameManager.LevelChange(SceneID.Muerte);
+    }
+
+    public void MuerteFinal()
+    {
+        _gameManager.LevelChange(SceneID.Cinematica);
     }
 
     /// <summary>
