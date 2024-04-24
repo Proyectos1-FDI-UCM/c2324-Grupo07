@@ -10,10 +10,13 @@ public class Zeus : MonoBehaviour
     [SerializeField] private AudioClip trueno;
     [SerializeField] private AudioClip descarga;
     [SerializeField] private AudioClip marcaAudio;
+    [SerializeField] private AudioClip terremoto;
     [SerializeField]
     private Rigidbody2D cam;
     private float time1;
     private float time2;
+    [SerializeField]
+    private GameObject fight;
     float randomX;
     float randomY;
     [SerializeField]
@@ -58,10 +61,12 @@ public class Zeus : MonoBehaviour
     bool instancia3 = true;
     bool instancia4 = true;
     bool instancia5 = true;
+    bool instancia6 = true;
     bool state4 = false;
     bool simultaneo = false;
     private GameObject marc;
     private GameObject ray;
+    private GameObject fight2;
     [SerializeField]
     private float si;
     Quaternion rotationZ;
@@ -93,7 +98,7 @@ public class Zeus : MonoBehaviour
         zeusRB = GetComponent<Rigidbody2D>();
         estado = 2;
         pos = false;
-        barravida= GameObject.Find("vidazeus").GetComponent<BarraVida>();
+        barravida = GameObject.Find("vidazeus").GetComponent<BarraVida>();
     }
 
     // Update is called once per frame
@@ -106,6 +111,11 @@ public class Zeus : MonoBehaviour
             //Sube y se agranda
             if (time1 < 2f)
             {
+                if (time1 > 0 && time1 < 0.1f)
+                {
+
+                    audio.PlayOneShot(terremoto);
+                }
                 zeusRB.velocity = Vector3.up * vel;
                 transform.localScale += new Vector3(4f, 4f) * Time.deltaTime;
             }
@@ -115,10 +125,16 @@ public class Zeus : MonoBehaviour
                 zeusRB.velocity = Vector3.down * vel;
                 transform.localScale -= new Vector3(4f, 4f) * Time.deltaTime;
                 //Cambia al siguiente estado
-                if (time1 > 3.9f)
-                {
-                    estado = 0;
-                }
+            }
+            if (time1 > 2f && instancia6)
+            {
+                fight2 = Instantiate(fight, new Vector3(0, -0.5f), Quaternion.identity);
+                instancia6 = false;
+            }
+            if (time1 > 3.9f)
+            {
+                Destroy(fight2);
+                estado = 0;
             }
         }
         if (estado == 0 && !simultaneo)
@@ -260,7 +276,7 @@ public class Zeus : MonoBehaviour
                 if (dispara2 > 0.50 && dispara2 < 0.54 && transform.localScale != new Vector3(10, 10) && instancia1)
                 {
                     GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * 2.1f, Quaternion.Euler(0, 0, 270));
-                    audio.PlayOneShot(descarga); 
+                    audio.PlayOneShot(descarga);
                     proyectilRB = proyectil.GetComponent<Rigidbody2D>();
                     proyectilRB.velocity = Vector3.left * 8.5f;
                     sizeX -= 0.2f;
@@ -353,7 +369,7 @@ public class Zeus : MonoBehaviour
                             ray = Instantiate(rayoCielo, ataca, Quaternion.identity);
                             instancia1 = false;
                         }
-                        if(dispara1 > 0.7)
+                        if (dispara1 > 0.7)
                         {
                             cam.velocity = new Vector3(Random.Range(-4, 5f), Random.Range(-4, 5f));
                         }
