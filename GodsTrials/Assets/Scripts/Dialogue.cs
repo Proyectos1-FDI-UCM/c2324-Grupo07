@@ -46,7 +46,9 @@ public class Dialogue : MonoBehaviour
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
-        StartCoroutine(ShowLine());
+        //StartCoroutine(ShowLine());
+        Time.timeScale = 0;
+        ShowLineTimeless();
     }
     private void NextDialogueLine()
     {
@@ -58,28 +60,32 @@ public class Dialogue : MonoBehaviour
             {
                 ZHead.SetActive(false); 
                 HHead.SetActive(true);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
 
             else if (lineIndex==2)
             {
                 ZHead.SetActive(true);
                 HHead.SetActive(false);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
 
             else if (lineIndex == 3)
             {
                 ZHead.SetActive(false);
                 HHead.SetActive(true);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
 
             else if (lineIndex == 4)
             {
                 ZHead.SetActive(true);
                 HHead.SetActive(false);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
 
         }
@@ -93,6 +99,7 @@ public class Dialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             HUD.SetActive(true);
             Collider.SetActive(false);
+            Time.timeScale = 1;
         }
     }
     private IEnumerator ShowLine()
@@ -112,4 +119,15 @@ public class Dialogue : MonoBehaviour
         NextDialogueLine();
     }
 
+    private void ShowLineTimeless(){
+        dialogueText.text = dialogueLines[lineIndex];
+    }
+
+    void Update()
+    {
+        if (Input.anyKeyDown && didDialogueStart)
+        {
+            NextDialogueLine();
+        }
+    }
 }
