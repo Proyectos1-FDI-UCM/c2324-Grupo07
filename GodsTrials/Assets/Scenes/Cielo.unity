@@ -213,7 +213,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 560808775}
   - {fileID: 1944710535}
   - {fileID: 1403006668}
   - {fileID: 1616937081}
@@ -656,6 +655,7 @@ Transform:
   - {fileID: 1191109507}
   - {fileID: 1404969240}
   - {fileID: 114492250}
+  - {fileID: 2035711870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &344132787
@@ -2113,11 +2113,11 @@ Transform:
   m_GameObject: {fileID: 560808774}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4681, y: -0.3676, z: 0.054212872}
+  m_LocalPosition: {x: 0.38047862, y: -3.0909798, z: 0}
   m_LocalScale: {x: 1.7752235, y: 1.5520502, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 114492250}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &560808776
 MonoBehaviour:
@@ -2433,7 +2433,7 @@ Transform:
   m_GameObject: {fileID: 833682391}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.57, y: -3.45, z: 0.05421257}
+  m_LocalPosition: {x: 5.27, y: -3.64, z: 0.05421257}
   m_LocalScale: {x: 3.9527433, y: 3.7219276, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2677,7 +2677,7 @@ Transform:
   m_GameObject: {fileID: 995492629}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.46, y: -3.21, z: 0.05421257}
+  m_LocalPosition: {x: -12.76, y: -3.42, z: 0.05421257}
   m_LocalScale: {x: 3.5555, y: 3.2571547, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2746,7 +2746,7 @@ GameObject:
   - component: {fileID: 996297083}
   - component: {fileID: 996297084}
   m_Layer: 0
-  m_Name: Cabeza Poseidon
+  m_Name: Cabeza Zeus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2760,13 +2760,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996297082}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -10.7586, y: -7.409, z: 0.05421257}
-  m_LocalScale: {x: 2.162598, y: 2.6910162, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0019793618, w: -0.99999803}
+  m_LocalPosition: {x: 1.2353, y: -3.2895, z: 0.05421257}
+  m_LocalScale: {x: 1.5216156, y: 1.7784092, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2035711870}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.227}
 --- !u!212 &996297084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2808,7 +2808,7 @@ SpriteRenderer:
   m_SortingLayerID: -1337078907
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2c1cae4b73bcc845943858144e2769a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6620dc00d9471cd44a8030137058e9a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13076,9 +13076,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238268497}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 3.0083997, y: -1.87, z: 0.054212872}
-  m_LocalScale: {x: 1.6393459, y: 2.0361085, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.3543, y: -2.0249, z: 0.054212872}
+  m_LocalScale: {x: 1.6580344, y: 2.078256, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2035711870}
@@ -14534,7 +14534,7 @@ GameObject:
   - component: {fileID: 1735784550}
   - component: {fileID: 1735784549}
   m_Layer: 0
-  m_Name: Inicio Dialogo
+  m_Name: Inicio Dialogo final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14549,11 +14549,11 @@ Transform:
   m_GameObject: {fileID: 1735784547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1623, y: 2.3436, z: 0.054212872}
-  m_LocalScale: {x: 0.99533266, y: 0.7537225, z: 1}
+  m_LocalPosition: {x: 2.7780786, y: 86.989624, z: 0}
+  m_LocalScale: {x: 1.0043901, y: 5.9998326, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2035711870}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1735784549
 MonoBehaviour:
@@ -14568,21 +14568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Poseid\xF3n:\n\n\xA1H\xE9rcules! Hijo del dios Zeus y la mortal Alcmena. Asesino
-    del le\xF3n de Nemea y de la hidra de Lerna, te estaba buscando."
-  - "H\xE9rcules:\n\n\xA1Gran Poseid\xF3n! \xBFA que debo la presencia del se\xF1or
-    de los mares?"
-  - "Poseid\xF3n:\n\nZeus me ha contado tu \xFAltima prueba y he venido a asistirte.
-    Lo que acabas de recoger es una poderosa criatura marina, con la que ser\xE1s
-    capaz de derrotar a tus enemigos. \xA1Ahora ve y demuestra ser digno! "
-  - "H\xE9rcules:\n\n\xA1Bendito seas gran Poseid\xF3n!"
+  - "Zeus:\n\nEnhorabuena hijo mio, has conseguido llegar hasta el Olimpo. Pero aun
+    te tengo una \xFAltima prueba."
+  - "H\xE9rcules:\n\n\xBFQu\xE9 es padre?"
+  - "Zeus:\n\nAl subir esas escaleras te enfrentar\xE1s a mi. Ense\xF1ame todo lo
+    que has crecido y si me derrotas habr\xE1s completado tu aventura. \xA1Ven a
+    por mi, hijo!"
+  - "H\xE9rcules:\n\n\xA1S\xED, padre!"
   dialoguePanel: {fileID: 1951638275}
   dialogueText: {fileID: 1108055768}
   ZHead: {fileID: 996297082}
   HHead: {fileID: 1238268497}
   Square1: {fileID: 995492629}
   Square2: {fileID: 833682391}
-  HUD: {fileID: 0}
+  HUD: {fileID: 1891639990}
   Collider: {fileID: 1735784547}
 --- !u!61 &1735784550
 BoxCollider2D:
@@ -17063,7 +17062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035711870}
   m_Layer: 0
-  m_Name: Dialogue
+  m_Name: Dialogue final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17078,17 +17077,16 @@ Transform:
   m_GameObject: {fileID: 2035711869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8485787, y: -2.7233799, z: -0.05421257}
+  m_LocalPosition: {x: 3.8485787, y: -1.0233798, z: 9.945787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1735784548}
   - {fileID: 1565724011}
   - {fileID: 1238268498}
   - {fileID: 996297083}
   - {fileID: 833682392}
   - {fileID: 995492630}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 344132786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061985286
 GameObject:
@@ -17338,6 +17336,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 344132786}
+  - {fileID: 1735784548}
+  - {fileID: 560808775}
   - {fileID: 510495383}
   - {fileID: 454572337}
   - {fileID: 847348199}
@@ -17353,4 +17353,3 @@ SceneRoots:
   - {fileID: 656569535}
   - {fileID: 718980448}
   - {fileID: 1940466011}
-  - {fileID: 2035711870}
