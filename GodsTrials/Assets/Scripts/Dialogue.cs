@@ -75,6 +75,13 @@ public class Dialogue : MonoBehaviour
                 StartCoroutine(ShowLine());
             }
 
+            else if (lineIndex == 4)
+            {
+                ZHead.SetActive(true);
+                HHead.SetActive(false);
+                StartCoroutine(ShowLine());
+            }
+
         }
         else
         {
