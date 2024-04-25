@@ -304,7 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667ad3854810a114b9e98a32d16d3cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vel: 5
 --- !u!1001 &649327709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -401,7 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546708d713770544fb653ccb6cb6bc7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1352873181}
 --- !u!4 &1245814497
 Transform:
   m_ObjectHideFlags: 0
@@ -468,6 +466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpvelocity: 10
+  platformJumpVelocity: 20
+  velocidadHorizontal: -30
+  time: 0
   velocity: 5
   enSuelo1: 0
   enSuelo2: 0
