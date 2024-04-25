@@ -7512,6 +7512,7 @@ MonoBehaviour:
   Square1: {fileID: 1492889296}
   Square2: {fileID: 1732210432}
   HUD: {fileID: 914084016}
+  Collider: {fileID: 657155711}
 --- !u!61 &657155713
 BoxCollider2D:
   m_ObjectHideFlags: 0
