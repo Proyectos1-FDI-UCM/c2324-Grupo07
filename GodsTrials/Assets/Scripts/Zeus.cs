@@ -30,6 +30,8 @@ public class Zeus : MonoBehaviour
     [SerializeField]
     private float estado;
     [SerializeField]
+    private GameObject brazoPivot;
+    [SerializeField]
     private GameObject rayo;
     [SerializeField]
     private GameObject rayoCielo;
@@ -99,6 +101,31 @@ public class Zeus : MonoBehaviour
         estado = 2;
         pos = false;
         barravida = GameObject.Find("vidazeus").GetComponent<BarraVida>();
+    }
+
+    void disparoAHercules(int velMult, ref bool instanciaN){
+        _animator.SetTrigger("MoveBrazo");
+        Vector3 direc = (hercules.transform.position - transform.position);
+        float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
+        rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
+        GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
+        audio.PlayOneShot(descarga);
+        proyectilRB = proyectil.GetComponent<Rigidbody2D>();
+        float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
+        proyectilRB.velocity = (direc / mod) * velMult;
+        instanciaN = false;
+    }
+
+    void disparoHorizontal(float altura, ref bool instanciaN){
+        _animator.SetTrigger("MoveBrazo");
+        GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * altura, Quaternion.Euler(0, 0, 270));
+        audio.PlayOneShot(descarga); 
+        proyectilRB = proyectil.GetComponent<Rigidbody2D>();
+        proyectilRB.velocity = Vector3.left * 8.5f;
+        sizeX -= 0.2f;
+        sizeY -= 0.2f;
+        transform.localScale = new Vector3(sizeX, sizeY);
+        instanciaN = false;
     }
 
     // Update is called once per frame
@@ -210,15 +237,7 @@ public class Zeus : MonoBehaviour
                 //Direccion disparos
                 if (dispara1 < 0.1 && instancia)
                 {
-                    Vector3 direc = (hercules.transform.position - transform.position);
-                    float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
-                    rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
-                    GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
-                    audio.PlayOneShot(descarga);
-                    proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                    float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
-                    proyectilRB.velocity = (direc / mod) * 12;
-                    instancia = false;
+                    disparoAHercules(12, ref instancia);
                 }
                 //Tiempo entre disparos
                 if (dispara1 > 1f)
@@ -263,38 +282,17 @@ public class Zeus : MonoBehaviour
                 //Disparo medio
                 if (dispara2 < 0.04 && transform.localScale != new Vector3(10, 10) && instancia)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position, Quaternion.Euler(0, 0, 270));
-                    audio.PlayOneShot(descarga);
-                    proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                    proyectilRB.velocity = Vector3.left * 8.5f;
-                    sizeX -= 0.2f;
-                    sizeY -= 0.2f;
-                    transform.localScale = new Vector3(sizeX, sizeY);
-                    instancia = false;
+                    disparoHorizontal(0.0f, ref instancia);
                 }
                 //Disparo arriba
                 if (dispara2 > 0.50 && dispara2 < 0.54 && transform.localScale != new Vector3(10, 10) && instancia1)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * 2.1f, Quaternion.Euler(0, 0, 270));
-                    audio.PlayOneShot(descarga);
-                    proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                    proyectilRB.velocity = Vector3.left * 8.5f;
-                    sizeX -= 0.2f;
-                    sizeY -= 0.2f;
-                    transform.localScale = new Vector3(sizeX, sizeY);
-                    instancia1 = false;
+                    disparoHorizontal(2.1f, ref instancia1);
                 }
                 //Disparo abajo
                 if (dispara2 > 1 && dispara2 < 1.04 && transform.localScale != new Vector3(10, 10) && instancia2)
                 {
-                    GameObject proyectil = Instantiate(rayo, transform.position + Vector3.down * 2.1f, Quaternion.Euler(0, 0, 270));
-                    audio.PlayOneShot(descarga);
-                    proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                    proyectilRB.velocity = Vector3.left * 8.5f;
-                    sizeX -= 0.2f;
-                    sizeY -= 0.2f;
-                    transform.localScale = new Vector3(sizeX, sizeY);
-                    instancia2 = false;
+                    disparoHorizontal(-2.1f, ref instancia2);
                 }
                 //Tiempo entre disparos
                 if (dispara2 > 1.5f)
@@ -392,15 +390,7 @@ public class Zeus : MonoBehaviour
                         //Disparos del primer estado
                         if (dispara2 < 0.1 && instancia2)
                         {
-                            Vector3 direc = (hercules.transform.position - transform.position);
-                            float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
-                            rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
-                            GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
-                            audio.PlayOneShot(descarga);
-                            proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                            float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
-                            proyectilRB.velocity = (direc / mod) * 10;
-                            instancia2 = false;
+                            disparoAHercules(10, ref instancia2);
                         }
                         //Tiempo entre disparos
                         if (dispara2 > 1f)
@@ -518,15 +508,7 @@ public class Zeus : MonoBehaviour
                     //Disparos primer estado
                     if (dispara5 < 0.1 && instancia5)
                     {
-                        Vector3 direc = (hercules.transform.position - transform.position);
-                        float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
-                        rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
-                        GameObject proyectil = Instantiate(rayo, transform.position, rotationZ);
-                        audio.PlayOneShot(descarga);
-                        proyectilRB = proyectil.GetComponent<Rigidbody2D>();
-                        float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
-                        proyectilRB.velocity = (direc / mod) * 10;
-                        instancia5 = false;
+                        disparoAHercules(10, ref instancia5);
                     }
                     //Tiempo entre disparos
                     if (dispara5 > 1f)

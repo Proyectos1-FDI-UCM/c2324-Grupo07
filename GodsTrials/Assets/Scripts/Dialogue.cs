@@ -11,6 +11,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject HHead;
     [SerializeField] private GameObject Square1;
     [SerializeField] private GameObject Square2;
+    [SerializeField] private GameObject HUD;
+    [SerializeField] private GameObject Collider;
     private float typingTime = 0.05f;
 
     private bool didDialogueStart = false;
@@ -22,6 +24,7 @@ public class Dialogue : MonoBehaviour
         {
             if (!didDialogueStart)
             {
+                HUD.SetActive(false);
                 StartDialogue();
             }
             else if (dialogueText.text == dialogueLines[lineIndex])
@@ -43,7 +46,9 @@ public class Dialogue : MonoBehaviour
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         lineIndex = 0;
-        StartCoroutine(ShowLine());
+        //StartCoroutine(ShowLine());
+        Time.timeScale = 0;
+        ShowLineTimeless();
     }
     private void NextDialogueLine()
     {
@@ -55,16 +60,34 @@ public class Dialogue : MonoBehaviour
             {
                 ZHead.SetActive(false); 
                 HHead.SetActive(true);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
 
             else if (lineIndex==2)
             {
                 ZHead.SetActive(true);
                 HHead.SetActive(false);
-                StartCoroutine(ShowLine());
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
             }
-            
+
+            else if (lineIndex == 3)
+            {
+                ZHead.SetActive(false);
+                HHead.SetActive(true);
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
+            }
+
+            else if (lineIndex == 4)
+            {
+                ZHead.SetActive(true);
+                HHead.SetActive(false);
+                //StartCoroutine(ShowLine());
+                ShowLineTimeless();
+            }
+
         }
         else
         {
@@ -74,6 +97,9 @@ public class Dialogue : MonoBehaviour
             HHead.SetActive(false);
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
+            HUD.SetActive(true);
+            Collider.SetActive(false);
+            Time.timeScale = 1;
         }
     }
     private IEnumerator ShowLine()
@@ -93,4 +119,15 @@ public class Dialogue : MonoBehaviour
         NextDialogueLine();
     }
 
+    private void ShowLineTimeless(){
+        dialogueText.text = dialogueLines[lineIndex];
+    }
+
+    void Update()
+    {
+        if (Input.anyKeyDown && didDialogueStart)
+        {
+            NextDialogueLine();
+        }
+    }
 }
