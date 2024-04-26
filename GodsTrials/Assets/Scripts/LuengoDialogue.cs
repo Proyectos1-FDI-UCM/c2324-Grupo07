@@ -62,6 +62,7 @@ public class LuengoDialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             LHead.SetActive(false);
             LHead2.SetActive(false);
+            Collider.SetActive(false);
 
         }
     }

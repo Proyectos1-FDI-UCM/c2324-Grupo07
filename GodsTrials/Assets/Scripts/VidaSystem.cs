@@ -64,6 +64,7 @@ public class VidaSystem : MonoBehaviour
         Destroy(hercules);
         barravida.DanoTotal();
         morir.Muerte();
+
     }
     public void Daño()
     {
