@@ -7,7 +7,7 @@ public class CamaraMontaña : MonoBehaviour
 {
     [SerializeField]
     private GameObject canvas;
-    public Camera _camara = Camera.main;
+    public Camera _camara;
     public Transform _circuloCabeza;
     public Transform _circuloPies;
     public float velMov = 5.0f;
@@ -20,7 +20,7 @@ public class CamaraMontaña : MonoBehaviour
         bool tocandoSuelo = Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f, enSuelo);
         bool tocandoColliderArriba = Physics2D.Raycast(_circuloCabeza.position, Vector3.up, 0.5f, capaColisionArriba);
         bool tocandoParteInferiorPantalla = _circuloPies.position.y <= _camara.transform.position.y - 5;
-        if (_circuloPies.position.y > -6.9)
+        if (_circuloPies.position.y > -16)
         {
             if (_circuloPies.position.x > 1.3 && _circuloPies.position.x < 140.7 && _circuloPies.position.y < 22.7)
             {
@@ -45,13 +45,13 @@ public class CamaraMontaña : MonoBehaviour
                 moviendose = false;
             }
         }
-        if (_circuloPies.position.y < -6.9f)
+        if (_circuloPies.position.y < -16)
         {
             canvas.SetActive(false);
             _camara.orthographicSize = 18;
             _camara.transform.position = new Vector3(59.7f, -38f, _camara.transform.position.z);
         }
-        if (_circuloPies.position.y > -6.8f && _circuloPies.position.x > -0.6f)
+        if (_circuloPies.position.y > -16f && _circuloPies.position.x > -0.6f)
         {
             _camara.orthographicSize = 6;
             _camara.transform.position = new Vector3(_circuloPies.position.x, _camara.transform.position.y, _camara.transform.position.z);
