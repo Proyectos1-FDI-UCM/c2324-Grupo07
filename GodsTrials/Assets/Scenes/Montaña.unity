@@ -84918,8 +84918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ad4c18808084d44834e54053c96a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
-  _camara: {fileID: 1870359073}
+  canvas: {fileID: 482959974}
+  _camara: {fileID: 1870359072}
   _circuloCabeza: {fileID: 424954733}
   _circuloPies: {fileID: 1452322732}
   velMov: 5
