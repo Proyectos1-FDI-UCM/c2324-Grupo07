@@ -69,12 +69,10 @@ public class LuengoDialogue : MonoBehaviour
 
     private IEnumerator ShowLine()
     {
-        Debug.Log("show line coroutine");
         dialogueText.text = string.Empty;
 
         foreach (char ch in dialogueLines[lineIndex])
         {
-            Debug.Log("foreach");
             yield return new WaitForSeconds(typingTime);
             dialogueText.text += ch;
         }

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class enemigopiedra : MonoBehaviour
@@ -9,6 +11,18 @@ public class enemigopiedra : MonoBehaviour
     private Vector3 _position;
     private float primerapos;
     private bool derecha = true;
+    private bool dano;
+    private bool movimiento = true;
+    private bool danohercules;
+    [SerializeField]
+    private float drch = 3;
+    [SerializeField]
+    private float izqu = -3;
+    [SerializeField]
+    LayerMask hercules;
+    Animator animator;
+    [SerializeField]
+    private VidaSystem vidaSystem;
 
     #endregion
     // Start is called before the first frame update
@@ -17,28 +31,59 @@ public class enemigopiedra : MonoBehaviour
         _mytransform = transform;
         _position = new Vector3(1, 0, 0);
         primerapos = transform.position.x;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (derecha)
+        if (movimiento)
         {
-            if(primerapos - transform.position.x < -3)
+
+            if (derecha)
             {
-                derecha = false;
+                if (primerapos - transform.position.x < izqu)
+                {
+                    derecha = false;
+                }
+                transform.position += _position * Time.deltaTime;
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            transform.position += _position * Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            if (!derecha)
+            {
+                if (primerapos - transform.position.x > drch)
+                {
+                    derecha = true;
+                }
+                transform.position += (Vector3.left) * Time.deltaTime;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
-        if (!derecha)
+
+        dano = Physics2D.Raycast(transform.position, Vector3.up, 0.5f, hercules);
+        danohercules = Physics2D.Raycast(transform.position, Vector3.right, 1f, hercules);
+        danohercules = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
+
+        if (dano)
         {
-            if(primerapos - transform.position.x > 3)
-            {
-                derecha = true;
-            }
-            transform.position += (Vector3.left) * Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            movimiento = false;
+            vidaSystem.ImpulsoPorDaño();
+            animator.SetInteger("enemigopiedra", 1);
+            Destroy(gameObject, 1.5f);
         }
+
+        if (danohercules)
+        {
+            Debug.Log("Entra");
+            vidaSystem.DanoPiedra();
+            vidaSystem.ImpulsoPorDaño();
+        }
+    }
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 0.5f);
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.left * 1f);
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.right * 1f);
     }
 }

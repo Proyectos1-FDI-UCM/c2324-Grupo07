@@ -15,9 +15,15 @@ public class BarraVida : MonoBehaviour
     private float muerterayo = 1f;
     #endregion
 
+    
     public void DanoSiete ()
     {
         vidaActual -= 4;
+    }
+
+    public void DanoDos()
+    {
+        vidaActual -= 14;
     }
     public void DanoTres()
     {
