@@ -516,7 +516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.05999756}
+  m_AnchoredPosition: {x: 0.10001, y: -0.000015259}
   m_SizeDelta: {x: 799.8, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389704692
@@ -7164,6 +7164,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3661878470116933729, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: cam
       value: 
@@ -7224,6 +7228,10 @@ PrefabInstance:
       propertyPath: marcadorSuelo
       value: 
       objectReference: {fileID: 3462345075257202278, guid: 524700fdffa306b4abfea19944976aff, type: 3}
+    - target: {fileID: 4977075099806817633, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7059390372585727425, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: m_Name
       value: Zeus
