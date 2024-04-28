@@ -15,6 +15,10 @@ public class enemigopiedra : MonoBehaviour
     private bool movimiento = true;
     private bool danohercules;
     [SerializeField]
+    private float drch = 3;
+    [SerializeField]
+    private float izqu = -3;
+    [SerializeField]
     LayerMask hercules;
     Animator animator;
     [SerializeField]
@@ -38,7 +42,7 @@ public class enemigopiedra : MonoBehaviour
 
             if (derecha)
             {
-                if (primerapos - transform.position.x < -3)
+                if (primerapos - transform.position.x < izqu)
                 {
                     derecha = false;
                 }
@@ -47,7 +51,7 @@ public class enemigopiedra : MonoBehaviour
             }
             if (!derecha)
             {
-                if (primerapos - transform.position.x > 3)
+                if (primerapos - transform.position.x > drch)
                 {
                     derecha = true;
                 }
@@ -63,6 +67,7 @@ public class enemigopiedra : MonoBehaviour
         if (dano)
         {
             movimiento = false;
+            vidaSystem.ImpulsoPorDaño();
             animator.SetInteger("enemigopiedra", 1);
             Destroy(gameObject, 1.5f);
         }
