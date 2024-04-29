@@ -21,7 +21,7 @@ public class ShootingComponent : MonoBehaviour
     Rigidbody2D rb;
     void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.J) && disparo && shoot && player.state == 0)
+        if (Input.GetKeyDown(KeyCode.P) && disparo && shoot && player.state == 0)
         {
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();

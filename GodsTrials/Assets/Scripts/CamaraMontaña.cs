@@ -19,14 +19,14 @@ public class CamaraMontaña : MonoBehaviour
         bool tocandoSuelo = Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f, enSuelo);
         bool tocandoColliderArriba = Physics2D.Raycast(_circuloCabeza.position, Vector3.up, 0.5f, capaColisionArriba);
         bool tocandoParteInferiorPantalla = _circuloPies.position.y <= _camara.transform.position.y - 5;
-        if (_circuloPies.position.y > -16)
+        if (_circuloPies.position.y > -16 || _circuloPies.position.x > 93.3)
         {
-            if (_circuloPies.position.x > 1.3 && _circuloPies.position.x < 140.7 && _circuloPies.position.y < 22.7)
+            if (_circuloPies.position.x < 140.7 && _circuloPies.position.y < 22.7)
             {
                 canvas.SetActive(true);
                 _camara.transform.position = new Vector3(_circuloPies.position.x, _camara.transform.position.y, _camara.transform.position.z);
             }
-            if (_circuloPies.position.y > 22.7 && _circuloPies.position.x < 140.7 && _circuloPies.position.x > 132.4)
+            if (_circuloPies.position.x < 140.7 && _circuloPies.position.x > 132.4)
             {
                 canvas.SetActive(true);
                 _camara.transform.position = new Vector3(_circuloPies.position.x, _camara.transform.position.y, _camara.transform.position.z);
@@ -44,13 +44,13 @@ public class CamaraMontaña : MonoBehaviour
                 moviendose = false;
             }
         }
-        if (_circuloPies.position.y < -16)
+        if (_circuloPies.position.y < -16 && _circuloPies.position.x < 93.3)
         {
             canvas.SetActive(false);
             _camara.orthographicSize = 18;
             _camara.transform.position = new Vector3(59.7f, -38f, _camara.transform.position.z);
         }
-        if (_circuloPies.position.y > -16f && _circuloPies.position.x > -0.6f)
+        if (_circuloPies.position.y > -16f && _circuloPies.position.x > -0.6f || _circuloPies.position.x > 93.3)
         {
             _camara.orthographicSize = 6;
             _camara.transform.position = new Vector3(_circuloPies.position.x, _camara.transform.position.y, _camara.transform.position.z);
