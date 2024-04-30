@@ -2245,7 +2245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "Para utilizar su poder m\xE1gico pusla la tecla J."
+  - "Para utilizar su poder m\xE1gico pusla la tecla P."
   dialoguePanel: {fileID: 1253089470}
   dialogueText: {fileID: 364449705}
   Collider: {fileID: 114865074}
