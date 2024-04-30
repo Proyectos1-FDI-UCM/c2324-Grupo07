@@ -75,8 +75,8 @@ public class enemigopiedra : MonoBehaviour
         if (danohercules)
         {
             Debug.Log("Entra");
-            vidaSystem.DanoPiedra();
             vidaSystem.ImpulsoPorDaño();
+            vidaSystem.DanoPiedra();
         }
     }
     public void OnDrawGizmos()
