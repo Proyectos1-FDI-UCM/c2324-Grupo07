@@ -557,6 +557,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389704690}
   m_CullTransparentMesh: 1
+--- !u!95 &440492175 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2073535445499014387, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+  m_PrefabInstance: {fileID: 5635369969672784700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &592639011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7207,7 +7212,7 @@ PrefabInstance:
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: 1522160496}
+      objectReference: {fileID: 440492175}
     - target: {fileID: 4921680225120056791, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
       propertyPath: rayoCielo
       value: 
