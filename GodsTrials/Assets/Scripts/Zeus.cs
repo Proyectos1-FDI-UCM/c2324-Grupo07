@@ -64,6 +64,7 @@ public class Zeus : MonoBehaviour
     bool instancia4 = true;
     bool instancia5 = true;
     bool instancia6 = true;
+    bool instancia7 = true;
     bool state4 = false;
     bool simultaneo = false;
     private GameObject marc;
@@ -103,7 +104,8 @@ public class Zeus : MonoBehaviour
         barravida = GameObject.Find("vidazeus").GetComponent<BarraVida>();
     }
 
-    void disparoAHercules(int velMult, ref bool instanciaN){
+    void disparoAHercules(int velMult, ref bool instanciaN)
+    {
         _animator.SetTrigger("MoveBrazo");
         Vector3 direc = (hercules.transform.position - transform.position);
         float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
@@ -116,10 +118,11 @@ public class Zeus : MonoBehaviour
         instanciaN = false;
     }
 
-    void disparoHorizontal(float altura, ref bool instanciaN){
+    void disparoHorizontal(float altura, ref bool instanciaN)
+    {
         _animator.SetTrigger("MoveBrazo");
         GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * altura, Quaternion.Euler(0, 0, 270));
-        audio.PlayOneShot(descarga); 
+        audio.PlayOneShot(descarga);
         proyectilRB = proyectil.GetComponent<Rigidbody2D>();
         proyectilRB.velocity = Vector3.left * 8.5f;
         sizeX -= 0.2f;
@@ -138,10 +141,10 @@ public class Zeus : MonoBehaviour
             //Sube y se agranda
             if (time1 < 2f)
             {
-                if (time1 > 0 && time1 < 0.1f)
+                if (time1 > 0 && instancia7)
                 {
-
                     audio.PlayOneShot(terremoto);
+                    instancia7 = false;
                 }
                 zeusRB.velocity = Vector3.up * vel;
                 transform.localScale += new Vector3(4f, 4f) * Time.deltaTime;
@@ -160,6 +163,7 @@ public class Zeus : MonoBehaviour
             }
             if (time1 > 3.9f)
             {
+                audio.Stop();
                 Destroy(fight2);
                 estado = 0;
             }

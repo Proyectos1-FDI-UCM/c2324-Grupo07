@@ -13,6 +13,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject Square2;
     [SerializeField] private GameObject HUD;
     [SerializeField] private GameObject Collider;
+    [SerializeField] private GameObject ColliderExplicativo;
     private float typingTime = 0.05f;
 
     private bool didDialogueStart = false;
@@ -99,6 +100,7 @@ public class Dialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             HUD.SetActive(true);
             Collider.SetActive(false);
+            ColliderExplicativo.SetActive(true);
             Time.timeScale = 1;
         }
     }
