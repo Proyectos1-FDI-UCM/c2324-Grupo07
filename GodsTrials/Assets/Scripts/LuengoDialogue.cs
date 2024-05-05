@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using System.Threading;
+using UnityEngine.Audio;
 
 public class LuengoDialogue : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LuengoDialogue : MonoBehaviour
     [SerializeField] private GameObject Collider;
     [SerializeField] private GameObject LHead;
     [SerializeField] private GameObject LHead2;
+    [SerializeField] private AudioSource clip;
     private float typingTime = 0.05f;
 
     private bool didDialogueStart = false;
@@ -39,6 +41,7 @@ public class LuengoDialogue : MonoBehaviour
 
     private void StartDialogue()
     {
+        clip.Play();
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         LHead.SetActive(true);

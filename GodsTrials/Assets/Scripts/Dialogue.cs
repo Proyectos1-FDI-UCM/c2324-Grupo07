@@ -101,6 +101,7 @@ public class Dialogue : MonoBehaviour
             HUD.SetActive(true);
             Collider.SetActive(false);
             ColliderExplicativo.SetActive(true);
+
             Time.timeScale = 1;
         }
     }

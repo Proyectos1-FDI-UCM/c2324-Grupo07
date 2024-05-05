@@ -40,6 +40,7 @@ public class LevelChange : MonoBehaviour
         if (collision.GetComponent<ControlarJugador>() != null)
         {
             _gameManager.LevelChange(_toLevel);
+       
         }
 
     }
