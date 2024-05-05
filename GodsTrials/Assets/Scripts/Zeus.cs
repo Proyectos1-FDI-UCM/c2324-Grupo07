@@ -106,7 +106,6 @@ public class Zeus : MonoBehaviour
 
     void disparoAHercules(int velMult, ref bool instanciaN)
     {
-        _animator.SetTrigger("MoveBrazo");
         Vector3 direc = (hercules.transform.position - transform.position);
         float anguloZ = Mathf.Atan2(direc.y, direc.x) * Mathf.Rad2Deg;
         rotationZ = Quaternion.Euler(new Vector3(0, 0, anguloZ + 90f));
@@ -116,11 +115,12 @@ public class Zeus : MonoBehaviour
         float mod = Mathf.Sqrt(direc.x * direc.x + direc.y * direc.y);
         proyectilRB.velocity = (direc / mod) * velMult;
         instanciaN = false;
+        _animator.SetTrigger("MoveBrazo");
+        brazoPivot.transform.Rotate(0.0f, 0.0f, -20.0f + anguloZ, Space.Self);
     }
 
     void disparoHorizontal(float altura, ref bool instanciaN)
     {
-        _animator.SetTrigger("MoveBrazo");
         GameObject proyectil = Instantiate(rayo, transform.position + Vector3.up * altura, Quaternion.Euler(0, 0, 270));
         audio.PlayOneShot(descarga);
         proyectilRB = proyectil.GetComponent<Rigidbody2D>();
@@ -129,6 +129,8 @@ public class Zeus : MonoBehaviour
         sizeY -= 0.2f;
         transform.localScale = new Vector3(sizeX, sizeY);
         instanciaN = false;
+        _animator.SetTrigger("MoveBrazo");
+        brazoPivot.transform.Rotate(0.0f, 0.0f, Mathf.Lerp(0.0f, -60.0f, Mathf.InverseLerp(-2.1f, 2.1f, altura)), Space.Self);
     }
 
     // Update is called once per frame
@@ -261,6 +263,7 @@ public class Zeus : MonoBehaviour
                 estado = 1;
                 sizeX = 15;
                 sizeY = 15;
+                brazoPivot.transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
             }
         }
         //Segundo estado
