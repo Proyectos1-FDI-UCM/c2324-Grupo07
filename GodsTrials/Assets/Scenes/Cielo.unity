@@ -2033,6 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 510495381}
   _toLevel: 0
+  dialogue: {fileID: 581226979}
 --- !u!114 &510495379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,6 +2141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 510495381}
   _toLevel: 8
+  dialogue: {fileID: 0}
 --- !u!61 &525574164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2636,7 +2638,7 @@ MonoBehaviour:
   Collider: {fileID: 581226979}
   LHead: {fileID: 2116906665}
   LHead2: {fileID: 1580315339}
-  clip: {fileID: 0}
+  clip: {fileID: 1255433604}
 --- !u!61 &581226981
 BoxCollider2D:
   m_ObjectHideFlags: 0
