@@ -17,12 +17,13 @@ public class LevelChange : MonoBehaviour
     /// </summary>
     [SerializeField]
     private SceneID _toLevel;
+    [SerializeField] GameObject dialogue;
     #endregion
 
     #region methods
     public void Muerte()
     {
-
+        dialogue.SetActive(false);
         _gameManager.LevelChange(SceneID.Muerte);
     }
 
