@@ -34,7 +34,7 @@ public class MonedaSystem : MonoBehaviour
         if (jugador != null)
         {
             gameManager.SumarMonedas(valor);
-            Destroy(this.gameObject);
+            jugador.Moneda();
             gameObject.SetActive(false);
         }  
     }

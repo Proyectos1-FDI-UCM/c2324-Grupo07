@@ -1,10 +1,17 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ControlarJugador : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource sound;
+    [SerializeField]
+    private AudioClip salto;
+    [SerializeField]
+    private AudioClip moneda;
     public float jumpvelocity = 10;
     public float platformJumpVelocity = 20;
     public float velocidadHorizontal = -30;
@@ -32,6 +39,11 @@ public class ControlarJugador : MonoBehaviour
     private ShootingComponent shoot;
     UIManager uiManager;
     public int state;
+    [SerializeField]
+    private GameObject efectoSalto;
+    private GameObject prefabSalto;
+    private float timeSalto;
+    private bool SaltoEfect = false;
 
     private void OnCollisionEnter2D(Collision2D activarSalto)
     {
@@ -91,6 +103,15 @@ public class ControlarJugador : MonoBehaviour
     }
     void Update()
     {
+        if (SaltoEfect)
+        {
+            timeSalto += Time.deltaTime;
+            if(timeSalto > 0.3f)
+            {
+                Destroy(prefabSalto);
+                SaltoEfect = false;
+            }
+        }
         if (state == 9)
         {
             time += Time.deltaTime;
@@ -114,6 +135,9 @@ public class ControlarJugador : MonoBehaviour
             }
             else if (tieneSalto && dobleSalto && Input.GetKeyDown(KeyCode.Space))
             {
+                prefabSalto = Instantiate(efectoSalto, circulo2.position, Quaternion.identity);
+                timeSalto = 0;
+                SaltoEfect = true;
                 Salto();
                 dobleSalto = false;
             }
@@ -145,7 +169,14 @@ public class ControlarJugador : MonoBehaviour
 
     public void Salto()
     {
+        sound.PlayOneShot(salto);
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
+    }
+
+    public void Moneda()
+    {
+        Debug.Log("Entra");
+        sound.PlayOneShot(moneda);
     }
 
 }
