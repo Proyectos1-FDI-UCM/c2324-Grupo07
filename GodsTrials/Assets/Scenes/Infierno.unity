@@ -9648,6 +9648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1071708421}
   _toLevel: 6
+  dialogue: {fileID: 0}
 --- !u!61 &974187264
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10255,6 +10256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1071708421}
   _toLevel: 0
+  dialogue: {fileID: 143259491}
 --- !u!1 &1090497597
 GameObject:
   m_ObjectHideFlags: 0
