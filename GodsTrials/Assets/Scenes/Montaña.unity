@@ -2251,6 +2251,7 @@ MonoBehaviour:
   Collider: {fileID: 114865074}
   LHead: {fileID: 212399042}
   LHead2: {fileID: 1240972471}
+  clip: {fileID: 0}
 --- !u!61 &114865076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -77336,6 +77337,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audiosource: {fileID: 1174641680}
   roca: {fileID: 8300000, guid: 1a7bfe0faee94704994ab1ad21887856, type: 3}
+--- !u!114 &1174641687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174641664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fec693a59c23c54d930077c77282145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hercules: {fileID: 1174641680}
+  salto: {fileID: 8300000, guid: 83d79125051c62a4f9a1fb313a683152, type: 3}
 --- !u!1001 &1189397951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94081,11 +94096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.99
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.89
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94144,6 +94159,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: salto
+      value: 
+      objectReference: {fileID: 8300000, guid: e1206178aa7541941b45e39992393064, type: 3}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1174641680}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: circulo1
       value: 
       objectReference: {fileID: 424954733}
@@ -94159,6 +94182,10 @@ PrefabInstance:
       propertyPath: tieneSalto
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: efectoSalto
+      value: 
+      objectReference: {fileID: 5247019087957922627, guid: 1e97f429f3008be409cc221151b0d8bc, type: 3}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: saltoHercules1
       value: 
@@ -94204,6 +94231,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1174641680}
+    - targetCorrespondingSourceObject: {fileID: 3757211540936703108, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1174641687}
   m_SourcePrefab: {fileID: 100100000, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
 --- !u!1001 &2103999364
 PrefabInstance:
