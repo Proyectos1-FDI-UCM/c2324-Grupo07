@@ -1841,6 +1841,7 @@ MonoBehaviour:
   dashea: 0
   dashActive: 0
   carro: {fileID: 527784575}
+  efectoDash: {fileID: 5375821948928465604, guid: 4108d0ce43cf6944f960dab3a18951ef, type: 3}
 --- !u!82 &454572353
 AudioSource:
   m_ObjectHideFlags: 0

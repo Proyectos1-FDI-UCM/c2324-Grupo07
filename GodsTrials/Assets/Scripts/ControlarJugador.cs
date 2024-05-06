@@ -175,7 +175,6 @@ public class ControlarJugador : MonoBehaviour
 
     public void Moneda()
     {
-        Debug.Log("Entra");
         sound.PlayOneShot(moneda);
     }
 

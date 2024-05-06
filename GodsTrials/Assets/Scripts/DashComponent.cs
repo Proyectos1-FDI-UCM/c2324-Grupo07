@@ -13,6 +13,9 @@ public class DashComponent : MonoBehaviour
     [SerializeField]
     private bool dashActive = false;
     public GameObject carro;
+    [SerializeField]
+    private GameObject efectoDash;
+    private GameObject prefabDash;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == carro)
@@ -37,10 +40,12 @@ public class DashComponent : MonoBehaviour
             jugador.state = 3;
             if (transform.rotation == Quaternion.identity)
             {
+                prefabDash = Instantiate(efectoDash, transform.position + Vector3.right * 3, Quaternion.identity);
                 hercules.velocity = new Vector3(35, 0, 0);
             }
             else
             {
+                prefabDash = Instantiate(efectoDash, transform.position + Vector3.left * 3, Quaternion.Euler(0, 180, 0));
                 hercules.velocity = new Vector3(-35, 0, 0);
             }
             dashea = false;
@@ -48,6 +53,7 @@ public class DashComponent : MonoBehaviour
         time += Time.deltaTime;
         if (time > timeToDash)
         {
+            Destroy(prefabDash);
             if (jugador.state == 3)
             {
                 hercules.velocity = new Vector3(0, hercules.velocity.y, 0);
