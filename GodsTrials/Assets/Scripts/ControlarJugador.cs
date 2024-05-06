@@ -10,6 +10,8 @@ public class ControlarJugador : MonoBehaviour
     private AudioSource sound;
     [SerializeField]
     private AudioClip salto;
+    [SerializeField]
+    private AudioClip moneda;
     public float jumpvelocity = 10;
     public float platformJumpVelocity = 20;
     public float velocidadHorizontal = -30;
@@ -104,7 +106,7 @@ public class ControlarJugador : MonoBehaviour
         if (SaltoEfect)
         {
             timeSalto += Time.deltaTime;
-            if(timeSalto > 0.2f)
+            if(timeSalto > 0.3f)
             {
                 Destroy(prefabSalto);
                 SaltoEfect = false;
@@ -169,6 +171,12 @@ public class ControlarJugador : MonoBehaviour
     {
         sound.PlayOneShot(salto);
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
+    }
+
+    public void Moneda()
+    {
+        Debug.Log("Entra");
+        sound.PlayOneShot(moneda);
     }
 
 }

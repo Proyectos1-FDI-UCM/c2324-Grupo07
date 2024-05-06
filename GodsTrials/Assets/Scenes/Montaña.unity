@@ -77349,8 +77349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fec693a59c23c54d930077c77282145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hercules: {fileID: 1174641680}
-  salto: {fileID: 8300000, guid: 83d79125051c62a4f9a1fb313a683152, type: 3}
 --- !u!1001 &1189397951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94166,6 +94164,10 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 1174641680}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: moneda
+      value: 
+      objectReference: {fileID: 8300000, guid: 4356ae43ce8f1ad41a40897e62f8931d, type: 3}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: circulo1
       value: 
