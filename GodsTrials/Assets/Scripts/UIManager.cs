@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -96,6 +97,11 @@ public class UIManager : MonoBehaviour
         if (monedas != null)
         {
             monedas.text = gameManager.PuntosTotales.ToString();
+        }
+        //si estamos en la escena del texto y presionamos enter nos lleva a la siguiente
+        if (SceneManager.GetActiveScene().buildIndex == 9 && Input.GetKeyDown(KeyCode.Return)){
+            Debug.Log("txao");
+            OnPress(16);
         }
     }
 

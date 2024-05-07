@@ -596,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0833fd8e42d46a4e94e29febf5286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMenu: 0
+  isMenu: 1
 --- !u!114 &1738252920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1738252919}
   _toLevel: 0
+  dialogue: {fileID: 0}
 --- !u!4 &1738252921
 Transform:
   m_ObjectHideFlags: 0
