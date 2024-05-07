@@ -436,6 +436,7 @@ MonoBehaviour:
   dashea: 0
   dashActive: 1
   carro: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
+  efectoDash: {fileID: 5375821948928465604, guid: 4108d0ce43cf6944f960dab3a18951ef, type: 3}
 --- !u!114 &346822926
 MonoBehaviour:
   m_ObjectHideFlags: 0
