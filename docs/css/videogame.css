@@ -1,13 +1,20 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap');
 
+/*
 html,body {
   font-size: 18px;
 }
+*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   padding-bottom: 1rem;
-  color: #5a5a5a;
+  background-color: #ffe6b0;
+  font-family: 'Pixelify Sans', sans-serif;
 }
 
 
@@ -17,7 +24,7 @@ body {
 -------------------------------------------------- */
 
 img.img-header {
-  max-height: 500px;
+  max-height: 600px;
 }
 
 
