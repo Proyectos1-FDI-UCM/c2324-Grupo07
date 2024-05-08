@@ -2260,29 +2260,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
   m_PrefabInstance: {fileID: 1238253421}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &527784578 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7462036321817759624, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
-  m_PrefabInstance: {fileID: 1238253421}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &527784579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527784575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56f604755b8d144e8a0a868e31be1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 0
-  gameManager: {fileID: 510495381}
-  velocidad: 2
-  amplitud: 0.3
-  frecuencia: 1
-  moneda: {fileID: 527784578}
 --- !u!1 &551327876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,6 +2459,7 @@ MonoBehaviour:
   HUD: {fileID: 1891639990}
   Collider: {fileID: 560808774}
   ColliderExplicativo: {fileID: 581226979}
+  detector: {fileID: 0}
 --- !u!212 &560808778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2639,7 +2617,7 @@ MonoBehaviour:
   Collider: {fileID: 581226979}
   LHead: {fileID: 2116906665}
   LHead2: {fileID: 1580315339}
-  clip: {fileID: 1255433604}
+  clip: {fileID: 1255433603}
 --- !u!61 &581226981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13631,10 +13609,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 527784579}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
 --- !u!1 &1238268497
 GameObject:
@@ -15478,6 +15453,7 @@ MonoBehaviour:
   HUD: {fileID: 1891639990}
   Collider: {fileID: 1735784547}
   ColliderExplicativo: {fileID: 581226979}
+  detector: {fileID: 0}
 --- !u!61 &1735784550
 BoxCollider2D:
   m_ObjectHideFlags: 0
