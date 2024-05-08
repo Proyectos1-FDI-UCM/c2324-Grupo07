@@ -5,6 +5,10 @@ using UnityEngine;
 public class VidaBatallaFinal : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource daño;
+    [SerializeField]
+    private AudioClip dolor;
+    [SerializeField]
     private float vidaHercules = 25;
     float time;
     private LevelChange morir;
@@ -20,6 +24,7 @@ public class VidaBatallaFinal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("rayo"))
         {
+            daño.PlayOneShot(dolor);
             vidaHercules--;
             animator.Dano();
             barravida.DanoRayo();

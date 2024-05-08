@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class VidaSystem : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource daño;
+    [SerializeField]
+    private AudioClip dolor;
     private LevelChange morir;
     [SerializeField]
     private GameObject hercules;
@@ -69,6 +73,7 @@ public class VidaSystem : MonoBehaviour
     }
     public void Daño()
     {
+        daño.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoTres();
         vida--;
@@ -81,6 +86,7 @@ public class VidaSystem : MonoBehaviour
 
     public void DañoCupido()//para los cupidos modificado por Jule
     {
+        daño.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoSiete();
         vida-=vidacupido;
@@ -93,6 +99,7 @@ public class VidaSystem : MonoBehaviour
 
     public void DanoPiedra()//para los cupidos modificado por Jule
     {
+        daño.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoDos();
         vida -= vidapiedra;

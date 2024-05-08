@@ -7867,6 +7867,7 @@ MonoBehaviour:
   HUD: {fileID: 914084016}
   Collider: {fileID: 657155711}
   ColliderExplicativo: {fileID: 714235165}
+  detector: {fileID: 0}
 --- !u!212 &657155714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8498,6 +8499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 778598596}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 778598587}
   vida: 3
   animatorController: {fileID: 778598589}

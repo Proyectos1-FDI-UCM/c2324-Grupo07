@@ -78610,6 +78610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 1174641680}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 1174641664}
   vida: 3
   animatorController: {fileID: 1174641666}
