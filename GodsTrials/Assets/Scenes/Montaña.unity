@@ -9263,6 +9263,7 @@ MonoBehaviour:
   HUD: {fileID: 482959974}
   Collider: {fileID: 551853058}
   ColliderExplicativo: {fileID: 114865074}
+  detector: {fileID: 0}
 --- !u!212 &551853062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -95674,11 +95675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.9
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.z

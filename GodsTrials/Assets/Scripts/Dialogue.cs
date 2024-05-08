@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Dialogue : MonoBehaviour
 {
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
@@ -14,6 +15,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject HUD;
     [SerializeField] private GameObject Collider;
     [SerializeField] private GameObject ColliderExplicativo;
+    [SerializeField] private GameObject detector;
     private float typingTime = 0.05f;
 
     private bool didDialogueStart = false;
@@ -101,6 +103,10 @@ public class Dialogue : MonoBehaviour
             HUD.SetActive(true);
             Collider.SetActive(false);
             ColliderExplicativo.SetActive(true);
+            if (detector == true)
+            {
+                SceneManager.LoadScene(13);
+            }
 
             Time.timeScale = 1;
         }
