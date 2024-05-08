@@ -9263,6 +9263,7 @@ MonoBehaviour:
   HUD: {fileID: 482959974}
   Collider: {fileID: 551853058}
   ColliderExplicativo: {fileID: 114865074}
+  detector: {fileID: 0}
 --- !u!212 &551853062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -78609,6 +78610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 1174641680}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 1174641664}
   vida: 3
   animatorController: {fileID: 1174641666}
@@ -95674,11 +95677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.9
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.z

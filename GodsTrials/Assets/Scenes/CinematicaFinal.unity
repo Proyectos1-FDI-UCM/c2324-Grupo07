@@ -417,6 +417,7 @@ MonoBehaviour:
   HUD: {fileID: 887081577}
   Collider: {fileID: 263346441}
   ColliderExplicativo: {fileID: 1909292737}
+  detector: {fileID: 1764558238}
 --- !u!61 &263346443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1657,6 +1658,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ca0c678bccf654fb63ec79a0c424d4, type: 3}
+--- !u!1 &1764558238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764558239}
+  m_Layer: 0
+  m_Name: detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764558239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764558238}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7248309, y: 1.8272151, z: -9.9596615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890674994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1890674998}
   _toLevel: 0
+  dialogue: {fileID: 0}
 --- !u!114 &1890674996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2982,3 +3015,4 @@ SceneRoots:
   - {fileID: 827484754}
   - {fileID: 887081578}
   - {fileID: 1909292738}
+  - {fileID: 1764558239}

@@ -1820,6 +1820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 454572353}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 454572338}
   vida: 3
   animatorController: {fileID: 454572339}
@@ -2260,29 +2262,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
   m_PrefabInstance: {fileID: 1238253421}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &527784578 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7462036321817759624, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
-  m_PrefabInstance: {fileID: 1238253421}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &527784579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527784575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56f604755b8d144e8a0a868e31be1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valor: 0
-  gameManager: {fileID: 510495381}
-  velocidad: 2
-  amplitud: 0.3
-  frecuencia: 1
-  moneda: {fileID: 527784578}
 --- !u!1 &551327876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2482,6 +2461,7 @@ MonoBehaviour:
   HUD: {fileID: 1891639990}
   Collider: {fileID: 560808774}
   ColliderExplicativo: {fileID: 581226979}
+  detector: {fileID: 0}
 --- !u!212 &560808778
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2639,7 +2619,7 @@ MonoBehaviour:
   Collider: {fileID: 581226979}
   LHead: {fileID: 2116906665}
   LHead2: {fileID: 1580315339}
-  clip: {fileID: 1255433604}
+  clip: {fileID: 1255433603}
 --- !u!61 &581226981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13631,10 +13611,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5442641466981485465, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 527784579}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ed9f81bec4ac5145aec53a06dcf3a54, type: 3}
 --- !u!1 &1238268497
 GameObject:
@@ -14981,8 +14958,8 @@ Transform:
   m_GameObject: {fileID: 1580315339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.166, y: 5.7, z: 0.107112885}
-  m_LocalScale: {x: 0.34507, y: 0.28893, z: 1}
+  m_LocalPosition: {x: 7.166, y: 5.55, z: 0.107112885}
+  m_LocalScale: {x: 0.3, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1882814798}
@@ -15028,7 +15005,7 @@ SpriteRenderer:
   m_SortingLayerID: -434573291
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b1569712f5b3e94f87a85fa9d6fa174, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db68d986c30aad24d98578bbf1ebd6e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15478,6 +15455,7 @@ MonoBehaviour:
   HUD: {fileID: 1891639990}
   Collider: {fileID: 1735784547}
   ColliderExplicativo: {fileID: 581226979}
+  detector: {fileID: 0}
 --- !u!61 &1735784550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18305,8 +18283,8 @@ Transform:
   m_GameObject: {fileID: 2116906665}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.584, y: 5.7, z: 0.107112885}
-  m_LocalScale: {x: 0.34507, y: 0.28893, z: 1}
+  m_LocalPosition: {x: -12.18, y: 5.5600004, z: 0.107112885}
+  m_LocalScale: {x: 0.3, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1882814798}
@@ -18352,7 +18330,7 @@ SpriteRenderer:
   m_SortingLayerID: 918236611
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b1569712f5b3e94f87a85fa9d6fa174, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db68d986c30aad24d98578bbf1ebd6e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

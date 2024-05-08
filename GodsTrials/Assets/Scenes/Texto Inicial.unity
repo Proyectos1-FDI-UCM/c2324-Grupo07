@@ -385,6 +385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 200
+  textPosBegin: -2378
+  boundaryTextEnd: 2563
   mainText: {fileID: 667115738}
 --- !u!114 &667115738
 MonoBehaviour:
@@ -407,7 +409,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Despu\xE9s de completar los 12 trabajos impuestos por el rey Euristeo,
-    H\xE9rcules regres\xF3 junto a su padre ,Zeus, en el Olimpo, hogar de los dioses,\r                      
+    H\xE9rcules regres\xF3 junto a su padre, Zeus, en el Olimpo, hogar de los dioses,\r                      
     donde esperaba que estos redimieran sus pecados y le permitieran ser uno de ellos.
     A sorpresa de nuestro h\xE9roe, Zeus le neg\xF3 la entrada y le impuso un \r                                                       
     \xFAltimo trabajo: ascender de nuevo hasta el Olimpo desde el Hades, el reino
