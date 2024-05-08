@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Caida.unity
     guid: 31a9a56e4a52ccb4aab59b3a7e1e027d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8933241949d0be4498600c88dde07f8d
   m_configObjects: {}

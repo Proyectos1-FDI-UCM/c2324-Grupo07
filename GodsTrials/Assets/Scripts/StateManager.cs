@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio, Cinematica, Pruebas, Caida};
-//                        0       1       2        3         4           5         6       7      8      9     10       11     12     13       14          15      16
+public enum SceneID {MainMenu, Cueva, Infierno, Muerte, OptionsMenu, PauseMenu, Montaña, Cielo, Final, Quit, Resume, Restart, Back, Inicio, Cinematica, Pruebas, Caida, Creditos};
+//                        0       1       2        3         4           5         6       7      8      9     10       11     12     13       14          15      16      17
 
 public class StateManager : MonoBehaviour
 {
@@ -84,6 +84,9 @@ public class StateManager : MonoBehaviour
                 break;
             case SceneID.Caida:
                 StartCoroutine(ChangeScene(12,true, false));
+                break;
+            case SceneID.Creditos:
+                StartCoroutine (ChangeScene(13,true, false));
                 break;
             default:
                 print("default CGS");
