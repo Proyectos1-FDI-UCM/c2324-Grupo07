@@ -467,6 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 346822940}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 346822924}
   vida: 3
   animatorController: {fileID: 346822928}
@@ -501,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab21b8e0dc54fb94aa9104f99ff23f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1o": {fileID: 346822940}
+  dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   vidaHercules: 25
   _zeus: {fileID: 1522160505}
 --- !u!114 &346822939 stripped
