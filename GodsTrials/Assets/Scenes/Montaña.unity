@@ -78630,7 +78630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd204e6415d0c240bec61df30de15bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1174641688}
+  disparoFX: {fileID: 8300000, guid: 721bfc8d4875abc4fbdb3b4cc857bfa3, type: 3}
+  soundSource: {fileID: 1174641680}
   pez: {fileID: 2099687991}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 6229957473730815168, guid: eb7ae2b164b8dde4381ede08ee1b2084, type: 3}
@@ -78756,6 +78758,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fec693a59c23c54d930077c77282145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1174641688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+  m_PrefabInstance: {fileID: 2103926876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174641664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2167ddc737329e84cb0a5e5d80304e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1189397951

@@ -8,6 +8,10 @@ public class ShootingComponent : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private ControlarJugador player;
+    [SerializeField]
+    private AudioClip disparoFX;
+    [SerializeField]
+    private AudioSource soundSource;
     private ControlarJugador hercules;
     public GameObject pez;
     public GameObject bala;
@@ -23,6 +27,7 @@ public class ShootingComponent : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P) && disparo && shoot && player.state == 0)
         {
+            disparoSoundFX();
             time = 0;
             hercules = gameObject.GetComponent<ControlarJugador>();
             Vector3 instantiate;
@@ -74,5 +79,8 @@ public class ShootingComponent : MonoBehaviour
             shoot = true;
             time = 0;
         }
+    }
+    void disparoSoundFX(){
+        soundSource.PlayOneShot(disparoFX);
     }
 }

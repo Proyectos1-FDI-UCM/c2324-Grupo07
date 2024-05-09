@@ -38,12 +38,13 @@ public class LevelChange : MonoBehaviour
     /// <param name="collision">Colliding object</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("HOLA HERCULES");
+
         if (collision.GetComponent<ControlarJugador>() != null)
         {
             _gameManager.LevelChange(_toLevel);
        
         }
-
     }
     #endregion
 
