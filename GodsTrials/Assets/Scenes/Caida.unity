@@ -705,8 +705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 58138875}
-  speed: 0.9
-  shakeMagnitude: 0.19
+  speed: 0.3
+  shakeMagnitude: 0.1
 --- !u!1 &966530501
 GameObject:
   m_ObjectHideFlags: 0
