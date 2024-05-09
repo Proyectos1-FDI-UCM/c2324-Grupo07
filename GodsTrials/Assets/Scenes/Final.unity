@@ -450,6 +450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 346822939}
+  disparoFX: {fileID: 8300000, guid: 721bfc8d4875abc4fbdb3b4cc857bfa3, type: 3}
+  soundSource: {fileID: 346822940}
   pez: {fileID: 9102920354266505187, guid: b8b14390cc1058c4199e8e66cee3f4a5, type: 3}
   bala: {fileID: 7736972717560446278, guid: b77ba072e61361c438647f24a117eb84, type: 3}
   ciclope: {fileID: 0}
