@@ -12305,7 +12305,7 @@ GameObject:
   - component: {fileID: 752757743}
   - component: {fileID: 752757742}
   - component: {fileID: 752757741}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95554,11 +95554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: 33.54
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4
+      value: 7.21
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -97007,6 +97007,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: Priority
+      value: 173
+      objectReference: {fileID: 0}
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Volume
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3775412244750382400, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_LocalPosition.x
       value: 46.84
@@ -97051,6 +97063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemigopiedra_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1870359070}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 

@@ -129,6 +129,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   vidaSystem: {fileID: 0}
+  camara: {fileID: 0}
+  audio: {fileID: -4248519995169744642}
+  martillo: {fileID: 8300000, guid: 8950dd41d2361a44da12196e5cdd2113, type: 3}
 --- !u!50 &3372980264803836779
 Rigidbody2D:
   serializedVersion: 4
@@ -223,11 +226,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8950dd41d2361a44da12196e5cdd2113, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d4659db25e9e0de4eadfb9a66b74553f, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.4
-  m_Pitch: 2.05
-  Loop: 0
+  m_Pitch: 3
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -30,7 +30,7 @@ public class SufrirDaño : MonoBehaviour
                 if (gameObject.CompareTag("Ciclope"))
                 {
                     animator.SetInteger("ciclope",2);
-                Debug.Log("entra");
+                
                 }
                 else if (gameObject.CompareTag("Cupido"))
                 {

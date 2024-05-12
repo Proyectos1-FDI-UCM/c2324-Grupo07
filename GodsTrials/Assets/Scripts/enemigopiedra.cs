@@ -23,7 +23,14 @@ public class enemigopiedra : MonoBehaviour
     Animator animator;
     [SerializeField]
     private VidaSystem vidaSystem;
-
+    [SerializeField]
+    private GameObject camara;
+    //Sonido
+    [SerializeField]
+    private AudioSource audio;
+    [SerializeField]
+    private AudioClip martillo;
+    private bool play = false;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -37,6 +44,20 @@ public class enemigopiedra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float camdist = Mathf.Abs(transform.position.x - camara.transform.position.x);
+     
+        if (camdist <= 5 && !play)
+        {
+            audio.Play();
+            play = true;
+        }
+        else if(camdist >= 5)
+        {
+            audio.Stop();
+            play = false;
+        }
+        
+
         if (movimiento)
         {
 
@@ -61,7 +82,7 @@ public class enemigopiedra : MonoBehaviour
         }
 
         dano = Physics2D.Raycast(transform.position, Vector3.up, 0.5f, hercules);
-        danohercules = Physics2D.Raycast(transform.position, Vector3.right, 1f, hercules);
+        danohercules = Physics2D.Raycast(transform.position, Vector3.right, 1.2f, hercules);
         danohercules = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
 
         if (dano)
@@ -84,6 +105,6 @@ public class enemigopiedra : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 0.5f);
         Gizmos.DrawLine(transform.position, transform.position + Vector3.left * 1f);
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.right * 1f);
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.right * 1.2f);
     }
 }
