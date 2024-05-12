@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class DashComponent : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class DashComponent : MonoBehaviour
     [SerializeField]
     private GameObject efectoDash;
     private GameObject prefabDash;
+    [SerializeField] private AudioSource dash;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == carro)
@@ -36,6 +38,8 @@ public class DashComponent : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashea && dashActive && jugador.state != 20)
         {
+            dash.Play();
+
             time = 0;
             jugador.state = 3;
             if (transform.rotation == Quaternion.identity)
