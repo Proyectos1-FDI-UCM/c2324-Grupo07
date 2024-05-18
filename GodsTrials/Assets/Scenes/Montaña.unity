@@ -75417,6 +75417,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -75464,6 +75468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemigopiedra_0 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1870359070}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 
@@ -76969,6 +76977,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -77021,6 +77033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemigopiedra_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1870359070}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 
@@ -80208,6 +80224,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -80260,6 +80280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemigopiedra_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1870359070}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 
@@ -90861,6 +90885,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -90913,6 +90941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemigopiedra_0 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: camara
+      value: 
+      objectReference: {fileID: 1870359070}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 
@@ -95558,7 +95590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.21
+      value: 6.93
       objectReference: {fileID: 0}
     - target: {fileID: 2636078505748438533, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -97008,12 +97040,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Pitch
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: Priority
       value: 173
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_Volume
-      value: 0.55
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_PlayOnAwake
