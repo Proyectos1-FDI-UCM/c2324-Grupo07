@@ -11,6 +11,9 @@ public class ControlarJugador : MonoBehaviour
     [SerializeField]
     private AudioClip salto;
     [SerializeField]
+    private AudioClip pasos;
+    private bool andando=false;
+    [SerializeField]
     private AudioClip moneda;
     public float jumpvelocity = 10;
     public float platformJumpVelocity = 20;
@@ -145,6 +148,7 @@ public class ControlarJugador : MonoBehaviour
             {
                 rb.velocity = new Vector2(velocity, rb.velocity.y);
                 transform.rotation = Quaternion.identity;
+
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
@@ -165,10 +169,24 @@ public class ControlarJugador : MonoBehaviour
 
     public void Salto()
     {
+        sound.Stop();
         sound.PlayOneShot(salto);
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
 
+    /*public void Andar()
+    {
+        if((rb.velocity.x>0.1 || rb.velocity.x < -0.1) && (enSuelo1==true || enSuelo2==true || enSuelo3 == true) && !andando)
+        {
+            andando = true;
+            sound.PlayOneShot(pasos);
+        }
+        else if(rb.velocity.x<0.1 || rb.velocity.x > -0.1)
+        {
+            sound.Stop();
+            andando = false;
+        }
+    }*/
     public void Moneda()
     {
         sound.PlayOneShot(moneda);

@@ -95686,6 +95686,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
+      propertyPath: pasos
+      value: 
+      objectReference: {fileID: 8300000, guid: 8188bf1fa3b6a954a83a64bba2b54ce6, type: 3}
+    - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: salto
       value: 
       objectReference: {fileID: 8300000, guid: e1206178aa7541941b45e39992393064, type: 3}
