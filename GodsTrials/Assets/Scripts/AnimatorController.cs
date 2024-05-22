@@ -32,7 +32,7 @@ public class AnimatorController : MonoBehaviour
         {
             animator.SetInteger("AnimState", 2); //jump
         }
-        else if(!enSuelo1 && rb.velocity.x == 0 && !enSuelo2 && !enSuelo3)
+        else if(!enSuelo1 && rb.velocity.x < 0.1f && rb.velocity.x > -0.1f && !enSuelo2 && !enSuelo3)
         {
             animator.SetInteger("AnimState", 3); //jump parado
         }
@@ -46,7 +46,7 @@ public class AnimatorController : MonoBehaviour
             {
                 animator.SetInteger("AnimState", 1); //run izquierda
             }
-            else if (enSuelo1 && rb.velocity.x == 0 || enSuelo2 && rb.velocity.x == 0 || enSuelo3 && rb.velocity.x == 0)
+            else if (enSuelo1 && rb.velocity.x < 0.1f && rb.velocity.x > -0.1f || enSuelo2 && rb.velocity.x < 0.1f && rb.velocity.x > -0.1f || enSuelo3 && rb.velocity.x < 0.1f && rb.velocity.x > -0.1f)
             {
                 animator.SetInteger("AnimState", 0); //idle
             }

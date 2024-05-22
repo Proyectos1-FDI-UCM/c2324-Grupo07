@@ -122,9 +122,9 @@ public class ControlarJugador : MonoBehaviour
         }
         if (state == 0)
         {
-            enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.1f, capaSuelo);
-            enSuelo2 = Physics2D.Raycast(saltoHercules2.position, Vector3.down, 0.1f, capaSuelo);
-            enSuelo3 = Physics2D.Raycast(circulo2.position, Vector3.down, 0.1f, capaSuelo);
+            enSuelo1 = Physics2D.Raycast(saltoHercules1.position, Vector3.down, 0.5f, capaSuelo);
+            enSuelo2 = Physics2D.Raycast(saltoHercules2.position, Vector3.down, 0.5f, capaSuelo);
+            enSuelo3 = Physics2D.Raycast(circulo2.position, Vector3.down, 0.5f, capaSuelo);
             enParedRC1 = Physics2D.Raycast(circulo1.position, Vector3.right, 1f, capaSuelo);
             enParedRC2 = Physics2D.Raycast(circulo2.position, Vector3.right, 1f, capaSuelo);
             enParedLC1 = Physics2D.Raycast(circulo1.position, Vector3.left, 1f, capaSuelo);
@@ -154,11 +154,7 @@ public class ControlarJugador : MonoBehaviour
             else if (!Input.anyKey)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-                if (enSuelo1 || enSuelo2 || enSuelo3)
-                {
-                    //bloquea el rebote de las plataformas, buscar mejor integracion?
-                    //rb.velocity = new Vector2(0, -2.5f);
-                }
+                Debug.Log(rb.velocity.x);
             }
         }
         if (state == 6)
