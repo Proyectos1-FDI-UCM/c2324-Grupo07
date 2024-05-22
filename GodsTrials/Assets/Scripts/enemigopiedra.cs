@@ -13,7 +13,8 @@ public class enemigopiedra : MonoBehaviour
     private bool derecha = true;
     private bool dano;
     private bool movimiento = true;
-    private bool danohercules;
+    private bool danoherculesderch;
+    private bool danoherculesizq;
     [SerializeField]
     private float drch = 3;
     [SerializeField]
@@ -28,8 +29,6 @@ public class enemigopiedra : MonoBehaviour
     //Sonido
     [SerializeField]
     private AudioSource audio;
-    [SerializeField]
-    private AudioClip martillo;
     private bool play = false;
     #endregion
     // Start is called before the first frame update
@@ -46,12 +45,12 @@ public class enemigopiedra : MonoBehaviour
     {
         float camdist = Mathf.Abs(transform.position.x - camara.transform.position.x);
      
-        if (camdist <= 5 && !play)
+        if (camdist <= 8 && !play)
         {
             audio.Play();
             play = true;
         }
-        else if(camdist >= 5)
+        else if(camdist >= 8)
         {
             audio.Stop();
             play = false;
@@ -82,18 +81,19 @@ public class enemigopiedra : MonoBehaviour
         }
 
         dano = Physics2D.Raycast(transform.position, Vector3.up, 0.5f, hercules);
-        danohercules = Physics2D.Raycast(transform.position, Vector3.right, 1.2f, hercules);
-        danohercules = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
+        danoherculesderch = Physics2D.Raycast(transform.position, Vector3.right, 1.1f, hercules);
+        danoherculesizq = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
 
         if (dano)
         {
             movimiento = false;
             vidaSystem.ImpulsoPorDaño();
             animator.SetInteger("enemigopiedra", 1);
+            audio.Stop();
             Destroy(gameObject, 1.5f);
         }
 
-        if (danohercules)
+        if (danoherculesderch || danoherculesizq)
         {
             Debug.Log("Entra");
             vidaSystem.ImpulsoPorDaño();

@@ -75424,6 +75424,14 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35933265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04533367
+      objectReference: {fileID: 0}
     - target: {fileID: 3775412244750382400, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_LocalPosition.x
       value: 87.89
@@ -76981,6 +76989,14 @@ PrefabInstance:
       propertyPath: m_Pitch
       value: 1.45
       objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35933456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.045332715
+      objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -78129,6 +78145,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718e07ca0566ab04f89710be6da38f1d, type: 3}
+--- !u!82 &1155627367 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+  m_PrefabInstance: {fileID: 4685726393500340122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1163047272
 GameObject:
   m_ObjectHideFlags: 0
@@ -80227,6 +80248,14 @@ PrefabInstance:
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_Pitch
       value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Size.x
+      value: 0.36051044
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.044744775
       objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
@@ -90889,6 +90918,14 @@ PrefabInstance:
       propertyPath: m_Pitch
       value: 1.45
       objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Size.x
+      value: 0.35933265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04533367
+      objectReference: {fileID: 0}
     - target: {fileID: 3196935301426103586, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -97045,15 +97082,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: Priority
-      value: 173
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_Volume
-      value: 0.42
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -4248519995169744642, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3513132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923029113816576159, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.049343392
       objectReference: {fileID: 0}
     - target: {fileID: 3775412244750382400, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: m_LocalPosition.x
@@ -97100,9 +97145,17 @@ PrefabInstance:
       value: enemigopiedra_0
       objectReference: {fileID: 0}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1155627367}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: camara
       value: 
       objectReference: {fileID: 1870359070}
+    - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
+      propertyPath: martillo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6611986507350650557, guid: 9e89529fe4e948a4a893d177bc571915, type: 3}
       propertyPath: vidaSystem
       value: 
