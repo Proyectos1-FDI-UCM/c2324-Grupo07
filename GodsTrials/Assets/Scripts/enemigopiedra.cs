@@ -44,8 +44,9 @@ public class enemigopiedra : MonoBehaviour
     void Update()
     {
         float camdist = Mathf.Abs(transform.position.x - camara.transform.position.x);
+        float camdisty = Mathf.Abs(transform.position.y - camara.transform.position.y);
      
-        if (camdist <= 8 && !play)
+        if (camdist <= 8 && !play && camdisty<=5)
         {
             audio.Play();
             play = true;
@@ -90,6 +91,7 @@ public class enemigopiedra : MonoBehaviour
             vidaSystem.ImpulsoPorDaño();
             animator.SetInteger("enemigopiedra", 1);
             audio.Stop();
+            Destroy(audio);
             Destroy(gameObject, 1.5f);
         }
 
