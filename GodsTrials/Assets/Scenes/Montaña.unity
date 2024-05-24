@@ -90576,7 +90576,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 05557d2611b6597479b4fb683d6a798f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.39
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -96862,7 +96862,7 @@ PrefabInstance:
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: pasos
       value: 
-      objectReference: {fileID: 8300000, guid: 8188bf1fa3b6a954a83a64bba2b54ce6, type: 3}
+      objectReference: {fileID: 8300000, guid: 613e5a84f29e9ec438d6eed27542479c, type: 3}
     - target: {fileID: 4559969014198587932, guid: 98c793649efa4884b8f022d7767dae99, type: 3}
       propertyPath: salto
       value: 

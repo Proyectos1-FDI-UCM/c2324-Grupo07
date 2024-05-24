@@ -12,7 +12,7 @@ public class ControlarJugador : MonoBehaviour
     private AudioClip salto;
     [SerializeField]
     private AudioClip pasos;
-    private bool andando=false;
+    private bool andando = false;
     [SerializeField]
     private AudioClip moneda;
     public float jumpvelocity = 10;
@@ -109,7 +109,7 @@ public class ControlarJugador : MonoBehaviour
         if (SaltoEfect)
         {
             timeSalto += Time.deltaTime;
-            if(timeSalto > 0.3f)
+            if (timeSalto > 0.3f)
             {
                 Destroy(prefabSalto);
                 SaltoEfect = false;
@@ -146,14 +146,39 @@ public class ControlarJugador : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.D) && !enParedRC1 && !enParedRC2)
             {
+                if (!andando && enSuelo1 && enSuelo2 && enSuelo3)
+                {
+                    sound.PlayOneShot(pasos);
+                    andando = true;
+                }
+                if (sound.isPlaying != pasos)
+                {
+                    andando = false;
+                }
                 rb.velocity = new Vector2(velocity, rb.velocity.y);
                 transform.rotation = Quaternion.identity;
-
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                sound.Stop();
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
+                if (!andando && enSuelo1 && enSuelo2 && enSuelo3)
+                {
+                    sound.PlayOneShot(pasos);
+                    andando = true;
+                }
+                if(sound.isPlaying != pasos)
+                {
+                    andando = false;
+                }
                 rb.velocity = new Vector2(-velocity, rb.velocity.y);
                 transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                sound.Stop();
             }
             else if (!Input.anyKey)
             {
