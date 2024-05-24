@@ -9,6 +9,8 @@ public class ControlarJugador : MonoBehaviour
     [SerializeField]
     private AudioSource sound;
     [SerializeField]
+    private AudioSource sound1;
+    [SerializeField]
     private AudioClip salto;
     [SerializeField]
     private AudioClip pasos;
@@ -148,10 +150,17 @@ public class ControlarJugador : MonoBehaviour
             {
                 if (!andando && enSuelo1 && enSuelo2 && enSuelo3)
                 {
-                    sound.PlayOneShot(pasos);
+                    sound1.PlayOneShot(pasos);
                     andando = true;
                 }
-                if (sound.isPlaying != pasos)
+                if (!enSuelo1 && !enSuelo2 && !enSuelo3)
+                {
+                    sound1.Stop();
+                }
+                {
+                    
+                }
+                if (sound1.isPlaying != pasos)
                 {
                     andando = false;
                 }
@@ -160,16 +169,20 @@ public class ControlarJugador : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
-                sound.Stop();
+                sound1.Stop();
             }
             if (Input.GetKey(KeyCode.A) && !enParedLC1 && !enParedLC2)
             {
                 if (!andando && enSuelo1 && enSuelo2 && enSuelo3)
                 {
-                    sound.PlayOneShot(pasos);
+                    sound1.PlayOneShot(pasos);
                     andando = true;
                 }
-                if(sound.isPlaying != pasos)
+                if (!enSuelo1 && !enSuelo2 && !enSuelo3)
+                {
+                    sound1.Stop();
+                }
+                if (sound1.isPlaying != pasos)
                 {
                     andando = false;
                 }
@@ -178,7 +191,7 @@ public class ControlarJugador : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.A))
             {
-                sound.Stop();
+                sound1.Stop();
             }
             else if (!Input.anyKey)
             {
@@ -194,24 +207,11 @@ public class ControlarJugador : MonoBehaviour
 
     public void Salto()
     {
+        sound1.Stop();
         sound.Stop();
         sound.PlayOneShot(salto);
         rb.velocity = new Vector2(rb.velocity.x, jumpvelocity);
     }
-
-    /*public void Andar()
-    {
-        if((rb.velocity.x>0.1 || rb.velocity.x < -0.1) && (enSuelo1==true || enSuelo2==true || enSuelo3 == true) && !andando)
-        {
-            andando = true;
-            sound.PlayOneShot(pasos);
-        }
-        else if(rb.velocity.x<0.1 || rb.velocity.x > -0.1)
-        {
-            sound.Stop();
-            andando = false;
-        }
-    }*/
     public void Moneda()
     {
         sound.PlayOneShot(moneda);
