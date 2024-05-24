@@ -196,7 +196,6 @@ public class ControlarJugador : MonoBehaviour
             else if (!Input.anyKey)
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
-                Debug.Log(rb.velocity.x);
             }
         }
         if (state == 6)
