@@ -25,7 +25,7 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enSuelo1 = (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f,capaSuelo));
+        enSuelo1 = (Physics2D.Raycast(_circuloPies.position, Vector3.down, 0.5f,capaSuelo));//raycasts para ver cuando toca el suelo hercules
         enSuelo2 = (Physics2D.Raycast(_circuloPies2.position, Vector3.down, 0.5f,capaSuelo));
         enSuelo3 = (Physics2D.Raycast(_circuloPies1.position, Vector3.down, 0.5f,capaSuelo));
         if (!enSuelo1 && !enSuelo2 && !enSuelo3 && rb.velocity.x > 0.1f || !enSuelo1 && !enSuelo3 && rb.velocity.x < -0.1f && !enSuelo2)
@@ -52,7 +52,7 @@ public class AnimatorController : MonoBehaviour
             }
         }
     }
-    public void Dano()
+    public void Dano()//animacion de daño
     {
         
         animator.SetTrigger("AnimTrigger");//dano

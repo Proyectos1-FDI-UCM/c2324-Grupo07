@@ -23,7 +23,7 @@ public class DanoFlechas : MonoBehaviour
     {
         time += Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D bola)
+    private void OnTriggerEnter2D(Collider2D bola)//si lo que toca el objeto tiene vida system entonces te hace daño
     {
         vida = bola.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
@@ -32,7 +32,7 @@ public class DanoFlechas : MonoBehaviour
             Destroy(gameObject);
         }
 
-        wall = bola.GetComponent<TilemapCollider2D>();
+        wall = bola.GetComponent<TilemapCollider2D>();// para que cuando toca la pared se rompan los objetos que se lanzan
         if (wall != null)
         {
             Destroy(gameObject);

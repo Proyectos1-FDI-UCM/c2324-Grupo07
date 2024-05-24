@@ -27,7 +27,7 @@ public class EnemigosCupido : MonoBehaviour
 
     void Start()
     {
-        tiempo = 0;
+        tiempo = 0;//iniciamos el contador a 0
         _mytransform = transform;
         _animator = GetComponent<Animator>();
     }
@@ -38,14 +38,14 @@ public class EnemigosCupido : MonoBehaviour
         tiempo += Time.deltaTime;
         jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
 
-        if (jugadorEnRango)
+        if (jugadorEnRango)//si estoy en rango me disparan
         {
-            if (tiempo > tiemporep)
+            if (tiempo > tiemporep)//para la cadencia
             {
 
 
                 _animator.SetTrigger("cupido");
-                GameObject bols = Instantiate(bola, transform.position, Quaternion.identity);
+                GameObject bols = Instantiate(bola, transform.position, Quaternion.identity);//se instancian las flechas
                 bb = bols.GetComponent<Rigidbody2D>();
                 if (transform.rotation == Quaternion.identity)
                 {
@@ -69,7 +69,7 @@ public class EnemigosCupido : MonoBehaviour
             _animator.ResetTrigger("cupido"); ;
         }
     }
-    public void OnDrawGizmos()
+    public void OnDrawGizmos()//para dibujar el rango de los cupidos
     {
 
         Gizmos.color = Color.red;

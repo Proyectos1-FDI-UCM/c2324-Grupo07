@@ -15,7 +15,7 @@ public class BarraVida : MonoBehaviour
     private float muerterayo = 1f;
     #endregion
 
-    
+    // distintos tipos de metodo que segun el daño que recibes, baja una cantidad de vida de la barra
     public void DanoSiete ()
     {
         vidaActual -= 4;

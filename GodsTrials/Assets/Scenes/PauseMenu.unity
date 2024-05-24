@@ -255,7 +255,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146393856}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6da479a30810e2440ac199fbc376263e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 42efdd1bfbfe8bb47a5d18a98a3eeb4a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -837,7 +837,6 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
-  BotonesEscena: {fileID: 1194444937}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}
 --- !u!4 &1323167373
 Transform:

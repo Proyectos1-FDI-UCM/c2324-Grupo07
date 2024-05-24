@@ -40,12 +40,12 @@ public class Enemigos : MonoBehaviour
     void Update()
     {
         tiempo += Time.deltaTime;
-        Vector3 direc = (hercules.transform.position - transform.position - Vector3.up);
-        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);
+        Vector3 direc = (hercules.transform.position - transform.position - Vector3.up);//para ver a donde dispara el ciclope 
+        jugadorEnRango = Physics2D.OverlapCircle(transform.position, distanciaLinea, capaJugador);//rango del disparo
         float distenemx = hercules.transform.position.x - transform.position.x;
 
 
-        if (tiempo > 2 && tiempo < 3)
+        if (tiempo > 2 && tiempo < 3)//animaciones segun disparo
         {
             if (_animator.GetInteger("ciclope") != 2)
             {
@@ -63,7 +63,7 @@ public class Enemigos : MonoBehaviour
                 _animator.SetInteger("ciclope", 0);
             }
         }
-        if (jugadorEnRango)
+        if (jugadorEnRango)//si estoy en rango me ataca
         {
             if (tiempo > tiemporep)
             {
@@ -102,7 +102,7 @@ public class Enemigos : MonoBehaviour
             _animator.SetInteger("ciclope", 0);
         }
     }
-    public void OnDrawGizmos()
+    public void OnDrawGizmos()//dibuja el rango del enemigo
     {
 
         Gizmos.color = Color.red;
