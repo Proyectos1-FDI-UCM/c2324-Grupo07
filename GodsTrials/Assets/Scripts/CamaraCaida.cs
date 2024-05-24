@@ -29,6 +29,6 @@ public class CamaraCaida : MonoBehaviour
     void Update()
     {
         transform.position += Random.insideUnitSphere * shakeMagnitude;
-        transform.position += Vector3.down * speed;
+        transform.position += Vector3.down.normalized * speed;
     }
 }

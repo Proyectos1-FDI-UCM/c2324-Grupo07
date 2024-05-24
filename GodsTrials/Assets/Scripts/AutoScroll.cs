@@ -9,7 +9,7 @@ public class AutoScroll : MonoBehaviour
     [SerializeField]
     float speed = 100.0f;
     [SerializeField] float textPosBegin=-2378.0f;
-    [SerializeField] float boundaryTextEnd=2563.0f;
+    [SerializeField] float boundaryTextEnd= 5773.0f;
 
     RectTransform myGorectTransform;
     [SerializeField]
@@ -30,7 +30,7 @@ public class AutoScroll : MonoBehaviour
             myGorectTransform.Translate(Vector3.up*speed*Time.deltaTime);
             yield return null;
         }
-        if(boundaryTextEnd==2563) 
+        if(boundaryTextEnd== 5773) 
         {
             SceneManager.LoadScene(1);
         }
