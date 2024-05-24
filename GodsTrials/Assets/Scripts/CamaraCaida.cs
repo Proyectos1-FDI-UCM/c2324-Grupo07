@@ -10,9 +10,9 @@ public class CamaraCaida : MonoBehaviour
     [SerializeField]
     private GameManager _gameManager;
     [SerializeField]
-    private float speed = 100.0f;
+    private float speed = 0.3f;
     // Start is called before the first frame update
-    [SerializeField] private float shakeMagnitude = 0.1f; // Adjust this to control the intensity of the shake
+    [SerializeField] private float shakeMagnitude = 0.01f; // ajusta para controlar intensidad de shake
 
     void Start()
     {

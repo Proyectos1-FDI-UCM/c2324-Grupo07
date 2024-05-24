@@ -46,19 +46,19 @@ public class enemigopiedra : MonoBehaviour
         float camdist = Mathf.Abs(transform.position.x - camara.transform.position.x);
         float camdisty = Mathf.Abs(transform.position.y - camara.transform.position.y);
      
-        if (camdist <= 8 && !play && camdisty<=5)
+        if (camdist <= 8 && !play && camdisty<=5) // si mi personaje esta a esta distancia suena el bicho
         {
             audio.Play();
             play = true;
         }
-        else if(camdist >= 8)
+        else if(camdist >= 8)// si no lo está, para
         {
             audio.Stop();
             play = false;
         }
         
 
-        if (movimiento)
+        if (movimiento)// moviemiento del enemigo hasta un punto y hasta otro
         {
 
             if (derecha)
@@ -85,7 +85,7 @@ public class enemigopiedra : MonoBehaviour
         danoherculesderch = Physics2D.Raycast(transform.position, Vector3.right, 1.1f, hercules);
         danoherculesizq = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
 
-        if (dano)
+        if (dano)// con raycast si lo toca el personaje hace daño y te mata
         {
             movimiento = false;
             vidaSystem.ImpulsoPorDaño();
@@ -95,14 +95,14 @@ public class enemigopiedra : MonoBehaviour
             Destroy(gameObject, 1.5f);
         }
 
-        if (danoherculesderch || danoherculesizq)
+        if (danoherculesderch || danoherculesizq)// quita vida
         {
             Debug.Log("Entra");
             vidaSystem.ImpulsoPorDaño();
             vidaSystem.DanoPiedra();
         }
     }
-    public void OnDrawGizmos()
+    public void OnDrawGizmos()// para ver el raycast
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.up * 0.5f);

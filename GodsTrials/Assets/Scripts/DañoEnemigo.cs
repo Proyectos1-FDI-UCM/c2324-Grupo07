@@ -25,7 +25,7 @@ public class DañoEnemigo : MonoBehaviour
     {
         time += Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D bola)
+    private void OnTriggerEnter2D(Collider2D bola)//como danoflechas pero para los enemigos de montaña
     {
         vida = bola.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
