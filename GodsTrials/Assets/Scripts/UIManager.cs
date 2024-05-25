@@ -100,7 +100,6 @@ public class UIManager : MonoBehaviour
         }
         //si estamos en la escena del texto y presionamos enter nos lleva a la siguiente
         if (SceneManager.GetActiveScene().buildIndex == 9 && Input.GetKeyDown(KeyCode.Return)){
-            Debug.Log("txao");
             OnPress(16);
         }
     }

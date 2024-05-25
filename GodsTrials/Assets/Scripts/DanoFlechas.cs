@@ -23,12 +23,12 @@ public class DanoFlechas : MonoBehaviour
     {
         time += Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D bola)//si lo que toca el objeto tiene vida system entonces te hace daño
+    private void OnTriggerEnter2D(Collider2D bola)//si lo que toca el objeto tiene vida system entonces te hace dano
     {
         vida = bola.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
         {
-            vida.DañoCupido();
+            vida.DanoCupido();
             Destroy(gameObject);
         }
 

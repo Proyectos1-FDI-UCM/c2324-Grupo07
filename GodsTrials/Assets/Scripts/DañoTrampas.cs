@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DañoTrampas : MonoBehaviour
+public class DanoTrampas : MonoBehaviour
 {
     private VidaSystem vida;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -10,8 +10,8 @@ public class DañoTrampas : MonoBehaviour
         vida = collision.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
         {
-            vida.Daño();
-            vida.ImpulsoPorDaño();
+            vida.Dano();
+            vida.ImpulsoPorDano();
         }
     }
 }

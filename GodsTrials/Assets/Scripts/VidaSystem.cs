@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class VidaSystem : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource daño;
+    private AudioSource dano;
     [SerializeField]
     private AudioClip dolor;
     private LevelChange morir;
@@ -68,12 +68,13 @@ public class VidaSystem : MonoBehaviour
     {
         Destroy(hercules);
         barravida.DanoTotal();
+
         morir.Muerte();
 
     }
-    public void Daño()
+    public void Dano()
     {
-        daño.PlayOneShot(dolor);
+        dano.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoTres();
         vida--;
@@ -84,9 +85,9 @@ public class VidaSystem : MonoBehaviour
         }
     }
 
-    public void DañoCupido()//para los cupidos modificado por Jule
+    public void DanoCupido()//para los cupidos modificado por Jule
     {
-        daño.PlayOneShot(dolor);
+        dano.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoSiete();
         vida-=vidacupido;
@@ -99,7 +100,7 @@ public class VidaSystem : MonoBehaviour
 
     public void DanoPiedra()//para los cupidos modificado por Jule
     {
-        daño.PlayOneShot(dolor);
+        dano.PlayOneShot(dolor);
         animatorController.Dano();
         barravida.DanoDos();
         vida -= vidapiedra;
@@ -109,7 +110,7 @@ public class VidaSystem : MonoBehaviour
             morir.Muerte();
         }
     }
-    public void ImpulsoPorDaño()
+    public void ImpulsoPorDano()
     {
         jugador.state = 1;
         if (hercules.transform.rotation == Quaternion.identity)

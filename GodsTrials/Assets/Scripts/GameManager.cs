@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     private UIManager _UIManager;
+    private AudioSource _audio;
     private StateManager _stateManager;
     public int PuntosTotales { get { return puntosTotales; } }
     private int puntosTotales;
 
     [SerializeField]
     private bool isMenu;
+    private bool isDead;
     #endregion
 
     #region methods
@@ -31,6 +33,15 @@ public class GameManager : MonoBehaviour
         Debug.Log(puntosTotales);
     }
 
+    public void SetDead(bool b){
+        isDead = b;
+        if (b){
+            _audio.Stop();
+        }
+        else{
+            _audio.Play();
+        }
+    }
 
     /// Initial setup of references and call to StartMenu
     void Start()
@@ -41,15 +52,23 @@ public class GameManager : MonoBehaviour
 
         _stateManager = GetComponent<StateManager>();
 
+        _audio = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+
+        isDead = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isMenu && !isDead)
         {
-            //Debug.Log("KeyDownESC");
-            _stateManager.ChangeGameState(SceneID.PauseMenu);          
-        }        
+            if (_stateManager.isPaused()) {
+                _audio.Play();
+            }
+            else {
+                _audio.Stop();
+            }
+            _stateManager.ChangeGameState(SceneID.PauseMenu);
+        }
     }
 
    /* private void Awake()

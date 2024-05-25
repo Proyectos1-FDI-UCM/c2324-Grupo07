@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class DañoEnemigo : MonoBehaviour
+public class DanoEnemigo : MonoBehaviour
 {
     #region parametros
     private VidaSystem vida;
@@ -30,7 +30,7 @@ public class DañoEnemigo : MonoBehaviour
         vida = bola.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
         {
-            vida.Daño();
+            vida.Dano();
             //animator.SetInteger("bola", 1);
             sonido.RocaRota();
             Destroy(gameObject);

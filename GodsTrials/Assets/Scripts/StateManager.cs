@@ -55,16 +55,16 @@ public class StateManager : MonoBehaviour
                 break;
             case SceneID.PauseMenu:{
                 if (paused){
-                    //Debug.Log("changing from PAUSED");
+                    Debug.Log("changing from PAUSED");
                     paused = false;
+                    Time.timeScale = 1f;
                     Unload(5);
-                    Time.timeScale = 1;
                 }
                 else {
-                    //Debug.Log("changing from NOT PAUSED");
+                    Debug.Log("changing from NOT PAUSED");
                     paused = true;
+                    Time.timeScale = 0f;
                     Load(5, true);
-                    Time.timeScale = 0;
                 }
                 }
                 break;
@@ -128,6 +128,7 @@ public class StateManager : MonoBehaviour
         if (id == 3)
         {//si era la escena de muerte
             Application.LoadLevel(Application.loadedLevel);
+            GameObject.Find("GameManager").GetComponent<GameManager>().SetDead(false);
         }
     }
 

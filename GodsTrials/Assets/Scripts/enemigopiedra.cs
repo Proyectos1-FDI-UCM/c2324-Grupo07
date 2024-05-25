@@ -51,7 +51,7 @@ public class enemigopiedra : MonoBehaviour
             audio.Play();
             play = true;
         }
-        else if(camdist >= 8)// si no lo está, para
+        else if(camdist >= 8)// si no lo estï¿½, para
         {
             audio.Stop();
             play = false;
@@ -85,10 +85,10 @@ public class enemigopiedra : MonoBehaviour
         danoherculesderch = Physics2D.Raycast(transform.position, Vector3.right, 1.1f, hercules);
         danoherculesizq = Physics2D.Raycast(transform.position, Vector3.left, 1f, hercules);
 
-        if (dano)// con raycast si lo toca el personaje hace daño y te mata
+        if (dano)// con raycast si lo toca el personaje hace daÃ±o y te mata
         {
             movimiento = false;
-            vidaSystem.ImpulsoPorDaño();
+            vidaSystem.ImpulsoPorDano();
             animator.SetInteger("enemigopiedra", 1);
             audio.Stop();
             Destroy(audio);
@@ -98,7 +98,7 @@ public class enemigopiedra : MonoBehaviour
         if (danoherculesderch || danoherculesizq)// quita vida
         {
             Debug.Log("Entra");
-            vidaSystem.ImpulsoPorDaño();
+            vidaSystem.ImpulsoPorDano();
             vidaSystem.DanoPiedra();
         }
     }

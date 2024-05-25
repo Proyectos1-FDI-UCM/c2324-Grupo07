@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 122265581}
   - component: {fileID: 122265583}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4350,7 +4350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": {fileID: 0}
+  dano: {fileID: 0}
   dolor: {fileID: 0}
   hercules: {fileID: 1675755597}
   vida: 3

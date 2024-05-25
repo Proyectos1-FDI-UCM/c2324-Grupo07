@@ -24,6 +24,7 @@ public class LevelChange : MonoBehaviour
     public void Muerte()
     {
         dialogue.SetActive(false);
+        _gameManager.SetDead(true);
         _gameManager.LevelChange(SceneID.Muerte);
     }
 
