@@ -32,7 +32,7 @@ public class AutoScroll : MonoBehaviour
         }
         if(boundaryTextEnd== 5773) 
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(12);
         }
         else if (boundaryTextEnd == 4328)
         {
