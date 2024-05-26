@@ -2249,7 +2249,7 @@ MonoBehaviour:
   carro: {fileID: 0}
   pez: {fileID: 0}
   ralla: {fileID: 0}
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1323167371}
   monedas: {fileID: 0}
   BotonesMuerte: {fileID: 0}
   buttonClickFXClip: {fileID: 8300000, guid: 8a2751738d21289498cd86cac3e8c871, type: 3}

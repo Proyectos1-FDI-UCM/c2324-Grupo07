@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621074646420745668, guid: 91ed7fffa8158314d907ff71526d9060, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff00a30f610564e88279a1cd279b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "da\xF1o": {fileID: 346822940}
+  dano: {fileID: 0}
   dolor: {fileID: 8300000, guid: 30802f62299ac7e40aed01b993919546, type: 3}
   hercules: {fileID: 346822924}
   vida: 3
