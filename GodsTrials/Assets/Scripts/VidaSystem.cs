@@ -8,7 +8,7 @@ public class VidaSystem : MonoBehaviour
     [SerializeField]
     private AudioSource dano;
     [SerializeField]
-    private AudioClip dolor;
+    private AudioSource dolor;
     private LevelChange morir;
     [SerializeField]
     private GameObject hercules;
@@ -74,7 +74,7 @@ public class VidaSystem : MonoBehaviour
     }
     public void Dano()
     {
-        dano.PlayOneShot(dolor);
+        dolor.Play();
         animatorController.Dano();
         barravida.DanoTres();
         vida--;
@@ -87,10 +87,11 @@ public class VidaSystem : MonoBehaviour
 
     public void DanoCupido()//para los cupidos modificado por Jule
     {
-        dano.PlayOneShot(dolor);
+        dolor.Play();
         animatorController.Dano();
         barravida.DanoSiete();
         vida-=vidacupido;
+        Debug.Log("pene");
         if (vida <= 0)
         {
             Destroy(hercules);
@@ -100,7 +101,7 @@ public class VidaSystem : MonoBehaviour
 
     public void DanoPiedra()//para los cupidos modificado por Jule
     {
-        dano.PlayOneShot(dolor);
+        dolor.Play();
         animatorController.Dano();
         barravida.DanoDos();
         vida -= vidapiedra;

@@ -28,6 +28,7 @@ public class DanoFlechas : MonoBehaviour
         vida = bola.gameObject.GetComponent<VidaSystem>();
         if (vida != null)
         {
+            
             vida.DanoCupido();
             Destroy(gameObject);
         }
